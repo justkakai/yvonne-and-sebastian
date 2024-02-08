@@ -1,0 +1,99 @@
+/* @font-face {
+	font-family: "Suez One";
+	src: url("../public/fonts/suezone-regular-webfont.woff2") format("woff2"),
+		url("../public/fonts/suezone-regular-webfont.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Karla";
+	src: url("../public/fonts/karla-regular-webfont.woff2") format("woff2"),
+		url("../public/fonts/karla-regular-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Karla";
+	src: url("../public/fonts/karla-bold-webfont.woff") format("woff2"),
+		url("../public/fonts/karla-bold-webfont.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Karla";
+	src: url("../public/fonts/karla-bold-webfont.woff") format("woff2"),
+		url("../public/fonts/karla-italic-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+} */
+
+@font-face {
+	font-family: "Pangaia";
+	src: url("../../public/fonts/PPPangaia-Medium.otf") format("otf"),
+		url("../../public/fonts/PPPangaia-Medium.otf") format("otf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Neue-Montreal";
+	src: url("../../public/fonts/PPNeueMontreal-Medium.otf") format("otf"),
+		url("../../public/fonts/PPNeueMontreal-Medium.otf") format("otf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "LaBelleAurore-Regular";
+	src: url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype"),
+		url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@supports (-webkit-touch-callout: none) {
+	#__next {
+		min-height: -webkit-fill-available;
+	}
+}
+
+@media (max-width: 760px) {
+	#logo-full-a {
+		display: none;
+	}
+
+	#logo-env {
+		display: none;
+	}
+}
+
+.emoji {
+	display: inline-block;
+	width: auto;
+	height: 1em;
+	vertical-align: -0.125em;
+}
