@@ -8,7 +8,15 @@ function Accommodation() {
 	return (
 		<Box>
 			<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
-				<Image src={image} borderRadius='full' alt='Dan Abramov' objectFit={'cover'} boxSize={400} loading='lazy' alignSelf={'center'}/>
+				<Image
+					src={image}
+					borderRadius='full'
+					alt='Dan Abramov'
+					objectFit={'cover'}
+					boxSize={400}
+					loading='lazy'
+					alignSelf={'center'}
+				/>
 				<Box textAlign={'left'}>
 				The recommended accommodation is sorted out into three price points, Expensive, affordable, and cheap.
 				</Box>

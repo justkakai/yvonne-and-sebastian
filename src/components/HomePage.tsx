@@ -77,9 +77,10 @@ const HomePage = () => {
 				</Flex>
 				<Button variant={'fun'}>
 					<Link
+						// eslint-disable-next-line max-len
 						href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
 						isExternal
-						>RSVP</Link></Button>
+					>RSVP</Link></Button>
 			</Flex>
 		</Flex>
 	);

@@ -1,6 +1,6 @@
 // Router.tsx
 import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import HomePage from '../HomePage';
 import Travel from '../Travel';
