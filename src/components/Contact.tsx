@@ -4,7 +4,7 @@ import { Box, Flex } from '@chakra-ui/react';
 function Contact() {
 
 	return (
-		<Box height={'100vh'}>
+		<Box height={'100vh'} mt={20}>
 			<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Box textAlign={'center'}>
             		Contact

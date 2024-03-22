@@ -4,7 +4,7 @@ export const faq = [
 	{
 		id: 1,
 		question: "What should I wear? Is there a dress code?",
-		answer1: "The dress code for our ceremony in Diani is beach casual. Please check out some examples here: (link to tab). The event in Perlin has no dress code."
+		answer1: "The dress code for our ceremony in Diani is beach casual. Please check out some examples here link to tab dress-code. The event in Perlin has no dress code."
 	},
 	{
 		id: 2,
@@ -35,19 +35,19 @@ export const faq = [
 	{
 		id: 7,
 		question: "Have you booked hotel room blocks for guests?",
-		answer1: "No, we did not. Guests can stay wherever they are comfortable in Diani or Perlin. Please check out some examples here: (link to tab)"
+		answer1: "No, we did not. Guests can stay wherever they are comfortable in Diani or Perlin. Please check out some examples here link to tab accommodation"
 	},
 	{
 		id: 8,
 		question: "When is the RSVP deadline? Do I need to mail back my RSVP or can I do it online?",
-		answer1: "The RSVP deadline for the Perlin ceremony is May 22nd, 2024.",
+		answer1: "The RSVP deadline for the Perlin ceremony is March 22nd, 2024.",
 		answer2: "The RSVP deadline for the Diani ceremony is August 12th, 2024.",
 		answer3: "Please complete the online form provided."
 	},
 	{
 		id: 9,
 		question: "Should I bring a gift to your destination wedding?",
-		answer1: "Your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift. Please find more information here: (link to tab)"
+		answer1: "Your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift. Please find more information here link to tab registry"
 	},
 	{
 		id: 10,

@@ -8,12 +8,18 @@ export const TravelHeader: React.FC = () => {
 		link: {
 			color: '#4a4a4a',
 			textDecoration: 'none',
-			padding: 10
+			paddingTop: 4,
+			paddingBottom: 4,
+			paddingLeft: 10,
+			paddingRight: 10
 		},
 		activeLink: {
 			color: '#4a4a4a',
 			backgroundColor: '#e6e6e6',
-			padding: 10,
+			paddingTop: 4,
+			paddingBottom: 4,
+			paddingLeft: 10,
+			paddingRight: 10,
 			borderRadius: 15,
 			textDecoration: 'none'
 		}
@@ -32,7 +38,13 @@ export const TravelHeader: React.FC = () => {
 			justifyContent={'center'}
 			width={'100%'}
 		>
-			<HStack color={'backgrounds.100'} width={'100%'} justifyContent={'center'} fontSize={'lg'} gap={12}>
+			<HStack
+				color={'backgrounds.100'}
+				width={'100%'}
+				justifyContent={'center'}
+				fontSize={'lg'}
+				gap={4}
+			>
 				{travelRoutes.map((route, i) => (
 					<NavLink key={`travel_route_${i}`} to={route.path} style={({isActive}) => {
 						if (isActive) {

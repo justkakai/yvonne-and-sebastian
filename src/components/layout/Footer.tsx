@@ -6,7 +6,7 @@ import type { FlexProps } from '@chakra-ui/react';
 export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 	const year = new Date().getFullYear();
 	return (
-		<Flex mt={8} p={4} justifyContent={'center'} gap={2} {...props}>
+		<Flex mt={40} p={4} justifyContent={'center'} gap={2} {...props}>
 			<Text fontSize="md" color="gray.500">Made by Kakai with ❤️</Text>
 			<Text fontSize="md" color="gray.500">© {year}</Text>
 		</Flex>

@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import type { ChakraTheme, ThemeConfig } from '@chakra-ui/react';
 
 const config: ThemeConfig = {
-	initialColorMode: 'system',
+	initialColorMode: 'light',
 	useSystemColorMode: true
 };
 
@@ -95,7 +95,7 @@ const semanticTokens: ChakraTheme['semanticTokens'] = {
 		},
 		modalbg: {
 			default: 'backgrounds.300',
-			_dark: 'backgrounds.700'
+			_dark: 'backgrounds.300'
 		},
 		modalborder: {
 			default: 'gray.200',
@@ -128,6 +128,28 @@ const components: ChakraTheme['components'] = {
 				color: 'foregrounds.800'
 			},
 			fun: {
+				alignItems: 'center',
+				backgroundColor: 'rgba(240, 240, 240, 0.26)',
+				border: '1px solid',
+				borderColor: '#b5b3b3',
+				borderRadius: '16px',
+				boxSizing: 'border-box',
+				color: '#000000',
+				cursor: 'pointer',
+				display: 'flex',
+				fontFamily: 'Inter, sans-serif',
+				fontSize: '18px',
+				justifyContent: 'center',
+				lineHeight: '28px',
+				maxWidth: '100%',
+				padding: '14px 22px',
+				textDecoration: 'none',
+				transition: 'all .2s',
+				userSelect: 'none',
+				touchAction: 'manipulation',
+				width: '50%'
+			},
+			/* fun: {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
@@ -140,7 +162,7 @@ const components: ChakraTheme['components'] = {
 				boxShadow: '0px 0.5px 1px rgba(0, 0, 0, 0.1)',
 				userSelect: 'none',
 				touchAction: 'manipulation'
-			},
+			}, */
 			/* fun: {
 				width: '150px',
 				height: '60px',
@@ -284,6 +306,16 @@ const components: ChakraTheme['components'] = {
 	Popover: {
 		baseStyle: {
 			_focus: { boxShadow: 'none' }
+		}
+	},
+	Link: {
+		variants: {
+			deco: {
+				_hover: {
+					textDecoration: 'underline'
+				},
+				color: '#328578'
+			}
 		}
 	}
 };

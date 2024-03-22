@@ -1,52 +1,34 @@
-/* @font-face {
-	font-family: "Suez One";
-	src: url("../public/fonts/suezone-regular-webfont.woff2") format("woff2"),
-		url("../public/fonts/suezone-regular-webfont.woff") format("woff");
+@font-face {
+	font-family: "Editorial";
+	src: url("../../public/fonts/PPFragment-TextRegular.otf") format("woff"),
+		url("../../public/fonts/PPFragment-TextRegular.otf") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hatton";
+	src: url("../../public/fonts/PPHatton-Bold.otf") format("woff"),
+		url("../../public/fonts/PPHatton-Bold.otf") format("woff2");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Karla";
-	src: url("../public/fonts/karla-regular-webfont.woff2") format("woff2"),
-		url("../public/fonts/karla-regular-webfont.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Karla";
-	src: url("../public/fonts/karla-bold-webfont.woff") format("woff2"),
-		url("../public/fonts/karla-bold-webfont.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Karla";
-	src: url("../public/fonts/karla-bold-webfont.woff") format("woff2"),
-		url("../public/fonts/karla-italic-webfont.woff") format("woff");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-} */
-
-@font-face {
-	font-family: "Pangaia";
-	src: url("../../public/fonts/PPPangaia-Medium.otf") format("otf"),
-		url("../../public/fonts/PPPangaia-Medium.otf") format("otf");
-	font-weight: 400;
+	font-family: "Hatton";
+	src: url("../../public/fonts/PPHatton-Ultralight.otf") format("woff"),
+		url("../../public/fonts/PPHatton-Ultralight.otf") format("woff2");
+	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Neue-Montreal";
-	src: url("../../public/fonts/PPNeueMontreal-Medium.otf") format("otf"),
-		url("../../public/fonts/PPNeueMontreal-Medium.otf") format("otf");
+	src: url("../../public/fonts/PPNeueMontreal-Medium.otf") format("woff"),
+		url("../../public/fonts/PPNeueMontreal-Medium.otf") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -97,3 +79,4 @@ a {
 	height: 1em;
 	vertical-align: -0.125em;
 }
+

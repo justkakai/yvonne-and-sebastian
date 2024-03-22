@@ -8,13 +8,19 @@ export const Header: React.FC = () => {
 		link: {
 			color: '#4a4a4a',
 			textDecoration: 'none',
-			padding: 10
+			paddingTop: 4,
+			paddingBottom: 4,
+			paddingLeft: 10,
+			paddingRight: 10
 		},
 		activeLink: {
 			color: '#4a4a4a',
 			backgroundColor: '#e6e6e6',
-			padding: 10,
-			borderRadius: 15,
+			paddingTop: 4,
+			paddingBottom: 4,
+			paddingLeft: 10,
+			paddingRight: 10,
+			borderRadius: 10,
 			textDecoration: 'none'
 		}
 	};
@@ -33,19 +39,27 @@ export const Header: React.FC = () => {
 		<Flex
 			fontFamily={'body'}
 			height={28}
-			mb={12}
 			justifyContent={'center'}
 			width={'100%'}
 		>
-			<HStack color={'backgrounds.100'} width={'100%'} justifyContent={'space-evenly'} fontSize={'lg'}>
+			<HStack
+				color={'backgrounds.100'}
+				width={'100%'}
+				justifyContent={'center'}
+				gap={4}
+				fontSize={'lg'}
+			>
 				{mainRoutes.map((route, i) => (
-					<NavLink key={`main_route_${i}`} to={route.path} style={({isActive}) => {
-						if (isActive) {
-							return styles.activeLink;
-						} else {
-							return styles.link;
-						}
-					}}>
+					<NavLink
+						key={`main_route_${i}`}
+						to={route.path}
+						style={({isActive}) => {
+							if (isActive) {
+								return styles.activeLink;
+							} else {
+								return styles.link;
+							}
+						}}>
 						{route.name}
 					</NavLink>
 				))}
