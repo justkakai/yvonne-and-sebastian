@@ -10,8 +10,8 @@ function Registry() {
 		<Box>
 			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Box textAlign={'left'}>
-            		<Text mb={2}>Dear Friends and Family,</Text>
-					<Text mb={2}>As our wedding day nears, your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift.</Text>
+            		<Text mb={8}>Dear Friends and Family,</Text>
+					<Text mb={8}>As our wedding day nears, your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift.</Text>
 					<Text mb={2}>With love,</Text>
 					<Text>Yvonne & Sebastian</Text>
 					<Text fontWeight={'bold'} mt={8} mb={8}>Bank Transfer</Text>

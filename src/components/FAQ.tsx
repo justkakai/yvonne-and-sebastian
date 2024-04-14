@@ -17,7 +17,7 @@ function FAQ() {
 	};
 
 	return (
-		<Box mt={20}>
+		<Box mt={12}>
 			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				{faq.map((entry, i) => (
 					<Box key={i}>

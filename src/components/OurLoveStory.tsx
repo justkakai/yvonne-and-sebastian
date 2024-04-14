@@ -11,7 +11,7 @@ import image5 from '../images/our-love-story-5.jpg';
 function OurLoveStory() {
 
 	return (
-		<Box mt={20}>
+		<Box mt={12}>
 			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Image src={image1} borderRadius='full' alt='Yvonne and Sebastian' objectFit={'cover'} boxSize={400} loading='lazy' alignSelf='center'/>
 				<Text>

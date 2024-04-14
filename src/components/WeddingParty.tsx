@@ -44,7 +44,7 @@ function WeddingParty() {
 			>
 				<Text textAlign={'left'} mb={10}>Meet Our Wakandan BrideVengers!</Text>
 				<Text textAlign={'left'} mb={4}>As we begin our lifelong journey, we are blessed to have an extraordinary group of women as our bridesmaids, who are our chosen sisters, confidantes, and cheerleaders, accompanying us through every moment.</Text>
-				<Text textAlign={'left'} mb={20}>They each add joy, wisdom, and love to our lives, and we're excited to introduce these incredible women who will be walking down the aisle before us.</Text>
+				<Text textAlign={'left'} mb={16}>They each add joy, wisdom, and love to our lives, and we're excited to introduce these incredible women who will be walking down the aisle before us.</Text>
 				<Flex
 					flexWrap={'wrap'}
 					direction={['column', null, null, 'row']}
@@ -57,7 +57,7 @@ function WeddingParty() {
 							direction={'column'}
 							alignItems={'start'}
 							mb={20}
-							ml={i % 2 !== 0 ? 5 : 0}
+							ml={[0, null, null, i % 2 !== 0 ? 5 : 0]}
 						>
 							<Image
 								src={entry.image}

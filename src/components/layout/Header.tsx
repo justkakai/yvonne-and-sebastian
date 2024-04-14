@@ -112,7 +112,7 @@ export const Header: React.FC = () => {
 								color='#907566'
 								pl={6}
 							>Yvonne & Sebastian</Text>
-							<VStack align="start" spacing={4} p={4}>
+							<VStack align="start" p={4}>
 								{mainRoutes.map((route, i) => (
 									<Link
 										as={NavLink}
@@ -120,9 +120,10 @@ export const Header: React.FC = () => {
 										to={route.path}
 										onClick={onClose}
 										width={'100%'}
+										fontSize={'lg'}
 										sx={{
-									  		pt: 1,
-									  		pb: 1,
+									  		pt: 2,
+									  		pb: 2,
 									  		pl: 2,
 									  		pr: 10,
 									  		color: '#907566',
