@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import HomePage from '../HomePage';
 import Travel from '../Travel';
-import VisaInformation from '../VisaInformation';
+import WhatToKnow from '../WhatToKnow';
 import WeddingInformation from '../WeddingInformation';
 import OurLoveStory from '../OurLoveStory';
 import Contact from '../Contact';
@@ -18,7 +18,7 @@ export const Router: React.FC = () => (
 	<Routes>
 		<Route path="/" element={<HomePage />} />
 		<Route path="/travel/*" element={<Travel />} />
-		<Route path="visa-info" element={<VisaInformation />} />
+		<Route path="what-to-know" element={<WhatToKnow />} />
 		<Route path="wedding-info/*" element={<WeddingInformation />} />
 		<Route path="our-love-story" element={<OurLoveStory />} />
 		<Route path="contact" element={<Contact />} />

@@ -26,10 +26,10 @@ export const InfoHeader: React.FC = () => {
 	};
 
 	const infoRoutes = [
-		{ path: 'schedule', name: 'Schedule' },
-		{ path: 'dress-code', name: 'Dress Code' },
+		{ path: 'program', name: 'Program' },
+		{ path: 'dress-code', name: 'Dress code' },
 		{ path: 'registry', name: 'Registry' },
-		{ path: 'wedding-party', name: 'Wedding Party' }
+		{ path: 'wedding-party', name: 'Wedding party' }
 	];
 
 	return (

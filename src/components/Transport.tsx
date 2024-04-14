@@ -7,7 +7,7 @@ function Transport() {
 
 	return (
 		<Box>
-			<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Image src={image} borderRadius='full' alt='Dan Abramov' objectFit={'cover'} boxSize={400} loading='lazy' alignSelf={'center'}/>
 				<Box textAlign={'left'}>
                 These are the three recommended ways to travel to Diani:

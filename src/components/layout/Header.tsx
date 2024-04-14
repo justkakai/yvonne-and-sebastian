@@ -1,9 +1,26 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { HStack, Flex } from '@chakra-ui/react';
-
+import {
+	Text,
+	Flex,
+	HStack,
+	Link,
+	Button,
+	IconButton,
+	useDisclosure,
+	Drawer,
+	DrawerBody,
+	DrawerOverlay,
+	DrawerContent,
+	DrawerCloseButton,
+	VStack
+} from '@chakra-ui/react';
+import { CiMenuFries } from 'react-icons/ci';
 
 export const Header: React.FC = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
+
 	const styles = {
 		link: {
 			color: '#4a4a4a',
@@ -28,42 +45,128 @@ export const Header: React.FC = () => {
 	const mainRoutes = [
 		{ path: '/', name: 'Home' },
 		{ path: '/travel', name: 'Travel' },
-		{ path: '/visa-info', name: 'Visa Info' },
-		{ path: '/wedding-info', name: 'Wedding Info' },
-		{ path: '/our-love-story', name: 'Our Love Story' },
+		{ path: '/what-to-know', name: 'What to know' },
+		{ path: '/wedding-info', name: 'Wedding info' },
+		{ path: '/our-love-story', name: 'Our love story' },
 		{ path: '/contact', name: 'Contact' },
 		{ path: '/faq', name: 'FAQ' }
 	];
 
 	return (
-		<Flex
-			fontFamily={'body'}
-			height={28}
-			justifyContent={'center'}
-			width={'100%'}
-		>
-			<HStack
-				color={'backgrounds.100'}
+		<>
+			{/* Mobile Menu Icon at the top */}
+			<Flex
+				display={['flex', null, null, 'none']} // Only display in mobile view
+				alignItems={'center'}
+				justifyContent={'flex-start'}
 				width={'100%'}
-				justifyContent={'center'}
-				gap={4}
-				fontSize={'lg'}
+				padding={2}
+				position="relative"
+				zIndex={2} // Ensures it is above other content
 			>
-				{mainRoutes.map((route, i) => (
-					<NavLink
-						key={`main_route_${i}`}
-						to={route.path}
-						style={({isActive}) => {
-							if (isActive) {
-								return styles.activeLink;
-							} else {
-								return styles.link;
-							}
-						}}>
-						{route.name}
-					</NavLink>
-				))}
-			</HStack>
-		</Flex>
+				<IconButton
+					icon={<CiMenuFries size={28}/>}
+					bg={'transparent'}
+					_hover={{ bg: 'transparent' }}
+					color={'black'}
+					aria-label="Open Menu"
+					boxSize={8}
+					onClick={onOpen}
+					marginRight={2}
+				/>
+				<Text cursor={'pointer'} onClick={onOpen} fontSize={'md'}>MENU</Text>
+			</Flex>
+			<Flex
+				alignItems={'center'}
+				justifyContent={'center'}
+				width={'100%'}
+				mt={[8, null, null, 0]}
+			>
+				<Text
+					fontFamily={'heading'}
+					fontSize={'6xl'}
+					color={'#4a4a4a'}
+					textAlign={'center'}
+				>Yvonne & Sebastian</Text>
+			</Flex>
+			<Flex
+				fontFamily={'body'}
+				height={[8, null, null, 28]}
+				justifyContent={'center'}
+				width={'100%'}
+				position={'relative'}
+			>
+				{/* Drawer and other content follows */}
+				<Drawer
+					isOpen={isOpen}
+					placement='left'
+					onClose={onClose}
+				>
+					<DrawerOverlay />
+					<DrawerContent>
+						<DrawerCloseButton color='#907566'/>
+						<DrawerBody mt={10} display={'flex'} flexDirection={'column'}>
+							<Text
+								fontFamily={'heading'}
+								fontSize={'3xl'}
+								color='#907566'
+								pl={6}
+							>Yvonne & Sebastian</Text>
+							<VStack align="start" spacing={4} p={4}>
+								{mainRoutes.map((route, i) => (
+									<Link
+										as={NavLink}
+										key={`main_route_${i}`}
+										to={route.path}
+										onClick={onClose}
+										width={'100%'}
+										sx={{
+									  		pt: 1,
+									  		pb: 1,
+									  		pl: 2,
+									  		pr: 10,
+									  		color: '#907566',
+									  		_hover: {
+												bg: 'rgba(144, 117, 102, 0.1)',
+												color: '#907566',
+												borderRadius: 10,
+												textDecoration: 'none'
+											}
+										}}
+								  >
+										{route.name}
+								  </Link>
+								))}
+							</VStack>
+							<Button variant={'fun'} width={48} mr={12} alignSelf={'center'} mt={'auto'} color={'#907566'} bg={'white'}>
+								<Link
+									href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
+									isExternal
+									_hover={{ textDecoration: 'none' }}
+								>RSVP</Link>
+							</Button>
+						</DrawerBody>
+					</DrawerContent>
+				</Drawer>
+				<HStack
+					color={'backgrounds.100'}
+					width={'100%'}
+					justifyContent={'center'}
+					gap={4}
+					fontSize={'lg'}
+					display={['none', null, null, 'flex']} // Hide on mobile, show on medium and larger screens
+				>
+					{mainRoutes.map((route, i) => (
+						<NavLink
+							key={`main_route_${i}`}
+							to={route.path}
+							style={({isActive}) => isActive ? styles.activeLink : styles.link}
+						>
+							{route.name}
+						</NavLink>
+					))}
+				</HStack>
+			</Flex>
+		</>
 	);
 };

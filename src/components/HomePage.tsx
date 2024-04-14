@@ -36,35 +36,29 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 				size={'xl'}
 			>
 				<ModalOverlay/>
-				<ModalContent p={10} bg={'modalbg'}>
+				<ModalContent px={{base: 2, md: 10}} py={10} bg={'modalbg'} width={{base: '90%', md: '100%'}}>
 					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'} >🪅 Karibuni Sherehe!! 🪅</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
-						<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
-							<Box textAlign={'left'}>
+						<Flex direction={'column'} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+							<Box textAlign={'left'} mb={10}>
 								We are so excited to have you!
 							</Box>
-							<Box textAlign={'left'}>
-								Thanks in advance for your RSVP. Please do so by the following dates:
+							<Box textAlign={'left'} mb={10}>
+								Thanks in advance for your RSVP. Please do so by
+								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={1}> 12th August 2024</Text>.
 							</Box>
-							<Box textAlign={'left'}>
-								<Text fontWeight={'bold'}>Perlin Event: <Text
-									as={'span'}
-									fontWeight={'normal'}
-								>22nd March 2024</Text></Text>
-								<Text fontWeight={'bold'}>Diani Event: <Text
-									as={'span'}
-									fontWeight={'normal'}
-								>12th August 2024</Text></Text>
+							<Box textAlign={'left'} mb={10}>
+								We will be adding updates soon to our program, FAQS, registry, and photos.
 							</Box>
-							<Box textAlign={'left'}>
-								We will be adding updates soon to our schedule, FAQS, registry, and photos.
-							</Box>
-							<Box textAlign={'left'}>
+							<Box textAlign={'left'} mb={10}>
 								Please add your email details to get updates.
 							</Box>
+							<Box textAlign={'left'} mb={1}>
+								Cheers,
+							</Box>
 							<Box textAlign={'left'}>
-								Cheers, Yvonne & Sebastian
+								Yvonne & Sebastian
 							</Box>
 						</Flex>
 					</ModalBody>
@@ -106,32 +100,22 @@ const HomePage = () => {
 		<Flex direction={'column'} alignItems={'center'} gap={10}>
 			<DeadlinePopup onModalClose={handleModalClose}/>
 			<Image src={homepageImage} alt='Yvonne and Sebastian' objectFit={'cover'} boxSize={700} loading='lazy'/>
-			<Flex width={'100%'} direction={'column'} justifyContent={'space-evenly'}>
-				<Flex direction={'column'} gap={4} alignItems={'center'}>
-					<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Saturday, June 22nd 2024</Text>
-					<Text fontFamily={'heading'} fontSize={'2xl'}>Perlin, Germany</Text>
-					<Flex gap={3} mb={20}>
-						<Text>{days} {days === 1 ? 'DAY' : 'DAYS'}</Text>
-						<Text>{hours} {hours === 1 ? 'HOUR' : 'HOURS'}</Text>
-						<Text>{minutes} {minutes === 1 ? 'MINUTE' : 'MINUTES'}</Text>
-					</Flex>
-				</Flex>
-				<Flex direction={'column'} gap={4} alignItems={'center'}>
-					<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Friday, October 4th 2024</Text>
-					<Text fontFamily={'heading'} fontSize={'2xl'}>Diani Beach, Kenya</Text>
-					<Flex gap={3} mb={20}>
-						<Text>{days} {days === 1 ? 'DAY' : 'DAYS'}</Text>
-						<Text>{hours} {hours === 1 ? 'HOUR' : 'HOURS'}</Text>
-						<Text>{minutes} {minutes === 1 ? 'MINUTE' : 'MINUTES'}</Text>
-					</Flex>
+			<Flex direction={'column'} gap={4} alignItems={'center'}>
+				<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Friday, October 4th 2024</Text>
+				<Text fontFamily={'heading'} fontSize={'2xl'}>Diani Beach, Kenya</Text>
+				<Flex gap={3} mb={20}>
+					<Text>{days} {days === 1 ? 'DAY' : 'DAYS'}</Text>
+					<Text>{hours} {hours === 1 ? 'HOUR' : 'HOURS'}</Text>
+					<Text>{minutes} {minutes === 1 ? 'MINUTE' : 'MINUTES'}</Text>
 				</Flex>
 			</Flex>
-			<Button variant={'fun'} width={'20%'} ref={rsvpRef}>
+			<Button variant={'fun'} width={48} ref={rsvpRef}>
 				<Link
 					href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
 					isExternal
 					_hover={{ textDecoration: 'none' }}
-				>RSVP</Link></Button>
+				>RSVP</Link>
+			</Button>
 		</Flex>
 	);
 };

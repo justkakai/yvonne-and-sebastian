@@ -5,7 +5,7 @@ function DressCode() {
 
 	return (
 		<Box height={'100vh'}>
-			<Flex direction={'column'} gap={3} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Flex direction={'column'} gap={3} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Grid templateColumns='repeat(5, 1fr)' gap={3}>
 					<GridItem w='100%' h='20' bg='#5FA9B6' cursor='pointer' />
 					<GridItem w='100%' h='20' bg='#25C3CB' cursor='pointer' />

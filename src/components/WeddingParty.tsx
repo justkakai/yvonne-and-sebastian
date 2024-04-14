@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
@@ -36,14 +37,17 @@ function WeddingParty() {
 		<Box>
 			<Flex
 				direction={'column'}
-				gap={10}
-				px={8}
+				px={[0, 4, 16, 24, 40]}
 				lineHeight={8}
 				fontSize={'lg'}
 				color={'#4a4a4a'}
 			>
+				<Text textAlign={'left'} mb={10}>Meet Our Wakandan BrideVengers!</Text>
+				<Text textAlign={'left'} mb={4}>As we begin our lifelong journey, we are blessed to have an extraordinary group of women as our bridesmaids, who are our chosen sisters, confidantes, and cheerleaders, accompanying us through every moment.</Text>
+				<Text textAlign={'left'} mb={20}>They each add joy, wisdom, and love to our lives, and we're excited to introduce these incredible women who will be walking down the aisle before us.</Text>
 				<Flex
 					flexWrap={'wrap'}
+					direction={['column', null, null, 'row']}
 					// justifyContent={'space-between'}
 				>
 					{weddingParty.map((entry, i) => (

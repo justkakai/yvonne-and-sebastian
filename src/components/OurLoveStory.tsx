@@ -12,7 +12,7 @@ function OurLoveStory() {
 
 	return (
 		<Box mt={20}>
-			<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Image src={image1} borderRadius='full' alt='Yvonne and Sebastian' objectFit={'cover'} boxSize={400} loading='lazy' alignSelf='center'/>
 				<Text>
                     Sebastian and Yvonne met in December 2016 and it was a story of coincidence or fate or God who connected them. Yvonne was in Hamburg living with her host family at the time and Sebastian was visiting his parents in Lübeck.

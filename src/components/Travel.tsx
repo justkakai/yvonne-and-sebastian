@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { TravelHeader } from './layout/TravelHeader';
 import Accommodation from './Accommodation';
 import Transport from './Transport';
+import VisaInformation from './VisaInformation';
 
 function Travel() {
 
@@ -13,6 +14,7 @@ function Travel() {
 			<Routes>
 				<Route path="transport" element={<Transport />} />
 				<Route path="accommodation" element={<Accommodation />} />
+				<Route path="visa-info" element={<VisaInformation />} />
 				<Route index element={<Navigate to='transport' />}></Route>
 			</Routes>
 		</Box>

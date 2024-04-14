@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/globals.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import { Text, Box, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 import theme from './styles/theme';
 import { Router } from './components/router/Router';
@@ -21,23 +21,12 @@ export const App: React.FC = () => (
 			}}
 		>
 			<Flex
-				width={'80%'}
-				pt={20}
+				width={{ base: '100%', md: '80%' }}
+				pt={[4, null, null, 20]}
 				bg={'rgba(255, 255, 255, 0.9)'}
 				justifyContent={'center'}
 			>
-				<Box width={'80%'} px={10}>
-					<Flex
-						alignItems={'center'}
-						justifyContent={'center'}
-						width={'100%'}
-					>
-						<Text
-							fontFamily={'heading'}
-							fontSize={'6xl'}
-							color={'#4a4a4a'}
-						>Yvonne & Sebastian</Text>
-					</Flex>
+				<Box width={{base: '100%', md: '80&'}} px={10}>
 					<Header/>
 					<Router/>
 					<Footer />

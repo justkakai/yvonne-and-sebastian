@@ -1,13 +1,12 @@
 
 import React from 'react';
 import { Box, Flex, Link } from '@chakra-ui/react';
-// import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 
-function VisaInformation() {
+function WhatToKnow() {
 
 	return (
-		<Box height={'100vh'} mt={20}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+		<Box height={'100vh'} mt={20} px={[0, 4, 16, 24, 40]}>
+			<Flex direction={'column'} gap={10} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 				<Box textAlign={'left'}>
 				People from African countries can travel visa-free to Kenya
 				</Box>
@@ -22,4 +21,4 @@ function VisaInformation() {
 	);
 }
 
-export default VisaInformation;
+export default WhatToKnow;

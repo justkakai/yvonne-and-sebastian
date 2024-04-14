@@ -27,7 +27,8 @@ export const TravelHeader: React.FC = () => {
 
 	const travelRoutes = [
 		{ path: 'transport', name: 'Transport' },
-		{ path: 'accommodation', name: 'Accommodation' }
+		{ path: 'accommodation', name: 'Accommodation' },
+		{ path: 'visa-info', name: 'Visa info' }
 	];
 
 	return (
