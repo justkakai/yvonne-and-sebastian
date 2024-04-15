@@ -8,7 +8,7 @@ import safariBeach from '../images/safari-beach.jpeg';
 import bahariDhow from '../images/bahari-dhow.jpeg'; */
 
 function Accommodation() {
-
+	const [imageLoaded, setImageLoaded] = React.useState(false);
 	return (
 		<Box>
 			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
@@ -20,11 +20,12 @@ function Accommodation() {
 					boxSize={400}
 					loading='lazy'
 					alignSelf={'center'}
+					onLoad={() => setImageLoaded(true)}
 				/>
-				<Box textAlign={'left'}>
+				{imageLoaded && <Box textAlign={'left'}>
 				The recommended accommodation is sorted out into two types; hotels and villas/apartments.
-				</Box>
-				<Box>
+				</Box>}
+				{imageLoaded && <Box>
 					<Flex gap={4} justifyContent={'space-between'}>
 						<Box textAlign={'left'}>
 							<Text borderBottom={'1px solid grey'}
@@ -59,8 +60,8 @@ function Accommodation() {
 							loading='lazy'
 						/> */}
 					</Flex>
-				</Box>
-				<Box>
+				</Box>}
+				{imageLoaded && <Box>
 					<Flex gap={4} justifyContent={'space-between'}>
 						<Box textAlign={'left'}>
 							<Text borderBottom={'1px solid grey'}
@@ -87,7 +88,7 @@ function Accommodation() {
 							loading='lazy'
 						/> */}
 					</Flex>
-				</Box>
+				</Box>}
 			</Flex>
 		</Box>
 	);

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect, useRef } from 'react';
 import {
 	Image,
@@ -74,11 +75,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 
 const HomePage = () => {
 
-	const difference = new Date('10/04/2024').getTime() - new Date().getTime();
-	const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-	const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-
+	const [imageLoaded, setImageLoaded] = React.useState(false);
 	const rsvpRef = useRef<HTMLButtonElement>(null);
 
 	const handleModalClose = () => {
@@ -96,11 +93,23 @@ const HomePage = () => {
 		return () => window.removeEventListener('beforeunload', onBeforeUnload);
 	}, []);
 
+	const difference = new Date('10/04/2024').getTime() - new Date().getTime();
+	const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+	const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
 	return (
 		<Flex direction={'column'} alignItems={'center'} gap={10}>
-			<DeadlinePopup onModalClose={handleModalClose}/>
-			<Image src={homepageImage} alt='Yvonne and Sebastian' objectFit={'cover'} boxSize={700} loading='lazy'/>
-			<Flex direction={'column'} gap={4} alignItems={'center'}>
+			{imageLoaded && <DeadlinePopup onModalClose={handleModalClose}/>}
+			<Image
+				src={homepageImage}
+				alt='Yvonne and Sebastian'
+				objectFit={'cover'}
+				boxSize={700}
+				loading='lazy'
+				onLoad={() => setImageLoaded(true)}
+			/>
+			{imageLoaded && <Flex direction={'column'} gap={4} alignItems={'center'}>
 				<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Friday, October 4th 2024</Text>
 				<Text fontFamily={'heading'} fontSize={'2xl'}>Diani Beach, Kenya</Text>
 				<Flex gap={1} mb={20}>
@@ -108,14 +117,14 @@ const HomePage = () => {
 					<Text>{hours} {hours === 1 ? 'hour' : 'hours'} and</Text>
 					<Text>{minutes} {minutes === 1 ? 'minute' : 'minutes'}</Text>
 				</Flex>
-			</Flex>
-			<Button variant={'fun'} width={48} ref={rsvpRef}>
-				<Link
-					href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
-					isExternal
-					_hover={{ textDecoration: 'none' }}
-				>RSVP</Link>
-			</Button>
+				<Button variant={'fun'} width={48} ref={rsvpRef}>
+					<Link
+						href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
+						isExternal
+						_hover={{ textDecoration: 'none' }}
+					>RSVP</Link>
+				</Button>
+			</Flex>}
 		</Flex>
 	);
 };
