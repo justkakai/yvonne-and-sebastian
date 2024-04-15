@@ -4,9 +4,8 @@ import { Box, Text, Flex, Image } from '@chakra-ui/react';
 
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { FaPaypal } from 'react-icons/fa';
-import { SiZelle } from 'react-icons/si';
+import { SiZelle, SiCashapp } from 'react-icons/si';
 import { MdMobileScreenShare } from 'react-icons/md';
-import { SiCashapp } from 'react-icons/si';
 import { IoLogoVenmo } from 'react-icons/io5';
 
 import cashapp from '../images/Cashapp.jpg';
