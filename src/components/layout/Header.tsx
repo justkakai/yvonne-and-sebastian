@@ -60,7 +60,9 @@ export const Header: React.FC = () => {
 				alignItems={'center'}
 				justifyContent={'flex-start'}
 				width={'100%'}
-				padding={2}
+				py={2}
+				pr={2}
+				pl={0}
 				position="relative"
 				zIndex={2} // Ensures it is above other content
 			>
@@ -70,11 +72,11 @@ export const Header: React.FC = () => {
 					_hover={{ bg: 'transparent' }}
 					color={'black'}
 					aria-label="Open Menu"
-					boxSize={8}
+					boxSize={0}
 					onClick={onOpen}
 					marginRight={2}
 				/>
-				<Text cursor={'pointer'} onClick={onOpen} fontSize={'md'}>MENU</Text>
+				<Text cursor={'pointer'} onClick={onOpen} fontSize={'lg'}>Menu</Text>
 			</Flex>
 			<Flex
 				alignItems={'center'}

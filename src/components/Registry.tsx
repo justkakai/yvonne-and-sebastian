@@ -36,7 +36,7 @@ function Registry() {
 					<Text>Email: yvonnendindam@gmail.com</Text>
 					<Flex mt={8} mb={8} gap={2} alignItems={'center'}>
 						<FaPaypal color='#0175BA'/>
-						<Text fontWeight={'bold'}>Paypal</Text>
+						<Text fontWeight={'bold'}>PayPal</Text>
 					</Flex>
 					<Text>Email: bakulube@yahoo.co.uk</Text>
 					<Text>Username: YMutua</Text>

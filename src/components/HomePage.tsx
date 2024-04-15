@@ -103,10 +103,10 @@ const HomePage = () => {
 			<Flex direction={'column'} gap={4} alignItems={'center'}>
 				<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Friday, October 4th 2024</Text>
 				<Text fontFamily={'heading'} fontSize={'2xl'}>Diani Beach, Kenya</Text>
-				<Flex gap={3} mb={20}>
-					<Text>{days} {days === 1 ? 'DAY' : 'DAYS'}</Text>
-					<Text>{hours} {hours === 1 ? 'HOUR' : 'HOURS'}</Text>
-					<Text>{minutes} {minutes === 1 ? 'MINUTE' : 'MINUTES'}</Text>
+				<Flex gap={1} mb={20}>
+					<Text>{days} {days === 1 ? 'day' : 'days'},</Text>
+					<Text>{hours} {hours === 1 ? 'hour' : 'hours'} and</Text>
+					<Text>{minutes} {minutes === 1 ? 'minute' : 'minutes'}</Text>
 				</Flex>
 			</Flex>
 			<Button variant={'fun'} width={48} ref={rsvpRef}>
