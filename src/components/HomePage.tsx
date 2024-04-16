@@ -38,7 +38,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 			>
 				<ModalOverlay/>
 				<ModalContent px={{base: 2, md: 10}} py={10} bg={'modalbg'} width={{base: '90%', md: '100%'}}>
-					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'} >🪅 Karibuni Sherehe!! 🪅</ModalHeader>
+					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'}>Karibuni Sherehe!! 🪅</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
 						<Flex direction={'column'} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
@@ -47,7 +47,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 							</Box>
 							<Box textAlign={'left'} mb={10}>
 								Thanks in advance for your RSVP. Please do so by&nbsp;
-								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>.
+								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>
 							</Box>
 							<Box textAlign={'left'} mb={10}>
 								We will be adding updates soon to our program, FAQS, registry, and photos.
@@ -114,7 +114,7 @@ const HomePage = () => {
 					textAlign={'center'}
 					fontFamily={'heading'}
 					fontSize={['2xl', null, null, '3xl']}
-					mb={6}
+					mb={0}
 				>
 					Friday, October 4th 2024
 				</Text>
@@ -122,13 +122,13 @@ const HomePage = () => {
 					textAlign={'center'}
 					fontFamily={'heading'}
 					fontSize={'2xl'}
-					mb={2}
+					mb={16}
 				>
 					Diani Beach, Kenya
 				</Text>
 				<Text
 					textAlign={'center'}
-					mb={20}
+					mb={8}
 					fontSize={'lg'}
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}

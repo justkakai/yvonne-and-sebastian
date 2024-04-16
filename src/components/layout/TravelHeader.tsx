@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { HStack, Flex } from '@chakra-ui/react';
+import { Wrap, WrapItem, Flex } from '@chakra-ui/react';
 
 
 export const TravelHeader: React.FC = () => {
@@ -34,30 +34,30 @@ export const TravelHeader: React.FC = () => {
 	return (
 		<Flex
 			fontFamily={'body'}
-			height={8}
-			mb={12}
+			height={[16, 12, 8]}
+			mb={20}
 			justifyContent={'center'}
 			width={'100%'}
 		>
-			<HStack
+			<Wrap
 				color={'backgrounds.100'}
-				width={'100%'}
-				justifyContent={'center'}
 				fontSize={'lg'}
-				gap={4}
+				// fontWeight={'bold'}
+				fontStyle={'italic'}
+				spacing={4}  // Adjust spacing to ensure it doesn't push items to the next line
+				justify={['space-between', 'center']}
+				width={'100%'}
 			>
 				{travelRoutes.map((route, i) => (
-					<NavLink key={`travel_route_${i}`} to={route.path} style={({isActive}) => {
-						if (isActive) {
-							return styles.activeLink;
-						} else {
-							return styles.link;
-						}
-					}}>
-						{route.name}
-					</NavLink>
+					<WrapItem key={`travel_route_${i}`} width={['calc(50% - 1rem)', 'auto']}>
+						<NavLink to={route.path} style={({ isActive }) => (
+							isActive ? styles.activeLink : styles.link
+						)}>
+							{route.name}
+						</NavLink>
+					</WrapItem>
 				))}
-			</HStack>
+			</Wrap>
 		</Flex>
 	);
 };
