@@ -70,13 +70,13 @@ export const Header: React.FC = () => {
 					icon={<CiMenuFries size={28}/>}
 					bg={'transparent'}
 					_hover={{ bg: 'transparent' }}
-					color={'black'}
+					color={'#4a4a4a'}
 					aria-label="Open Menu"
 					boxSize={0}
 					onClick={onOpen}
 					marginRight={2}
 				/>
-				<Text cursor={'pointer'} onClick={onOpen} fontSize={'lg'}>Menu</Text>
+				<Text cursor={'pointer'} onClick={onOpen} fontSize={'lg'} color={'#4a4a4a'}>Menu</Text>
 			</Flex>
 			<Flex
 				alignItems={'center'}
