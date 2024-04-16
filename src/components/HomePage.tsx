@@ -46,8 +46,8 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 								We are so excited to have you!
 							</Box>
 							<Box textAlign={'left'} mb={10}>
-								Thanks in advance for your RSVP. Please do so by
-								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={1}> 12th August 2024</Text>.
+								Thanks in advance for your RSVP. Please do so by&nbsp;
+								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>.
 							</Box>
 							<Box textAlign={'left'} mb={10}>
 								We will be adding updates soon to our program, FAQS, registry, and photos.
@@ -110,13 +110,29 @@ const HomePage = () => {
 				onLoad={() => setImageLoaded(true)}
 			/>
 			{imageLoaded && <Flex direction={'column'} gap={4} alignItems={'center'}>
-				<Text fontFamily={'heading'} fontSize={'3xl'} mb={6}>Friday, October 4th 2024</Text>
-				<Text fontFamily={'heading'} fontSize={'2xl'}>Diani Beach, Kenya</Text>
-				<Flex gap={1} mb={20}>
-					<Text>{days} {days === 1 ? 'day' : 'days'},</Text>
-					<Text>{hours} {hours === 1 ? 'hour' : 'hours'} and</Text>
-					<Text>{minutes} {minutes === 1 ? 'minute' : 'minutes'}</Text>
-				</Flex>
+				<Text
+					textAlign={'center'}
+					fontFamily={'heading'}
+					fontSize={['2xl', null, null, '3xl']}
+					mb={6}
+				>
+					Friday, October 4th 2024
+				</Text>
+				<Text
+					textAlign={'center'}
+					fontFamily={'heading'}
+					fontSize={'2xl'}
+					mb={2}
+				>
+					Diani Beach, Kenya
+				</Text>
+				<Text
+					textAlign={'center'}
+					mb={20}
+					fontSize={'lg'}
+				>
+					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}
+				</Text>
 				<Button variant={'fun'} width={48} ref={rsvpRef}>
 					<Link
 						href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'

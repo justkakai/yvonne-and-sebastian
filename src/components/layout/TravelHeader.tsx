@@ -15,12 +15,12 @@ export const TravelHeader: React.FC = () => {
 		},
 		activeLink: {
 			color: '#4a4a4a',
-			backgroundColor: '#e6e6e6',
+			backgroundColor: 'rgba(209, 188, 183, 0.2)',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 10,
 			paddingRight: 10,
-			borderRadius: 15,
+			borderRadius: 10,
 			textDecoration: 'none'
 		}
 	};
@@ -34,7 +34,7 @@ export const TravelHeader: React.FC = () => {
 	return (
 		<Flex
 			fontFamily={'body'}
-			height={16}
+			height={8}
 			mb={12}
 			justifyContent={'center'}
 			width={'100%'}

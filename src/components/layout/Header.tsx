@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
 		},
 		activeLink: {
 			color: '#4a4a4a',
-			backgroundColor: '#e6e6e6',
+			backgroundColor: 'rgba(209, 188, 183, 0.2)',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 10,
@@ -141,7 +141,7 @@ export const Header: React.FC = () => {
 								  </Link>
 								))}
 							</VStack>
-							<Button variant={'fun'} width={48} mr={12} alignSelf={'center'} mt={'auto'} color={'#907566'} bg={'white'}>
+							<Button variant={'fun'} width={48} mr={12} alignSelf={'center'} mt={'auto'} color={'#907566'} bg={'transparent'} borderColor={'#907566'}>
 								<Link
 									href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
 									isExternal

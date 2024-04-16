@@ -60,6 +60,6 @@ export const faq = [
 	{
 		id: 12,
 		question: "What's the best way to contact you if I have additional questions?",
-		answer1: "Please check the websites for updates and to contact us please use the email: yswedding01@gmail.com."
+		answer1: "Please check the websites for updates and to contact us please use the email: yswedding01@gmail.com"
 	}
 ];

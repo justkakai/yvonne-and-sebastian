@@ -40,7 +40,7 @@ function Registry() {
 					</Flex>
 					<Text>Email: bakulube@yahoo.co.uk</Text>
 					<Text>Username: YMutua</Text>
-					<Text display={'inline-block'}>Please send as <Text display={'inline-block'} fontWeight={'bold'}>“Friends and Family”</Text> option when sending to reduce extra charges.</Text>
+					<Text display={'inline-block'}>Please send as <Text display={'inline-block'} fontWeight={'bold'}>Friends and Family</Text> option when sending to reduce extra charges.</Text>
 					<Flex mt={8} mb={8} gap={2} alignItems={'center'}>
 						<MdMobileScreenShare color='#38AF48'/>
 						<Text fontWeight={'bold'}>MPESA</Text>

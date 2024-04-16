@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "Editorial";
+	font-family: "Fragment";
 	src: url("../../public/fonts/PPFragment-TextRegular.otf") format("woff"),
 		url("../../public/fonts/PPFragment-TextRegular.otf") format("woff2");
 	font-weight: 400;
@@ -8,7 +8,16 @@
 }
 
 @font-face {
-	font-family: "Hatton";
+	font-family: "Hatton-Medium";
+	src: url("../../public/fonts/PPHatton-Medium.otf") format("woff"),
+		url("../../public/fonts/PPHatton-Medium.otf") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hatton-Bold";
 	src: url("../../public/fonts/PPHatton-Bold.otf") format("woff"),
 		url("../../public/fonts/PPHatton-Bold.otf") format("woff2");
 	font-weight: 700;
@@ -17,7 +26,7 @@
 }
 
 @font-face {
-	font-family: "Hatton";
+	font-family: "Hatton-Ultralight";
 	src: url("../../public/fonts/PPHatton-Ultralight.otf") format("woff"),
 		url("../../public/fonts/PPHatton-Ultralight.otf") format("woff2");
 	font-weight: 200;
@@ -47,6 +56,15 @@
 	font-family: "LaBelleAurore-Regular";
 	src: url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype"),
 		url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Pangaia-Medium";
+	src: url("../../public/fonts/PPPangaia-Medium.otf") format("woff"),
+		url("../../public/fonts/PPPangaia-Medium.otf") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -89,3 +107,28 @@ a {
 	vertical-align: -0.125em;
 }
 
+/* styles.css */
+.icon-size-adjusted {
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .icon-flight {
+	font-size: 46px; /* Adjusted size for visual consistency */
+  }
+  
+  .icon-train {
+	font-size: 38px; /* Adjusted size for visual consistency */
+  }
+  
+  .icon-bus {
+	font-size: 40px; /* As the base size seems appropriate */
+  }
+  
+  .icon-car {
+	font-size: 42px; /* Adjusted size for visual consistency */
+  }
+  

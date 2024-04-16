@@ -113,7 +113,7 @@ const semanticTokens: ChakraTheme['semanticTokens'] = {
 };
 
 const fonts: ChakraTheme['fonts'] = {
-	heading: '"LaBelleAurore-Regular", sans-serif',
+	heading: '"Fragment", sans-serif',
 	body: '"Neue-Montreal", sans-serif'
 };
 
