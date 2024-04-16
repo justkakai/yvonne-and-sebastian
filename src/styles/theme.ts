@@ -139,6 +139,7 @@ const components: ChakraTheme['components'] = {
 				display: 'flex',
 				fontFamily: 'Inter, sans-serif',
 				fontSize: '18px',
+				fontWeight: 'normal',
 				justifyContent: 'center',
 				lineHeight: '28px',
 				maxWidth: '100%',
@@ -149,87 +150,6 @@ const components: ChakraTheme['components'] = {
 				touchAction: 'manipulation',
 				width: '50%'
 			},
-			/* fun: {
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				padding: '6px 14px',
-				borderRadius: '6px',
-				color: '#3D3D3D',
-				background: '#fff',
-				border: '1px solid',
-				borderColor: 'gray.200',
-				boxShadow: '0px 0.5px 1px rgba(0, 0, 0, 0.1)',
-				userSelect: 'none',
-				touchAction: 'manipulation'
-			}, */
-			/* fun: {
-				width: '150px',
-				height: '60px',
-				fontSize: '24px',
-				fontWeight: 'normal',
-				background: 'transparent',
-				border: 'none',
-				position: 'relative',
-				color: '#4a4a4a',
-				cursor: 'pointer',
-				zIndex: 1,
-				padding: '10px 20px',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				whiteSpace: 'nowrap',
-				userSelect: 'none',
-				touchAction: 'manipulation',
-				_hover: {
-					_before: {
-						transform: 'translate(5%, 20%)',
-						width: '100%',
-						height: '100%'
-					},
-					_after: {
-						borderRadius: '10px',
-						transform: 'translate(0, 0)',
-						width: '100%',
-						height: '100%'
-					}
-				},
-				_active: {
-					_after: {
-						transition: '0s',
-						transform: 'translate(0, 5%)'
-					}
-				},
-				_after: {
-					content: '""',
-					position: 'absolute',
-					right: 0,
-					bottom: 0,
-					zIndex: -99999,
-					transition: 'all .4s',
-					transform: 'translate(10px, 10px)',
-					width: '35px',
-					height: '35px',
-					bg: '#ffffff15',
-					backdropFilter: 'blur(5px)',
-					borderRadius: '50px'
-				},
-				_before: {
-					content: '""',
-					position: 'absolute',
-					right: 0,
-					bottom: 0,
-					zIndex: -99999,
-					transition: 'all .4s',
-					transform: 'translateX(0%, 0%)',
-					width: '100%',
-					height: '100%',
-					// bg: '#28282d',
-					border: '3px solid',
-					borderColor: '#4a4a4a'
-					// borderRadius: '10px'
-				}
-			}, */
 			alert: {
 				background: 'red.900',
 				color: 'white'

@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
 			>
 				<Text
 					fontFamily={'heading'}
-					fontSize={'6xl'}
+					fontSize={'5xl'}
 					color={'#4a4a4a'}
 					textAlign={'center'}
 				>Yvonne & Sebastian</Text>
