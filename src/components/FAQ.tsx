@@ -34,11 +34,11 @@ function FAQ() {
 								<Button
 									onClick={() => handleCopy(emails[i])}
 									bg={'white'}
-									color={'black'}
-									border={'1px solid #e3e2de'}
+									color={'#4a4a4a'}
+									border={'1px solid #ebeae8'}
 									my={1}
 									mr={1}
-									_hover={{ bg: '#ebeae8' }}
+									_hover={{ bg: '#f9f9f9' }}
 								>
 									{emails[i]}
 								</Button>

@@ -42,15 +42,27 @@ const Transport: React.FC<TransportProps> = (props: TransportProps) => {
 				{imageLoaded && <Box textAlign={'left'}>
                 These are the three recommended ways to travel to Diani.
 				</Box>}
-				{imageLoaded && <Flex direction={'column'} gap={12}>
-					<Flex gap={[8, null, 12]} alignItems={['center', null, null, 'start']} direction={['column', null, null, 'row']}>
+				{imageLoaded &&
+				<Flex
+					direction={'column'}
+					gap={12}
+				>
+					<Flex
+						gap={[8, null, 12]}
+						alignItems={['center', null, null, 'start']}
+						direction={['column', null, null, 'row']}
+					>
 						<IconWrapper size="30px"><MdFlight /></IconWrapper>
 						<Box textAlign={'left'}>
 							<Text>Book a flight with <Link href='https://www.jambojet.com/en-US' isExternal variant={'deco'}>Jambo Jet</Link> , <Link href='https://www.flysafarilink.com/en' isExternal variant={'deco'}>Safarilink</Link> or <Link href='https://www.flyals.com/' isExternal variant={'deco'}>Fly ALS</Link> from Wilson Airport (Nairobi) to Ukunda Airport (Diani). Each flight takes about one hour.</Text>
 							<Text mt={4}>The cost of a return trip ranges from <Text as='b'>$40 / KSH 6,000</Text> to <Text as='b'>$100 / KSH 15,000</Text></Text>
 						</Box>
 					</Flex>
-					<Flex gap={[8, null, 12]} alignItems={['center', null, null, 'start']} direction={['column', null, null, 'row']}>
+					<Flex
+						gap={[8, null, 12]}
+						alignItems={['center', null, null, 'start']}
+						direction={['column', null, null, 'row']}
+					>
 						<IconWrapper size="22px"><FaTrainSubway /></IconWrapper>
 						<Box textAlign={'left'}>
 							<Text>Take the high-speed train (<Link href='https://metickets.krc.co.ke/' isExternal variant={'deco'}>Madaraka Express</Link>) from Nairobi to Mombasa. Each train leaves daily either at 3pm or 10pm and takes about six hours.</Text>
@@ -58,7 +70,11 @@ const Transport: React.FC<TransportProps> = (props: TransportProps) => {
 							<Text mt={4}>The cost of a return trip ranges from <Text as='b'>$38 / KSH 5800</Text> to <Text as='b'>$60 / KSH 9,000</Text></Text>
 						</Box>
 					</Flex>
-					<Flex gap={[8, null, 12]} alignItems={['center', null, null, 'start']} direction={['column', null, null, 'row']}>
+					<Flex
+						gap={[8, null, 12]}
+						alignItems={['center', null, null, 'start']}
+						direction={['column', null, null, 'row']}
+					>
 						<IconWrapper size="24px"><FaBusSimple /></IconWrapper>
 						<Box textAlign={'left'}>
 							<Text>Enjoy a scenic bus trip from Nairobi to Diani.</Text>
@@ -66,7 +82,11 @@ const Transport: React.FC<TransportProps> = (props: TransportProps) => {
 							<Text mt={4}>The cost of a return trip ranges from <Text as='b'>$16 / KSH 2,500</Text> to <Text as='b'>$26 / KSH 4,000</Text></Text>
 						</Box>
 					</Flex>
-					<Flex gap={[2, null, 6]} alignItems={['center', null, null, 'start']} direction={['column', null, null, 'row']}>
+					<Flex
+						gap={[2, null, 6]}
+						alignItems={['center', null, null, 'start']}
+						direction={['column', null, null, 'row']}
+					>
 						<Flex mb={[4, null, null, 'auto']}>
 							<IconWrapper size="26px">
 								<FaCar />

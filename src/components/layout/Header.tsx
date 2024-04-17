@@ -157,7 +157,6 @@ export const Header: React.FC = () => {
 					justifyContent={'center'}
 					gap={4}
 					fontSize={'lg'}
-					// fontWeight={'bold'}
 					display={['none', null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
 					{mainRoutes.map((route, i) => (
