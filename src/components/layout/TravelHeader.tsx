@@ -37,7 +37,7 @@ export const TravelHeader: React.FC = () => {
 		<Flex
 			fontFamily={'body'}
 			height={[16, 12, 8]}
-			mb={28}
+			mb={20}
 			justifyContent={'center'}
 			width={'100%'}
 		>

@@ -21,6 +21,13 @@ import { CiMenuFries } from 'react-icons/ci';
 export const Header: React.FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
+	// Updated styles for glass-like effect
+	const glassEffectStyle = {
+		bg: 'rgba(209, 188, 183, 0.1)', // Transparent background
+		backdropFilter: 'blur(10px)' // Blur effect
+		// boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' // Optional: subtle shadow to lift the element off the page
+	};
+
 	const styles = {
 		link: {
 			fontWeight: 'bold',
@@ -34,7 +41,7 @@ export const Header: React.FC = () => {
 		activeLink: {
 			fontWeight: 'bold',
 			color: '#4a4a4a',
-			backgroundColor: 'rgba(209, 188, 183, 0.2)',
+			backgroundColor: 'rgba(209, 188, 183, 0.5)', // Slightly more opaque for active links
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 10,
@@ -56,29 +63,32 @@ export const Header: React.FC = () => {
 
 	return (
 		<>
-			{/* Mobile Menu Icon at the top */}
+			{/* Mobile Menu Icon at the top with glass-like effect */}
 			<Flex
 				display={['flex', null, null, 'none']} // Only display in mobile view
 				alignItems={'center'}
 				justifyContent={'flex-start'}
-				width={'100%'}
+				width={'fit-content'}
 				py={2}
-				pr={2}
-				pl={0}
-				position="relative"
+				pr={8}
+				pl={4}
+				borderRadius={40}
+				position="sticky" // Make the navigation bar sticky
+				top={4} // Stick to the top of the viewport
 				zIndex={2} // Ensures it is above other content
+				{...glassEffectStyle} // Apply glass effect styles
 			>
 				<IconButton
-					icon={<CiMenuFries size={28}/>}
+					icon={<CiMenuFries size={20}/>}
 					bg={'transparent'}
 					_hover={{ bg: 'transparent' }}
 					color={'#4a4a4a'}
 					aria-label="Open Menu"
 					boxSize={0}
 					onClick={onOpen}
-					marginRight={2}
+					marginRight={1}
 				/>
-				<Text cursor={'pointer'} onClick={onOpen} fontSize={'xl'} color={'#4a4a4a'}>Menu</Text>
+				<Text cursor={'pointer'} onClick={onOpen} fontSize={'md'} color={'#4a4a4a'}>MENU</Text>
 			</Flex>
 			<Flex
 				alignItems={'center'}
@@ -126,21 +136,21 @@ export const Header: React.FC = () => {
 										width={'100%'}
 										fontSize={'lg'}
 										sx={{
-									  		pt: 2,
-									  		pb: 2,
-									  		pl: 2,
-									  		pr: 10,
-									  		color: '#907566',
-									  		_hover: {
+											pt: 2,
+											pb: 2,
+											pl: 2,
+											pr: 10,
+											color: '#907566',
+											_hover: {
 												bg: 'rgba(144, 117, 102, 0.1)',
 												color: '#907566',
 												borderRadius: 10,
 												textDecoration: 'none'
 											}
 										}}
-								  >
+									>
 										{route.name}
-								  </Link>
+									</Link>
 								))}
 							</VStack>
 							<Button variant={'fun'} width={48} mr={12} alignSelf={'center'} mt={'auto'} color={'#907566'} bg={'transparent'} borderColor={'#907566'}>
@@ -150,8 +160,8 @@ export const Header: React.FC = () => {
 									_hover={{ textDecoration: 'none' }}
 								>RSVP</Link>
 							</Button>
-						</DrawerBody>
-					</DrawerContent>
+						</DrawerBody
+						></DrawerContent>
 				</Drawer>
 				<HStack
 					color={'backgrounds.100'}
@@ -169,8 +179,8 @@ export const Header: React.FC = () => {
 							style={({isActive}) => isActive ? styles.activeLink : styles.link}
 						>
 							{route.name}
-						</NavLink>
-					))}
+						</NavLink
+						>))}
 				</HStack>
 			</Flex>
 		</>
