@@ -38,7 +38,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 			>
 				<ModalOverlay/>
 				<ModalContent px={{base: 2, md: 10}} py={10} bg={'modalbg'} width={{base: '90%', md: '100%'}}>
-					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'}>Karibuni Sherehe!! 🪅</ModalHeader>
+					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'}>Karibuni Sherehe! 🪅</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
 						<Flex direction={'column'} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
@@ -64,7 +64,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 						</Flex>
 					</ModalBody>
 					<ModalFooter>
-						<Button variant={'fun'} onClick={onClose}>Continue</Button>
+						<Button variant={'fun'} fontWeight={'bold'} onClick={onClose}>Continue</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>
@@ -128,12 +128,12 @@ const HomePage = () => {
 				</Text>
 				<Text
 					textAlign={'center'}
-					mb={8}
+					mb={2}
 					fontSize={'lg'}
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}
 				</Text>
-				<Button variant={'fun'} width={48} ref={rsvpRef}>
+				<Button variant={'fun'} width={48} ref={rsvpRef} fontWeight={'bold'}>
 					<Link
 						href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
 						isExternal

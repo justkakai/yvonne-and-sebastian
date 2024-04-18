@@ -6,6 +6,8 @@ import { Box, Flex, Text, Image } from '@chakra-ui/react';
 import yvette from '../images/yvette.jpeg';
 import joanne from '../images/joanne.jpeg';
 import adeva from '../images/adeva.jpeg';
+import kakai from '../images/kakai2.jpg';
+import heart from '../images/heart.png';
 
 const weddingParty = [
 	{
@@ -13,7 +15,7 @@ const weddingParty = [
 		name: 'Yvette Munee Mutua',
 		role: 'Maid of Honor',
 		image: yvette,
-		text: 'Sister of the bride / maid of honor  Catch me moonwalking on the dance floor. Diagnosed with joy so watch out because I’ll be  spreading infectious laughs. Can’t wait to celebrate yvonne and Seb’s love with all of you!'
+		text: 'Sister of the bride / maid of honor. Catch me moonwalking on the dance floor. Diagnosed with joy so watch out because I’ll be  spreading infectious laughs. Can’t wait to celebrate yvonne and Seb’s love with all of you!'
 	},
 	{
 		id: 2,
@@ -27,6 +29,41 @@ const weddingParty = [
 		name: 'Adeva Kimmy Prince',
 		role: 'Bridesmaid',
 		image: adeva,
+		text: ''
+	},
+	{
+		id: 4,
+		name: 'Bianca Kibwage',
+		role: 'Bridesmaid',
+		image: '',
+		text: ''
+	},
+	{
+		id: 5,
+		name: 'Cynthia Mogoi',
+		role: 'Bridesmaid',
+		image: '',
+		text: ''
+	},
+	{
+		id: 6,
+		name: 'Christine Rolle',
+		role: 'Bridesmaid',
+		image: '',
+		text: ''
+	},
+	{
+		id: 7,
+		name: 'Charlene',
+		role: 'Bridesmaid',
+		image: '',
+		text: ''
+	},
+	{
+		id: 8,
+		name: 'Kakai Wapenyi',
+		role: 'Bridesmaid',
+		image: kakai,
 		text: ''
 	}
 ];
@@ -60,19 +97,18 @@ function WeddingParty() {
 							ml={[0, null, null, i % 2 !== 0 ? 5 : 0]}
 						>
 							<Image
-								src={entry.image}
+								src={entry.image ? entry.image : heart}
 								alt={entry.name}
 								objectFit={'cover'}
 								boxSize={300}
 								loading='lazy'
 								border={'2px solid gray'}
 								mb={4}
-								/* alignSelf={'center'} */
 							/>
-							<Text as={'b'} /* alignSelf={'center'} */>
+							<Text as={'b'}>
 								{entry.name}
 							</Text>
-							<Text mb={6} /* alignSelf={'center'} */>
+							<Text mb={6}>
 								{entry.role}
 							</Text>
 							{entry.text && <Text textAlign={'left'}>

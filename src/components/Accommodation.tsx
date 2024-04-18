@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Flex, Image, Text, Box, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { Flex, Image, Text, Box, Link, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { BiHeartCircle } from 'react-icons/bi';
 import image from '../images/accomodation.jpg';
 /* import diamondsLeisure from '../images/diamonds-leisure.jpeg';
@@ -69,6 +69,7 @@ function Accommodation() {
 								</Flex>
 							</Box>
 						))}
+						<Box textAlign={'left'}>Please click <Link href='https://www.tripadvisor.com/Hotels-g775870-Diani_Beach_Ukunda_Coast_Province-Hotels.html' isExternal variant={'deco'}>here</Link> or <Link href='https://www.tripadvisor.com/VacationRentals-g775870-Reviews-Diani_Beach_Ukunda_Coast_Province-Vacation_Rentals.html' isExternal variant={'deco'}>here</Link> for more accommodation suggestions and <Link href='https://www.tripadvisor.com/Attractions-g775870-Activities-Diani_Beach_Ukunda_Coast_Province.html' isExternal variant={'deco'}>here</Link> on things to do in Diani. </Box>
 					</>
 				)}
 			</Flex>

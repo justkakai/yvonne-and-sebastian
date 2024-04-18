@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Flex } from '@chakra-ui/react';
+import { Box, Text, Flex, Heading } from '@chakra-ui/react';
 import { FaLocationDot } from 'react-icons/fa6';
 import { CiCalendarDate } from 'react-icons/ci';
 
@@ -20,11 +20,7 @@ function Program() {
 				>
 					<Box>
 						<Flex mb={2}>
-							<Text
-								fontWeight={'bold'}
-							>
-						MEET AND GREET
-							</Text>
+							<Heading size='md' mb={2}>Meet and Greet</Heading>
 						</Flex>
 						<Flex alignItems={'center'} mb={2} gap={4}>
 							<CiCalendarDate />
@@ -49,11 +45,7 @@ function Program() {
 					</Box>
 					<Box mt={[12, null, null, null, 0]}>
 						<Flex mb={2}>
-							<Text
-								fontWeight={'bold'}
-							>
-						WEDDING CEREMONY
-							</Text>
+							<Heading size='md' mb={2}>Wedding Ceremony</Heading>
 						</Flex>
 						<Flex alignItems={'center'} mb={2} gap={4}>
 							<CiCalendarDate />

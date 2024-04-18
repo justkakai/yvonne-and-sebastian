@@ -23,6 +23,7 @@ export const Header: React.FC = () => {
 
 	const styles = {
 		link: {
+			fontWeight: 'bold',
 			color: '#4a4a4a',
 			textDecoration: 'none',
 			paddingTop: 4,
@@ -31,6 +32,7 @@ export const Header: React.FC = () => {
 			paddingRight: 10
 		},
 		activeLink: {
+			fontWeight: 'bold',
 			color: '#4a4a4a',
 			backgroundColor: 'rgba(209, 188, 183, 0.2)',
 			paddingTop: 4,
@@ -76,7 +78,7 @@ export const Header: React.FC = () => {
 					onClick={onOpen}
 					marginRight={2}
 				/>
-				<Text cursor={'pointer'} onClick={onOpen} fontSize={'lg'} color={'#4a4a4a'}>Menu</Text>
+				<Text cursor={'pointer'} onClick={onOpen} fontSize={'xl'} color={'#4a4a4a'}>Menu</Text>
 			</Flex>
 			<Flex
 				alignItems={'center'}
@@ -157,6 +159,7 @@ export const Header: React.FC = () => {
 					justifyContent={'center'}
 					gap={4}
 					fontSize={'lg'}
+					fontWeight={'normal'}
 					display={['none', null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
 					{mainRoutes.map((route, i) => (
