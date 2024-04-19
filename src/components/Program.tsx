@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Text, Flex, Heading } from '@chakra-ui/react';
 import { FaLocationDot } from 'react-icons/fa6';
 import { CiCalendarDate } from 'react-icons/ci';
+import { FaHandshake } from 'react-icons/fa';
+import { GiLinkedRings } from 'react-icons/gi';
 
 function Program() {
 
@@ -19,8 +21,9 @@ function Program() {
 					width={['auto', null, null, null, '100%']}
 				>
 					<Box>
-						<Flex mb={2}>
-							<Heading size='md' mb={2}>Meet and Greet</Heading>
+						<Flex mb={2} alignItems={'center'} gap={4}>
+							<FaHandshake color='#99663f' />
+							<Heading size='md' mb={2}>MEET AND GREET</Heading>
 						</Flex>
 						<Flex alignItems={'center'} mb={2} gap={4}>
 							<CiCalendarDate />
@@ -44,8 +47,9 @@ function Program() {
 						<Text>11:00 PM - Closing</Text>
 					</Box>
 					<Box mt={[12, null, null, null, 0]}>
-						<Flex mb={2}>
-							<Heading size='md' mb={2}>Wedding Ceremony</Heading>
+						<Flex mb={2} alignItems={'center'} gap={4}>
+							<GiLinkedRings color='#fc9f08' />
+							<Heading size='md' mb={2}>WEDDING CEREMONY</Heading>
 						</Flex>
 						<Flex alignItems={'center'} mb={2} gap={4}>
 							<CiCalendarDate />

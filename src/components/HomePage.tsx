@@ -6,7 +6,6 @@ import {
 	Flex,
 	Text,
 	Button,
-	Link,
 	Modal,
 	ModalOverlay,
 	ModalContent,
@@ -14,7 +13,8 @@ import {
 	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
-	useDisclosure } from '@chakra-ui/react';
+	useDisclosure
+} from '@chakra-ui/react';
 import homepageImage from '../images/homepage.jpg';
 
 function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
@@ -23,9 +23,9 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 
 	useEffect(() => {
 		if (!isOpen) {
-		  onModalClose();
+			onModalClose();
 		}
-	  }, [isOpen, onModalClose]);
+	}, [isOpen, onModalClose]);
 
 	return (
 		<Box>
@@ -43,23 +43,23 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 					<ModalBody>
 						<Flex direction={'column'} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
 							<Box textAlign={'left'} mb={10}>
-								We are so excited to have you!
+                We are so excited to have you!
 							</Box>
 							<Box textAlign={'left'} mb={10}>
-								Thanks in advance for your RSVP. Please do so by&nbsp;
+                Thanks in advance for your RSVP. Please do so by&nbsp;
 								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>
 							</Box>
 							<Box textAlign={'left'} mb={10}>
-								We will be adding updates soon to our program, FAQS, registry, and photos.
+                We will be adding updates soon to our program, FAQS, registry, and photos.
 							</Box>
 							<Box textAlign={'left'} mb={10}>
-								Please add your email details to get updates.
+                Please add your email details to get updates.
 							</Box>
 							<Box textAlign={'left'} mb={1}>
-								Cheers,
+                Cheers,
 							</Box>
 							<Box textAlign={'left'}>
-								Yvonne & Sebastian
+                Yvonne & Sebastian
 							</Box>
 						</Flex>
 					</ModalBody>
@@ -72,7 +72,6 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 	);
 }
 
-
 const HomePage = () => {
 
 	const [imageLoaded, setImageLoaded] = React.useState(false);
@@ -80,7 +79,7 @@ const HomePage = () => {
 
 	const handleModalClose = () => {
 		if (rsvpRef.current) {
-		  rsvpRef.current.scrollIntoView({ behavior: 'smooth' });
+			rsvpRef.current.scrollIntoView({ behavior: 'smooth' });
 		}
 	};
 
@@ -116,7 +115,7 @@ const HomePage = () => {
 					fontSize={['2xl', null, null, '3xl']}
 					mb={0}
 				>
-					Friday, October 4th 2024
+          Friday, October 4th 2024
 				</Text>
 				<Text
 					textAlign={'center'}
@@ -124,7 +123,7 @@ const HomePage = () => {
 					fontSize={'2xl'}
 					mb={16}
 				>
-					Diani Beach, Kenya
+          Diani Beach, Kenya
 				</Text>
 				<Text
 					textAlign={'center'}
@@ -133,12 +132,19 @@ const HomePage = () => {
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}
 				</Text>
-				<Button variant={'fun'} width={48} ref={rsvpRef} fontWeight={'bold'}>
-					<Link
-						href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
-						isExternal
-						_hover={{ textDecoration: 'none' }}
-					>RSVP</Link>
+				<Button
+					as="a"
+					href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
+					target="_blank"
+					variant={'fun'}
+					width={48}
+					ref={rsvpRef}
+					fontWeight={'bold'}
+					bg={'rgba(255, 255, 255, 0.6)'}
+					borderColor={'rgba(209, 188, 183, 0.8)'}
+					_hover={{ textDecoration: 'none' }}
+				>
+          RSVP
 				</Button>
 			</Flex>}
 		</Flex>

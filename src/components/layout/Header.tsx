@@ -5,8 +5,8 @@ import {
 	Text,
 	Flex,
 	HStack,
-	Link,
 	Button,
+	Link,
 	IconButton,
 	useDisclosure,
 	Drawer,
@@ -152,15 +152,24 @@ export const Header: React.FC = () => {
 									</Link>
 								))}
 							</VStack>
-							<Button variant={'fun'} width={48} mr={12} alignSelf={'center'} mt={'auto'} color={'#907566'} bg={'transparent'} borderColor={'#907566'}>
-								<Link
-									href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
-									isExternal
-									_hover={{ textDecoration: 'none' }}
-								>RSVP</Link>
+							<Button
+								as="a"
+								href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing'
+								target="_blank"
+								variant={'fun'}
+								width={48}
+								mr={12}
+								alignSelf={'center'}
+								mt={'auto'}
+								color={'#907566'}
+								bg={'transparent'}
+								borderColor={'#907566'}
+								_hover={{ textDecoration: 'none', backgroundColor: 'rgba(209, 188, 183, 0.5)' }}
+							>
+                                RSVP
 							</Button>
-						</DrawerBody
-						></DrawerContent>
+						</DrawerBody>
+					</DrawerContent>
 				</Drawer>
 				<HStack
 					color={'backgrounds.100'}
@@ -178,8 +187,8 @@ export const Header: React.FC = () => {
 							style={({isActive}) => isActive ? styles.activeLink : styles.link}
 						>
 							{route.name}
-						</NavLink
-						>))}
+						</NavLink>
+					))}
 				</HStack>
 			</Flex>
 		</>
