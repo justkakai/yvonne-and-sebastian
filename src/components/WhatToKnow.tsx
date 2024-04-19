@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Flex, List, ListItem, ListIcon, Heading } from '@chakra-ui/react';
+import { Box, List, ListItem, ListIcon, Heading } from '@chakra-ui/react';
 import { MdCheckCircle, MdWarning } from 'react-icons/md';
+import Page from './layout/Page';
 
 function WhatToKnow() {
 	const dosAndDonts = [
@@ -47,8 +48,8 @@ function WhatToKnow() {
 	];
 
 	return (
-		<Box mt={12} px={[0, 4, 16, 24, 40]}>
-			<Flex direction={'column'} gap={10} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+		<Box mt={12}>
+			<Page>
 				{dosAndDonts.map(section => (
 					<Box key={section.id}>
 						<Heading size='md' mb={4}>{section.title}</Heading>
@@ -81,7 +82,7 @@ function WhatToKnow() {
 						</List>
 					</Box>
 				))}
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

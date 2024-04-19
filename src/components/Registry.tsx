@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Text, Flex, Image } from '@chakra-ui/react';
+import { Box, Text, Flex, Image, Heading } from '@chakra-ui/react';
 
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { FaPaypal } from 'react-icons/fa';
@@ -10,6 +10,7 @@ import { IoLogoVenmo } from 'react-icons/io5';
 
 import cashapp from '../images/Cashapp.jpg';
 import venmo from '../images/Venmo.jpg';
+import Page from './layout/Page';
 
 function Registry() {
 	const paymentMethods = [
@@ -68,7 +69,7 @@ function Registry() {
 
 	return (
 		<Box mt={12}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Page>
 				<Box textAlign={'left'}>
 					<Text mb={8}>Dear Friends and Family,</Text>
 					<Text mb={8}>As our wedding day nears, your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift.</Text>
@@ -76,9 +77,9 @@ function Registry() {
 					<Text mb={16}>Yvonne & Sebastian</Text>
 					{paymentMethods.map((method, index) => (
 						<Box key={index} mb={12}>
-							<Flex mt={8} mb={2} gap={2} alignItems={'center'}>
+							<Flex mt={8} mb={4} gap={3} alignItems={'center'}>
 								<method.icon color={method.color} />
-								<Text fontWeight={'bold'}>{method.title}</Text>
+								<Heading size='md'>{method.title}</Heading>
 							</Flex>
 							{method.details?.map((detail, i) => (
 								<Text key={i}>{detail}</Text>
@@ -95,7 +96,7 @@ function Registry() {
 						</Box>
 					))}
 				</Box>
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

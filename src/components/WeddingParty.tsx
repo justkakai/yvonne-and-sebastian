@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Flex, Text, Image } from '@chakra-ui/react';
+import { Box, Flex, Text, Image, Heading } from '@chakra-ui/react';
 
 import yvette from '../images/yvette.jpeg';
 import joanne from '../images/joanne.jpeg';
 import adeva from '../images/adeva.jpeg';
 import kakai from '../images/kakai2.jpg';
 import heart from '../images/heart.png';
+import Page from './layout/Page';
 
 const weddingParty = [
 	{
@@ -72,13 +73,7 @@ function WeddingParty() {
 
 	return (
 		<Box>
-			<Flex
-				direction={'column'}
-				px={[0, 4, 16, 24, 40]}
-				lineHeight={8}
-				fontSize={'lg'}
-				color={'#4a4a4a'}
-			>
+			<Page gap={0}>
 				<Text textAlign={'left'} mb={10}>Meet Our Wakandan BrideVengers!</Text>
 				<Text textAlign={'left'} mb={4}>As we begin our lifelong journey, we are blessed to have an extraordinary group of women as our bridesmaids, who are our chosen sisters, confidantes, and cheerleaders, accompanying us through every moment.</Text>
 				<Text textAlign={'left'} mb={16}>They each add joy, wisdom, and love to our lives, and we're excited to introduce these incredible women who will be walking down the aisle before us.</Text>
@@ -105,9 +100,10 @@ function WeddingParty() {
 								border={'2px solid gray'}
 								mb={4}
 							/>
-							<Text as={'b'}>
+							{/* <Text as={'b'} fontSize={'xl'}>
 								{entry.name}
-							</Text>
+							</Text> */}
+							<Heading size='md' mb={2}>{entry.name}</Heading>
 							<Text mb={6}>
 								{entry.role}
 							</Text>
@@ -117,7 +113,7 @@ function WeddingParty() {
 						</Flex>
 					))}
 				</Flex>
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

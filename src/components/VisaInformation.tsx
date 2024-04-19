@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Box, Flex, Link } from '@chakra-ui/react';
-// import { FaExternalLinkSquareAlt } from 'react-icons/fa';
+import { Box, Link } from '@chakra-ui/react';
+import Page from './layout/Page';
 
 function VisaInformation() {
 
 	return (
 		<Box height={'100vh'} mt={20}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Page>
 				<Box textAlign={'left'}>
 				People from African countries can travel visa-free to Kenya
 				</Box>
@@ -17,7 +17,7 @@ function VisaInformation() {
 						isExternal
 						color={'brown'}>here</Link>
 				</Box>
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

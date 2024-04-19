@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Flex, Image, Text, Box, Link, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { Flex, Image, Text, Box, Heading, Link, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { BiHeartCircle } from 'react-icons/bi';
 import image from '../images/accomodation.jpg';
+import Page from './layout/Page';
 /* import diamondsLeisure from '../images/diamonds-leisure.jpeg';
 import safariBeach from '../images/safari-beach.jpeg';
 import bahariDhow from '../images/bahari-dhow.jpeg'; */
@@ -33,7 +34,7 @@ function Accommodation() {
 
 	return (
 		<Box>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Page>
 				<Image
 					src={image}
 					borderRadius='full'
@@ -53,9 +54,7 @@ function Accommodation() {
 							<Box key={index}>
 								<Flex gap={4} justifyContent={'space-between'}>
 									<Box textAlign={'left'}>
-										<Text borderBottom={'1px solid grey'} mb={4} display='inline-block'>
-											{section.title}
-										</Text>
+										<Heading size='md' mb={4}>{section.title}</Heading>
 										<Text mb={2}>{section.description}</Text>
 										<List>
 											{section.items.map((item, itemIndex) => (
@@ -72,7 +71,7 @@ function Accommodation() {
 						<Box textAlign={'left'}>Please click <Link href='https://www.tripadvisor.com/Hotels-g775870-Diani_Beach_Ukunda_Coast_Province-Hotels.html' isExternal variant={'deco'}>here</Link> or <Link href='https://www.tripadvisor.com/VacationRentals-g775870-Reviews-Diani_Beach_Ukunda_Coast_Province-Vacation_Rentals.html' isExternal variant={'deco'}>here</Link> for more accommodation suggestions and <Link href='https://www.tripadvisor.com/Attractions-g775870-Activities-Diani_Beach_Ukunda_Coast_Province.html' isExternal variant={'deco'}>here</Link> on things to do in Diani. </Box>
 					</>
 				)}
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

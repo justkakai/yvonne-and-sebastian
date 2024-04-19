@@ -10,7 +10,7 @@ const styles: ChakraTheme['styles'] = {
 	global: {
 		body: {
 			bg: '#F9FAFF',
-			color: '#0A3254',
+			color: '#4a4a4a',
 			height: '100vh'
 		},
 		a: {
@@ -30,7 +30,7 @@ const colors: ChakraTheme['colors'] = {
 		200: '#9ddfc9',
 		300: '#78d1b4',
 		400: '#54c49f',
-		500: '#339E7A',
+		500: '#4a4a4a',
 		600: '#f3f3f3',
 		900: '#1a202c'
 	},
@@ -125,7 +125,7 @@ const components: ChakraTheme['components'] = {
 		variants: {
 			main: {
 				background: 'brand.400',
-				color: 'foregrounds.800'
+				color: 'brand.500'
 			},
 			fun: {
 				alignItems: 'center',
@@ -172,7 +172,7 @@ const components: ChakraTheme['components'] = {
 			}
 		},
 		defaultProps: {
-			colorScheme: 'brand'
+			color: 'brand.500'
 		}
 	},
 	Input: {

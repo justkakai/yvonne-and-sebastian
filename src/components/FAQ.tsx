@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Text, Flex, Button, Tooltip } from '@chakra-ui/react';
+import { Box, Text, Button, Tooltip } from '@chakra-ui/react';
 import { faq } from '../data/FAQ';
+import Page from './layout/Page';
 
 function FAQ() {
 	// This state will keep track of which email's tooltip is currently visible
@@ -34,7 +35,6 @@ function FAQ() {
 								<Button
 									onClick={() => handleCopy(emails[i])}
 									bg={'white'}
-									color={'#4a4a4a'}
 									border={'1px solid #ebeae8'}
 									my={1}
 									mr={1}
@@ -52,13 +52,13 @@ function FAQ() {
 
 	return (
 		<Box mt={12}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Page>
 				{faq.map((entry, i) => (
 					<Box key={i}>
-						<Text as={'b'}>
+						<Text as={'b'} display='inline-block' mb={2}>
 							{copyEmailFunctionality(entry.question)}
 						</Text>
-						<Text mb={i === faq.length-1 ? 40 : 0}>
+						<Text mb={i === faq.length-1 ? 40 : 3}>
 							{copyEmailFunctionality(entry.answer1)}
 						</Text>
 						{entry.answer2 && <Text>
@@ -69,7 +69,7 @@ function FAQ() {
 						</Text>}
 					</Box>
 				))}
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

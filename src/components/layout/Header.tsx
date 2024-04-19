@@ -24,8 +24,11 @@ export const Header: React.FC = () => {
 	// Updated styles for glass-like effect
 	const glassEffectStyle = {
 		bg: 'rgba(209, 188, 183, 0.1)', // Transparent background
-		backdropFilter: 'blur(10px)' // Blur effect
-		// boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' // Optional: subtle shadow to lift the element off the page
+		backdropFilter: 'blur(10px)', // Blur effect
+		_hover: {
+			bg: 'rgba(209, 188, 183, 0.2)',
+			backdropFilter: 'blur(10px)'
+		}
 	};
 
 	const styles = {
@@ -40,7 +43,7 @@ export const Header: React.FC = () => {
 		},
 		activeLink: {
 			color: '#4a4a4a',
-			backgroundColor: 'rgba(209, 188, 183, 0.7)',
+			backgroundColor: 'rgba(209, 188, 183, 0.6)',
 			textDecoration: 'none',
 			paddingTop: 4,
 			paddingBottom: 4,
@@ -64,6 +67,8 @@ export const Header: React.FC = () => {
 		<>
 			{/* Mobile Menu Icon at the top with glass-like effect */}
 			<Flex
+				onClick={onOpen}
+				cursor={'pointer'}
 				display={['flex', null, null, 'none']} // Only display in mobile view
 				alignItems={'center'}
 				justifyContent={'flex-start'}
@@ -72,22 +77,22 @@ export const Header: React.FC = () => {
 				pr={8}
 				pl={4}
 				borderRadius={40}
-				position="sticky" // Make the navigation bar sticky
-				top={4} // Stick to the top of the viewport
-				zIndex={2} // Ensures it is above other content
-				{...glassEffectStyle} // Apply glass effect styles
+				position="sticky"
+				top={4}
+				zIndex={2}
+				{...glassEffectStyle}
 			>
 				<IconButton
 					icon={<CiMenuFries size={20}/>}
 					bg={'transparent'}
 					_hover={{ bg: 'transparent' }}
-					color={'#4a4a4a'}
 					aria-label="Open Menu"
 					boxSize={0}
-					onClick={onOpen}
 					marginRight={1}
 				/>
-				<Text cursor={'pointer'} onClick={onOpen} fontSize={'md'} color={'#4a4a4a'}>MENU</Text>
+				<Text
+					fontSize={'md'}
+				>MENU</Text>
 			</Flex>
 			<Flex
 				alignItems={'center'}
@@ -98,8 +103,9 @@ export const Header: React.FC = () => {
 				<Text
 					fontFamily={'heading'}
 					fontSize={'5xl'}
-					color={'#4a4a4a'}
 					textAlign={'center'}
+					cursor={'pointer'}
+					onClick={() => window.location.href = '/'}
 				>Yvonne & Sebastian</Text>
 			</Flex>
 			<Flex

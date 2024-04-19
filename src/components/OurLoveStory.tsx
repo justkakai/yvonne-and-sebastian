@@ -1,11 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Flex, Text, Image } from '@chakra-ui/react';
+import { Box, Text, Image } from '@chakra-ui/react';
 import image1 from '../images/our-love-story-1.jpg';
 import image2 from '../images/our-love-story-2.png';
 import image3 from '../images/our-love-story-3.jpg';
 import image4 from '../images/our-love-story-4.jpg';
 import image5 from '../images/our-love-story-5.jpg';
+import Page from './layout/Page';
 
 function OurLoveStory() {
 	const storyParts = [
@@ -38,7 +39,7 @@ function OurLoveStory() {
 
 	return (
 		<Box mt={12}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
+			<Page>
 				{storyParts.map((part, index) => (
 					<React.Fragment key={index}>
 						<Image
@@ -53,7 +54,7 @@ function OurLoveStory() {
 						<Text>{part.text}</Text>
 					</React.Fragment>
 				))}
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

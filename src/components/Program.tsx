@@ -2,80 +2,67 @@ import React from 'react';
 import { Box, Text, Flex, Heading } from '@chakra-ui/react';
 import { FaLocationDot } from 'react-icons/fa6';
 import { CiCalendarDate } from 'react-icons/ci';
-import { FaHandshake } from 'react-icons/fa';
-import { GiLinkedRings } from 'react-icons/gi';
+import Page from './layout/Page';
 
 function Program() {
+	const events = [
+		{
+			title: 'Meet and greet',
+			date: 'October 3rd, 2024',
+			location: 'Diamonds Leisure Beach & Golf Resort',
+			schedule: [
+				{ time: '8:00 PM', activity: 'Guests Arrival' },
+				{ time: '9:00 PM', activity: 'Speeches' },
+				{ time: '10:15 PM', activity: 'Karaoke Party' },
+				{ time: '11:00 PM', activity: 'Closing' }
+			]
+		},
+		{
+			title: 'Wedding Ceremony',
+			date: 'October 4th, 2024',
+			location: 'Diamonds Leisure Beach & Golf Resort',
+			schedule: [
+				{ time: '3:30 PM', activity: 'Guests Arrival' },
+				{ time: '4:00 PM', activity: 'Wedding Ceremony' },
+				{ time: '6:30 PM', activity: 'Reception Begins' },
+				{ time: '9:00 PM', activity: 'Party Time' },
+				{ time: '10:00 PM', activity: 'Reception Ends' },
+				{ time: '11:00 PM', activity: 'After-Party' }
+			]
+		}
+	];
 
 	return (
-		<Box height={'100vh'}>
-			<Flex direction={'column'} gap={10} px={[0, 4, 16, 24, 40]} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
-				<Box textAlign={'left'}>
-					Please find below tentative programs for planning purposes.
-					The final programs will be sent closer to each event. We kindly ask for your patience on this.
+		<Box>
+			<Page>
+				<Box textAlign={'left'} mb={4}>
+                    Please find below tentative programs for planning purposes.
+                    The final programs will be sent closer to each event. We kindly ask for your patience on this.
 				</Box>
 				<Flex
 					textAlign={'left'}
-					direction={['column', null, null, null, 'row']}
-					justifyContent={['auto', null, null, null, 'space-between']}
-					width={['auto', null, null, null, '100%']}
+					direction={'column'}
+					justifyContent={'space-between'}
+					width={'100%'}
 				>
-					<Box>
-						<Flex mb={2} alignItems={'center'} gap={4}>
-							<FaHandshake color='#99663f' />
-							<Heading size='md' mb={2}>MEET AND GREET</Heading>
-						</Flex>
-						<Flex alignItems={'center'} mb={2} gap={4}>
-							<CiCalendarDate />
-							<Text
-								fontWeight={'bold'}
-							>
-						October 3rd, 2024
-							</Text>
-						</Flex>
-						<Flex alignItems={'center'} mb={6} gap={4}>
-							<FaLocationDot />
-							<Text
-								fontWeight={'bold'}
-							>
-						Diamonds Leisure Beach & Golf Resort
-							</Text>
-						</Flex>
-						<Text>8:00 PM - Guests Arrival</Text>
-						<Text>9:00 PM - Speeches</Text>
-						<Text>10:15 PM - Karaoke Party</Text>
-						<Text>11:00 PM - Closing</Text>
-					</Box>
-					<Box mt={[12, null, null, null, 0]}>
-						<Flex mb={2} alignItems={'center'} gap={4}>
-							<GiLinkedRings color='#fc9f08' />
-							<Heading size='md' mb={2}>WEDDING CEREMONY</Heading>
-						</Flex>
-						<Flex alignItems={'center'} mb={2} gap={4}>
-							<CiCalendarDate />
-							<Text
-								fontWeight={'bold'}
-							>
-						October 4th, 2024
-							</Text>
-						</Flex>
-						<Flex alignItems={'center'} mb={6} gap={4}>
-							<FaLocationDot />
-							<Text
-								fontWeight={'bold'}
-							>
-						Diamonds Leisure Beach & Golf Resort
-							</Text>
-						</Flex>
-						<Text>3:30 PM - Guests Arrival</Text>
-						<Text>4:00 PM - Wedding Ceremony</Text>
-						<Text>6:30 PM - Reception Begins</Text>
-						<Text>9:00 PM - Party Time</Text>
-						<Text>10:00 PM - Reception Ends</Text>
-						<Text>11:00 PM - After-Party</Text>
-					</Box>
+					{events.map((event, index) => (
+						<Box key={index} mt={index === 0 ? 0 : 12}>
+							<Heading size='md' mb={4}>{event.title}</Heading>
+							<Flex alignItems={'center'} mb={2} gap={4}>
+								<CiCalendarDate />
+								<Text fontWeight={'bold'}>{event.date}</Text>
+							</Flex>
+							<Flex alignItems={'center'} mb={6} gap={4}>
+								<FaLocationDot />
+								<Text fontWeight={'bold'}>{event.location}</Text>
+							</Flex>
+							{event.schedule.map((item, idx) => (
+								<Text key={idx}>{item.time} - {item.activity}</Text>
+							))}
+						</Box>
+					))}
 				</Flex>
-			</Flex>
+			</Page>
 		</Box>
 	);
 }

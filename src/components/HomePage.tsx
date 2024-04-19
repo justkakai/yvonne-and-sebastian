@@ -37,34 +37,42 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 				size={'xl'}
 			>
 				<ModalOverlay/>
-				<ModalContent px={{base: 2, md: 10}} py={10} bg={'modalbg'} width={{base: '90%', md: '100%'}}>
-					<ModalHeader textAlign={'center'} mb={8} fontWeight={'normal'} color={'#4a4a4a'}>Karibuni Sherehe! 🪅</ModalHeader>
+				<ModalContent
+					px={{base: 2, md: 10}}
+					py={10} bg={'modalbg'}
+					width={{base: '90%', md: '100%'}}
+				>
+					<ModalHeader
+						textAlign={'center'}
+						mb={8}
+						fontWeight={'normal'}
+					>
+						Karibuni Sherehe! 🍾
+					</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
-						<Flex direction={'column'} px={8} lineHeight={8} fontSize={'lg'} color={'#4a4a4a'}>
-							<Box textAlign={'left'} mb={10}>
-                We are so excited to have you!
-							</Box>
-							<Box textAlign={'left'} mb={10}>
-                Thanks in advance for your RSVP. Please do so by&nbsp;
+						<Flex
+							direction={'column'}
+							px={8}
+							lineHeight={8}
+							fontSize={'lg'}
+						>
+							<Box textAlign={'left'} mb={10}>We are so excited to have you!</Box>
+							<Box textAlign={'left'} mb={10}>Thanks in advance for your RSVP. Please do so by&nbsp;
 								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>
 							</Box>
-							<Box textAlign={'left'} mb={10}>
-                We will be adding updates soon to our program, FAQS, registry, and photos.
-							</Box>
-							<Box textAlign={'left'} mb={10}>
-                Please add your email details to get updates.
-							</Box>
-							<Box textAlign={'left'} mb={1}>
-                Cheers,
-							</Box>
-							<Box textAlign={'left'}>
-                Yvonne & Sebastian
-							</Box>
+							<Box textAlign={'left'} mb={10}>We will be adding updates soon to our program, FAQS, registry, and photos.</Box>
+							<Box textAlign={'left'} mb={10}>Please add your email details to get updates.</Box>
+							<Box textAlign={'left'} mb={1}>Cheers,</Box>
+							<Box textAlign={'left'}>Yvonne & Sebastian</Box>
 						</Flex>
 					</ModalBody>
 					<ModalFooter>
-						<Button variant={'fun'} fontWeight={'bold'} onClick={onClose}>Continue</Button>
+						<Button
+							variant={'fun'}
+							fontWeight={'bold'}
+							onClick={onClose}
+						>Continue</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>
@@ -98,7 +106,11 @@ const HomePage = () => {
 	const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
 	return (
-		<Flex direction={'column'} alignItems={'center'} gap={10}>
+		<Flex
+			direction={'column'}
+			alignItems={'center'}
+			gap={10}
+		>
 			{imageLoaded && <DeadlinePopup onModalClose={handleModalClose}/>}
 			<Image
 				src={homepageImage}
@@ -114,20 +126,16 @@ const HomePage = () => {
 					fontFamily={'heading'}
 					fontSize={['2xl', null, null, '3xl']}
 					mb={0}
-				>
-          Friday, October 4th 2024
-				</Text>
+				>Friday, October 4th 2024</Text>
 				<Text
 					textAlign={'center'}
 					fontFamily={'heading'}
-					fontSize={'2xl'}
+					fontSize={'xl'}
 					mb={16}
-				>
-          Diani Beach, Kenya
-				</Text>
+				>Diani Beach, Kenya</Text>
 				<Text
 					textAlign={'center'}
-					mb={2}
+					mb={1}
 					fontSize={'lg'}
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}
@@ -141,11 +149,8 @@ const HomePage = () => {
 					ref={rsvpRef}
 					fontWeight={'bold'}
 					bg={'rgba(255, 255, 255, 0.6)'}
-					borderColor={'rgba(209, 188, 183, 0.8)'}
 					_hover={{ textDecoration: 'none' }}
-				>
-          RSVP
-				</Button>
+				>RSVP</Button>
 			</Flex>}
 		</Flex>
 	);
