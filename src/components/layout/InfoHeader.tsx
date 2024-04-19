@@ -5,24 +5,24 @@ import { Wrap, WrapItem, Flex } from '@chakra-ui/react';
 export const InfoHeader: React.FC = () => {
 	const styles = {
 		link: {
-			fontWeight: 'bold',
 			color: '#4a4a4a',
+			// backgroundColor: 'rgba(209, 188, 183, 0.2)',
 			textDecoration: 'none',
 			paddingTop: 4,
 			paddingBottom: 4,
-			paddingLeft: 10,
-			paddingRight: 10
+			paddingLeft: 20,
+			paddingRight: 20,
+			borderRadius: 40
 		},
 		activeLink: {
-			fontWeight: 'bold',
 			color: '#4a4a4a',
-			backgroundColor: 'rgba(209, 188, 183, 0.2)',
+			backgroundColor: 'rgba(209, 188, 183, 0.4)',
+			textDecoration: 'none',
 			paddingTop: 4,
 			paddingBottom: 4,
-			paddingLeft: 10,
-			paddingRight: 10,
-			borderRadius: 10,
-			textDecoration: 'none'
+			paddingLeft: 20,
+			paddingRight: 20,
+			borderRadius: 40
 		}
 	};
 
@@ -44,12 +44,17 @@ export const InfoHeader: React.FC = () => {
 			<Wrap
 				color={'backgrounds.100'}
 				fontSize={'lg'}
+				fontWeight={'bold'}
 				spacing={4}  // Adjust spacing to ensure it doesn't push items to the next line
 				justify={['space-between', 'center']}
 				width={'100%'}
 			>
 				{infoRoutes.map((route, i) => (
-					<WrapItem key={`info_route_${i}`} width={['calc(50% - 2rem)', 'auto']}>
+					<WrapItem
+						key={`info_route_${i}`}
+						width={['auto', 'calc(50% - 2rem)', 'auto']}
+						// width={['calc(50% - 2rem)', 'auto']}
+					>
 						<NavLink to={route.path} style={({ isActive }) => (
 							isActive ? styles.activeLink : styles.link
 						)}>

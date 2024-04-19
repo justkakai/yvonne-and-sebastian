@@ -30,24 +30,23 @@ export const Header: React.FC = () => {
 
 	const styles = {
 		link: {
-			fontWeight: 'bold',
 			color: '#4a4a4a',
 			textDecoration: 'none',
 			paddingTop: 4,
 			paddingBottom: 4,
-			paddingLeft: 10,
-			paddingRight: 10
+			paddingLeft: 20,
+			paddingRight: 20,
+			borderRadius: 40
 		},
 		activeLink: {
-			fontWeight: 'bold',
 			color: '#4a4a4a',
-			backgroundColor: 'rgba(209, 188, 183, 0.5)', // Slightly more opaque for active links
+			backgroundColor: 'rgba(209, 188, 183, 0.7)',
+			textDecoration: 'none',
 			paddingTop: 4,
 			paddingBottom: 4,
-			paddingLeft: 10,
-			paddingRight: 10,
-			borderRadius: 10,
-			textDecoration: 'none'
+			paddingLeft: 20,
+			paddingRight: 20,
+			borderRadius: 40
 		}
 	};
 
@@ -169,7 +168,7 @@ export const Header: React.FC = () => {
 					justifyContent={'center'}
 					gap={4}
 					fontSize={'lg'}
-					fontWeight={'normal'}
+					fontWeight={'bold'}
 					display={['none', null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
 					{mainRoutes.map((route, i) => (
