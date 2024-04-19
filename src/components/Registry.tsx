@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Text, Flex, Image, Heading } from '@chakra-ui/react';
+import { Box, Text, Flex, Image } from '@chakra-ui/react';
 
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { FaPaypal } from 'react-icons/fa';
@@ -77,9 +77,9 @@ function Registry() {
 					<Text mb={16}>Yvonne & Sebastian</Text>
 					{paymentMethods.map((method, index) => (
 						<Box key={index} mb={12}>
-							<Flex mt={8} mb={4} gap={3} alignItems={'center'}>
+							<Flex mt={8} mb={3} gap={3} alignItems={'center'}>
 								<method.icon color={method.color} />
-								<Heading size='md'>{method.title}</Heading>
+								<Text as={'b'} fontSize={'xl'}>{method.title}</Text>
 							</Flex>
 							{method.details?.map((detail, i) => (
 								<Text key={i}>{detail}</Text>

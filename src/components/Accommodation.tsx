@@ -33,46 +33,44 @@ function Accommodation() {
 	];
 
 	return (
-		<Box>
-			<Page>
-				<Image
-					src={image}
-					borderRadius='full'
-					alt='Yvonne and Sebastian'
-					objectFit={'cover'}
-					boxSize={400}
-					loading='lazy'
-					alignSelf={'center'}
-					onLoad={() => setImageLoaded(true)}
-				/>
-				{imageLoaded && (
-					<>
-						<Box textAlign={'left'}>
+		<Page>
+			<Image
+				src={image}
+				borderRadius='full'
+				alt='Yvonne and Sebastian'
+				objectFit={'cover'}
+				boxSize={400}
+				loading='lazy'
+				alignSelf={'center'}
+				onLoad={() => setImageLoaded(true)}
+			/>
+			{imageLoaded && (
+				<>
+					<Box textAlign={'left'}>
                             The recommended accommodation is sorted out into two types; hotels and villas/apartments.
+					</Box>
+					{accommodationData.map((section, index) => (
+						<Box key={index}>
+							<Flex gap={4} justifyContent={'space-between'}>
+								<Box textAlign={'left'}>
+									<Heading size='md' mb={4}>{section.title}</Heading>
+									<Text mb={2}>{section.description}</Text>
+									<List>
+										{section.items.map((item, itemIndex) => (
+											<ListItem key={itemIndex}>
+												<ListIcon as={BiHeartCircle} color='green.500' />
+												{item}
+											</ListItem>
+										))}
+									</List>
+								</Box>
+							</Flex>
 						</Box>
-						{accommodationData.map((section, index) => (
-							<Box key={index}>
-								<Flex gap={4} justifyContent={'space-between'}>
-									<Box textAlign={'left'}>
-										<Heading size='md' mb={4}>{section.title}</Heading>
-										<Text mb={2}>{section.description}</Text>
-										<List>
-											{section.items.map((item, itemIndex) => (
-												<ListItem key={itemIndex}>
-													<ListIcon as={BiHeartCircle} color='green.500' />
-													{item}
-												</ListItem>
-											))}
-										</List>
-									</Box>
-								</Flex>
-							</Box>
-						))}
-						<Box textAlign={'left'}>Please click <Link href='https://www.tripadvisor.com/Hotels-g775870-Diani_Beach_Ukunda_Coast_Province-Hotels.html' isExternal variant={'deco'}>here</Link> or <Link href='https://www.tripadvisor.com/VacationRentals-g775870-Reviews-Diani_Beach_Ukunda_Coast_Province-Vacation_Rentals.html' isExternal variant={'deco'}>here</Link> for more accommodation suggestions and <Link href='https://www.tripadvisor.com/Attractions-g775870-Activities-Diani_Beach_Ukunda_Coast_Province.html' isExternal variant={'deco'}>here</Link> on things to do in Diani. </Box>
-					</>
-				)}
-			</Page>
-		</Box>
+					))}
+					<Box textAlign={'left'}>Please click <Link href='https://www.tripadvisor.com/Hotels-g775870-Diani_Beach_Ukunda_Coast_Province-Hotels.html' isExternal variant={'deco'}>here</Link> or <Link href='https://www.tripadvisor.com/VacationRentals-g775870-Reviews-Diani_Beach_Ukunda_Coast_Province-Vacation_Rentals.html' isExternal variant={'deco'}>here</Link> for more accommodation suggestions and <Link href='https://www.tripadvisor.com/Attractions-g775870-Activities-Diani_Beach_Ukunda_Coast_Province.html' isExternal variant={'deco'}>here</Link> on things to do in Diani. </Box>
+				</>
+			)}
+		</Page>
 	);
 }
 

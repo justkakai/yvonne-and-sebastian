@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React from 'react';
-import { Box, Flex, Text, Image, Heading } from '@chakra-ui/react';
+import { Box, Flex, Text, Image } from '@chakra-ui/react';
 
 import yvette from '../images/yvette.jpeg';
 import joanne from '../images/joanne.jpeg';
@@ -14,9 +14,9 @@ const weddingParty = [
 	{
 		id: 1,
 		name: 'Yvette Munee Mutua',
-		role: 'Maid of Honor',
+		role: 'Sister of the Bride / Maid of Honor',
 		image: yvette,
-		text: 'Sister of the bride / maid of honor. Catch me moonwalking on the dance floor. Diagnosed with joy so watch out because I’ll be  spreading infectious laughs. Can’t wait to celebrate yvonne and Seb’s love with all of you!'
+		text: 'Catch me moonwalking on the dance floor. Diagnosed with joy so watch out because I’ll be  spreading infectious laughs. Can’t wait to celebrate yvonne and Seb’s love with all of you!'
 	},
 	{
 		id: 2,
@@ -100,10 +100,7 @@ function WeddingParty() {
 								border={'2px solid gray'}
 								mb={4}
 							/>
-							{/* <Text as={'b'} fontSize={'xl'}>
-								{entry.name}
-							</Text> */}
-							<Heading size='md' mb={2}>{entry.name}</Heading>
+							<Text fontSize='xl' as={'b'}>{entry.name}</Text>
 							<Text mb={6}>
 								{entry.role}
 							</Text>

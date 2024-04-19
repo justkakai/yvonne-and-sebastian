@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
 			<Flex
 				onClick={onOpen}
 				cursor={'pointer'}
-				display={['flex', null, null, 'none']} // Only display in mobile view
+				display={['flex', null, null, null, 'none']} // Only display in mobile view
 				alignItems={'center'}
 				justifyContent={'flex-start'}
 				width={'fit-content'}
@@ -184,7 +184,7 @@ export const Header: React.FC = () => {
 					gap={4}
 					fontSize={'lg'}
 					fontWeight={'bold'}
-					display={['none', null, null, 'flex']} // Hide on mobile, show on medium and larger screens
+					display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
 					{mainRoutes.map((route, i) => (
 						<NavLink

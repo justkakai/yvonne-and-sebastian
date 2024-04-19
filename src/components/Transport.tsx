@@ -57,52 +57,50 @@ const Transport = () => {
 
 
 	return (
-		<Box>
-			<Page>
-				<Image
-					src={image}
-					borderRadius='full'
-					alt='Transport Options'
-					objectFit={'cover'}
-					boxSize={400}
-					loading='lazy'
-					alignSelf={'center'}
-					onLoad={() => setImageLoaded(true)}
-				/>
-				{imageLoaded && (
-					<>
-						<Box textAlign={'left'}>
+		<Page>
+			<Image
+				src={image}
+				borderRadius='full'
+				alt='Transport Options'
+				objectFit={'cover'}
+				boxSize={400}
+				loading='lazy'
+				alignSelf={'center'}
+				onLoad={() => setImageLoaded(true)}
+			/>
+			{imageLoaded && (
+				<>
+					<Box textAlign={'left'}>
                             These are the three recommended ways to travel to Diani.
+					</Box>
+					{transportOptions.map((option, index) => (
+						<Box key={index} mb={4} textAlign={'left'}>
+							<Flex gap={2} mb={4} alignItems={'center'}>
+								<option.icon color={option.color} />
+								<Heading size='md'>{option.title}</Heading>
+							</Flex>
+							<Text mb={2}>{option.description}</Text>
+							<List spacing={2}>
+								{option.links && option.links.map((link, linkIndex, array) => (
+									<ListItem key={linkIndex} mb={linkIndex === array.length-1 ? 6 : 0}>
+										<ListIcon as={IoIosPricetag} color='black' />
+										<Text display='inline-block'>Book with</Text>&nbsp;
+										<Link href={link.url} isExternal variant={'deco'} display={'inline-block'}>
+											{link.name}
+										</Link>
+									</ListItem>
+								))}
+								{option.cost && (
+									<ListItem >
+										<Text>Prices range from <Text as={'b'}>{option.cost.min}</Text> to <Text as={'b'}>{option.cost.max}</Text></Text>
+									</ListItem>
+								)}
+							</List>
 						</Box>
-						{transportOptions.map((option, index) => (
-							<Box key={index} mb={4} textAlign={'left'}>
-								<Flex gap={2} mb={4} alignItems={'center'}>
-									<option.icon color={option.color} />
-									<Heading size='md'>{option.title}</Heading>
-								</Flex>
-								<Text mb={2}>{option.description}</Text>
-								<List spacing={2}>
-									{option.links && option.links.map((link, linkIndex, array) => (
-										<ListItem key={linkIndex} mb={linkIndex === array.length-1 ? 6 : 0}>
-											<ListIcon as={IoIosPricetag} color='black' />
-											<Text display='inline-block'>Book with</Text>&nbsp;
-											<Link href={link.url} isExternal variant={'deco'} display={'inline-block'}>
-												{link.name}
-											</Link>
-										</ListItem>
-									))}
-									{option.cost && (
-										<ListItem >
-											<Text>Prices range from <Text as={'b'}>{option.cost.min}</Text> to <Text as={'b'}>{option.cost.max}</Text></Text>
-										</ListItem>
-									)}
-								</List>
-							</Box>
-						))}
-					</>
-				)}
-			</Page>
-		</Box>
+					))}
+				</>
+			)}
+		</Page>
 	);
 };
 
