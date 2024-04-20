@@ -131,7 +131,7 @@ const components: ChakraTheme['components'] = {
 				alignItems: 'center',
 				backgroundColor: 'rgba(240, 240, 240, 0.2)',
 				border: '1px solid',
-				borderColor: '#b5b3b3',
+				borderColor: 'rgba(0, 0, 0, 0.1)',
 				borderRadius: '16px',
 				boxSizing: 'border-box',
 				color: '#4a4a4a',

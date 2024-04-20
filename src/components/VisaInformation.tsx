@@ -25,9 +25,9 @@ function VisaInformation() {
 		'Nigerian': 'E-VISA',
 		'Moroccan': 'E-VISA',
 		'Ethiopian': 'ETA',
-		'Zimbabwe': 'ETA',
-		'Mozambique': 'E-VISA',
-		'Honduras': 'E-VISA',
+		'Zimbabwean': 'ETA',
+		'Mozambican': 'E-VISA',
+		'Honduran': 'E-VISA',
 		'Italian': 'E-VISA',
 		'Ghanaian': 'ETA',
 		'French': 'E-VISA',
@@ -41,7 +41,7 @@ function VisaInformation() {
 		  'The ETA is only valid for one trip and affected travelers must obtain a new ETA for each visit to Kenya',
 		  'Each adult visitor to the Republic of Kenya is required to submit E-VISA applications in their personal E citizen account. Parents can apply for their children in the parent\'s account.',
 		  'If you are traveling alone with children, border officials may require custody documents or notarized written consent from the other parent',
-		  'Valid passport for at least six (6) months after your planned date of arrival into Kenya, with at least two blank pages',
+		  'You must have a valid passport for at least six (6) months after your planned date of arrival into Kenya, with at least two blank pages',
 		  'Passport-type photo',
 		  'Contact information, email address and phone number',
 		  'Details of your arrival and departure itinerary',
@@ -54,24 +54,24 @@ function VisaInformation() {
 		touristRequirements: [
 		  'Travel itinerary (Details about places to visit if going as a tourist)',
 		  'Hotel bookings',
-		  'Return air ticket',
-		  'Clear Passport bio data page',
+		  'A return air ticket',
+		  'A clear passport bio data page',
 		  'A clear photograph',
-		  'Local ID or Passport for Dual citizens (at point of entry)'
+		  'A local ID or passport for dual citizens (at point of entry)'
 		],
 		applicationSteps: [
 		  'Click on Create an account',
 		  'Click on E-visa Application',
-		  'Fill Application form',
-		  'Pay Using Visa Card, Mastercard and other debit or credit cards',
+		  'Fill in the application form',
+		  'Pay Using a Visa Card, Mastercard and other debit or credit cards',
 		  'Await approval then download and print the eVisa from your eVisa account',
 		  'Present your printed eVisa to the immigration officer at the port of entry',
-		  'You can always check status of your application online'
+		  'You can always check the status of your application online'
 		],
 		customsAllowances: [
-		  '250 grams total of any tobacco products; Restricted to travellers 18 years and over',
-		  '1 litre of spirits; or 2 litres of wine; Restricted to travellers 18 years and over',
-		  '500mL total of perfume and eau de toilette, of which not more than 125mL may be perfume'
+		  '250 grams total of any tobacco products. This is restricted to travellers 18 years and over',
+		  '1 litre of spirits or 2 litres of wine. This is restricted to travellers 18 years and over',
+		  '500ml total of perfume and eau de toilette, of which not more than 125ml may be perfume'
 		],
 		healthInformation: [
 			'Malaria is widespread, except in Nairobi and places higher than 2500 meters above sea level. Consider taking anti-malarial medication. Ensure your accommodation is insect-proof. Use insect repellent.',
@@ -79,7 +79,7 @@ function VisaInformation() {
 			'You may be exposed to foodborne, waterborne. Drink only boiled or bottled water. Avoid raw or undercooked food.',
 			'It\'s illegal to work or volunteer without a valid work permit. To work in the charity sector, get a valid work permit through the Directorate of Immigration Services.',
 			'It\'s illegal to have same-sex relationships.',
-			'It\'s illegal to take photos of official buildings, get advice before taking photos. It&#39;s also illegal to destroy the local currency, smoke outside designated areas, possess ivory, and use single-use plastic bags.',
+			'It\'s illegal to take photos of official buildings, get advice before taking photos. It\'s also illegal to destroy the local currency, smoke outside designated areas, possess ivory, and use single-use plastic bags.',
 			'Kenya recognizes dual nationality but hasn\'t fully enacted laws around it.',
 			'All travellers arriving into the country through any point of entry shall no longer be required to show proof of either Covid-19 vaccination or a pre- departure Covid-19 test.',
 			'Any traveler arriving at any port of entry into Kenya with flu-like symptoms will be required to fill the passenger locator form on the \'jitenge\' platform: https://ears.health.go.ke/airline_registration/. They will also require to take a Covid-19 antigen test upon arrival at their own cost. These who turn out positive for antigen test will be required to take a further Covid-19 PCR test at their own cost. Those with severe symptoms shall thereafter be allowed to isolate as per the prevailing isolation requirements for mild, moderate and severe disease.',
@@ -113,14 +113,14 @@ function VisaInformation() {
 						</Text>)}
 					<Text textAlign={'left'} width={'100%'} mt={8}>The best option to use is to travel on a tourist Visa.</Text>
 					<Text textAlign={'left'} width={'100%'} mb={6}>Visit Visa is also an option which requires an invitation letter from a family member/ travel agent in Kenya.</Text>
-			  			<List spacing={3}>
+			  			<List spacing={3} width="100%">
 						{Object.entries(visaDetails).map(([key, values]) => (
-				  			<Box key={key} py={4} width="100%" textAlign={'left'}>
+				  			<Box key={key} py={4} textAlign={'left'}>
 								<Heading size='md' mb={4}>{formatTitle(key)}</Heading>
 								{values.map((item, index) => (
 									<ListItem key={index} display={'flex'} alignItems="start" mb={2} gap={1}>
 										<ListIcon as={MdCheckCircle} color="green.500" mt={2}/>
-										<Text textAlign={'left'}>{item}</Text>
+										<Text textAlign={'left'} wordBreak="break-word">{item}</Text>
 								  </ListItem>
 								))}
 				 		</Box>))}

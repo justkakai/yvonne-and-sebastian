@@ -39,7 +39,8 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 				<ModalOverlay/>
 				<ModalContent
 					px={{base: 2, md: 10}}
-					py={10} bg={'modalbg'}
+					py={10}
+					bg={'modalbg'}
 					width={{base: '90%', md: '100%'}}
 				>
 					<ModalHeader
