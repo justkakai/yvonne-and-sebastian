@@ -24,6 +24,7 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 		<Flex mt={40} p={4} justifyContent={'center'} gap={2} {...props}>
 			<Text fontSize="md" color="gray.500">Made by <Link color="green.500" onClick={onOpen}>Kakai</Link> with ❤️ <Text fontSize="md" color="gray.500" display={'inline'}>© {year}</Text></Text>
 			<Modal
+				autoFocus={false}
 				isOpen={isOpen}
 				onClose={onClose}
 			>

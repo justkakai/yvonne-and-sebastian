@@ -122,6 +122,7 @@ export const Header: React.FC = () => {
 					isOpen={isOpen}
 					placement='left'
 					onClose={onClose}
+					autoFocus={false}
 				>
 					<DrawerOverlay />
 					<DrawerContent>
