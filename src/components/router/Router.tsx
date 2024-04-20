@@ -10,20 +10,25 @@ import OurLoveStory from '../OurLoveStory';
 import Contact from '../Contact';
 import FAQ from '../FAQ';
 import NotFoundComponent from '../NotFoundComponent';
+import useScrollToTop from '../hooks/scrollToTop';
 
 /**
  * React router component switching to the currently displayed page
  */
-export const Router: React.FC = () => (
-	<Routes>
-		<Route path="/" element={<HomePage />} />
-		<Route path="/travel/*" element={<Travel />} />
-		<Route path="what-to-know" element={<WhatToKnow />} />
-		<Route path="wedding-info/*" element={<WeddingInformation />} />
-		<Route path="our-love-story" element={<OurLoveStory />} />
-		<Route path="contact" element={<Contact />} />
-		<Route path="faq" element={<FAQ />} />
-		<Route path="*" element={<NotFoundComponent />} />
-	</Routes>
-);
+export const Router: React.FC = () => {
+	useScrollToTop();
+
+	return (
+		<Routes>
+			<Route path="/" element={<HomePage />} />
+			<Route path="/travel/*" element={<Travel />} />
+			<Route path="what-to-know" element={<WhatToKnow />} />
+			<Route path="wedding-info/*" element={<WeddingInformation />} />
+			<Route path="our-love-story" element={<OurLoveStory />} />
+			<Route path="contact" element={<Contact />} />
+			<Route path="faq" element={<FAQ />} />
+			<Route path="*" element={<NotFoundComponent />} />
+		</Routes>
+	);
+};
 

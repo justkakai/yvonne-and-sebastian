@@ -105,11 +105,13 @@ export const Header: React.FC = () => {
 					fontSize={'5xl'}
 					textAlign={'center'}
 					cursor={'pointer'}
+					mb={[8, null, null, null, 0]}
 					onClick={() => window.location.href = '/'}
 				>Yvonne & Sebastian</Text>
 			</Flex>
 			<Flex
 				fontFamily={'body'}
+				display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				height={[8, null, null, 28]}
 				justifyContent={'center'}
 				width={'100%'}
@@ -181,7 +183,7 @@ export const Header: React.FC = () => {
 					color={'backgrounds.100'}
 					width={'100%'}
 					justifyContent={'center'}
-					gap={4}
+					// gap={4}
 					fontSize={'lg'}
 					fontWeight={'bold'}
 					display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens
