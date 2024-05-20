@@ -4,7 +4,7 @@ import { Box, Text, Flex, Image } from '@chakra-ui/react';
 
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { FaPaypal } from 'react-icons/fa';
-import { SiZelle, SiCashapp } from 'react-icons/si';
+import { /* SiZelle,  */SiCashapp } from 'react-icons/si';
 import { MdMobileScreenShare } from 'react-icons/md';
 import { IoLogoVenmo } from 'react-icons/io5';
 
@@ -25,14 +25,14 @@ function Registry() {
 				'BIC: NTSBDEB1XXX'
 			]
 		},
-		{
+		/* {
 			icon: SiZelle,
 			color: '#6C1CD3',
 			title: 'Zelle',
 			details: [
 				'Email: yvonnendindam@gmail.com'
 			]
-		},
+		}, */
 		{
 			icon: FaPaypal,
 			color: '#0175BA',
@@ -48,7 +48,7 @@ function Registry() {
 			color: '#38AF48',
 			title: 'MPESA',
 			details: [
-				'Cynthia Kibwage: 0712422964'
+				'Yvonne Ndinda Mutua: 0702042034'
 			]
 		},
 		{

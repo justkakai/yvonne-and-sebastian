@@ -22,7 +22,7 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 
 	return (
 		<Flex mt={40} p={4} justifyContent={'center'} gap={2} {...props}>
-			<Text fontSize="md" color="gray.500">Made by <Link color="green.500" onClick={onOpen}>Kakai</Link> with ❤️ <Text fontSize="md" color="gray.500" display={'inline'}>© {year}</Text></Text>
+			<Text fontSize="md" color="gray.500">Made by <Link color="black" onClick={onOpen}>Kakai</Link> with ❤️ <Text fontSize="md" color="gray.500" display={'inline'}>© {year}</Text></Text>
 			<Modal
 				autoFocus={false}
 				isOpen={isOpen}
@@ -35,7 +35,7 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 					width={{base: '90%', md: '100%'}}
 				>
 					<ModalHeader pr={{base: 8, md: 16}}>
-						<Text>Hey, i&apos;m Kakai & I do frontend stuff 🎨</Text>
+						<Text>Hey! I&apos;m Kakai & I do frontend stuff 🎨</Text>
 					</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pr={{base: 8, md: 16}}>

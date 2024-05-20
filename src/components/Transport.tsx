@@ -19,7 +19,7 @@ const Transport = () => {
 				{ name: 'Safarilink', url: 'https://www.flysafarilink.com/en' },
 				{ name: 'Fly ALS', url: 'https://www.flyals.com/' }
 			],
-			description: 'Book a flight from Wilson Airport (Nairobi) to Ukunda Airport (Diani). Each flight takes about one hour.',
+			description: 'Book a flight from Nairobi to Ukunda/Diani Airport. It is possible to fly into Mombasa (which is 1 hour 20 minutes away from Diani by car), however we recommend flying directly to Ukunda/Diani. Each flight takes about one hour. We suggest that you avoid booking flights that would require you to travel to the airport during peak rush hour times, that is 7-10am and 3:30-6pm. ',
 			color: 'green',
 			cost: {
 				min: '$40 / KSH 6,000',
@@ -30,7 +30,7 @@ const Transport = () => {
 			icon: MdCheckCircle,
 			title: 'Train',
 			links: [{ name: 'Madaraka Express', url: 'https://metickets.krc.co.ke/' }],
-			description: 'Take the high-speed Madaraka Express train from Nairobi to Mombasa, then an Uber or Taxi to Diani. The train leaves daily at 3pm or 10pm and takes about six hours.',
+			description: 'Take the high-speed Madaraka Express train from Nairobi to Mombasa, then an Uber or Taxi to Diani. The train leaves daily at 3pm or 10pm and takes about six hours. The tickets can only be purchased in person with cash or with MPESA.',
 			color: 'green',
 			cost: {
 				min: '$38 / KSH 5800',
@@ -38,19 +38,9 @@ const Transport = () => {
 			}
 		},
 		{
-			icon: MdCheckCircle,
-			title: 'Bus',
-			description: 'Enjoy a scenic bus trip from Nairobi to Diani, which takes about ten hours.',
-			color: 'green',
-			cost: {
-				min: '$16 / KSH 2,500',
-				max: '$26 / KSH 4,000'
-			}
-		},
-		{
 			icon: MdWarning,
 			title: 'Car Hire',
-			description: 'Hiring a car is possible but not recommended unless familiar with Kenyan roads.',
+			description: 'Hiring a car is possible but not recommended unless you are familiar with Kenyan roads.',
 			color: 'red'
 		}
 	];
@@ -58,6 +48,7 @@ const Transport = () => {
 
 	return (
 		<Page>
+			{/* <Heading size={'lg'} as='h3' fontWeight={'normal'}>Transport</Heading> */}
 			<Image
 				src={image}
 				borderRadius='full'
@@ -71,7 +62,7 @@ const Transport = () => {
 			{imageLoaded && (
 				<>
 					<Box textAlign={'left'}>
-                            These are the three recommended ways to travel to Diani.
+                            There are two recommended ways to travel to Diani.
 					</Box>
 					{transportOptions.map((option, index) => (
 						<Box key={index} mb={4} textAlign={'left'}>

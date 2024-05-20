@@ -54,14 +54,31 @@ export const Header: React.FC = () => {
 	};
 
 	const mainRoutes = [
-		{ path: '/', name: 'Home' },
-		{ path: '/travel', name: 'Travel' },
-		{ path: '/what-to-know', name: 'What to know' },
-		{ path: '/wedding-info', name: 'Wedding info' },
-		{ path: '/our-love-story', name: 'Our love story' },
-		{ path: '/contact', name: 'Contact' },
-		{ path: '/faq', name: 'FAQ' }
+		{ path: '/', name: 'Home', subRoutes: [] },
+		{ path: '/travel', name: 'Travel', subRoutes: [
+		  	{ path: '/travel/transport', name: 'Transport' },
+		  	{ path: '/travel/accommodation', name: 'Accommodation' },
+		  	{ path: '/travel/visa-info', name: 'Visa info' }
+		]},
+		{ path: '/what-to-know', name: 'What to know', subRoutes: [] },
+		{ path: '/wedding-info', name: 'Wedding info', subRoutes: [
+		  	{ path: '/wedding-info/program', name: 'Program' },
+		  	{ path: '/wedding-info/dress-code', name: 'Dress code' },
+		  	{ path: '/wedding-info/registry', name: 'Registry' },
+		  	{ path: '/wedding-info/wedding-party', name: 'Wedding party' }
+		]},
+		{ path: '/our-love-story', name: 'Our love story', subRoutes: [] },
+		{ path: '/contact', name: 'Contact', subRoutes: [] },
+		{ path: '/faq', name: 'FAQ', subRoutes: [] }
 	];
+
+	const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, route: typeof mainRoutes[number]) => {
+		if (route.subRoutes.length > 0) {
+			e.preventDefault(); // Prevent the link from navigating
+		} else {
+			onClose(); // Close the menu if it's a valid navigation
+		}
+	};
 
 	return (
 		<>
@@ -136,29 +153,67 @@ export const Header: React.FC = () => {
 							>Yvonne & Sebastian</Text>
 							<VStack align="start" p={4}>
 								{mainRoutes.map((route, i) => (
-									<Link
-										as={NavLink}
-										key={`main_route_${i}`}
-										to={route.path}
-										onClick={onClose}
-										width={'100%'}
-										fontSize={'lg'}
-										sx={{
-											pt: 2,
-											pb: 2,
-											pl: 2,
-											pr: 10,
-											color: '#907566',
-											_hover: {
-												bg: 'rgba(144, 117, 102, 0.1)',
-												color: '#907566',
-												borderRadius: 10,
-												textDecoration: 'none'
-											}
-										}}
-									>
-										{route.name}
-									</Link>
+									<>
+										<Link
+											as={NavLink}
+											key={`main_route_${i}`}
+											to={route.subRoutes.length === 0 ? route.path : '#'}
+											onClick={(e) => handleLinkClick(e, route)}
+											width={'100%'}
+											fontSize={'lg'}
+											sx={route.subRoutes.length === 0 ?
+												{
+													pt: 2,
+													pb: 2,
+													pl: 2,
+													pr: 10,
+													color: '#907566',
+													_hover: {
+														bg: 'rgba(144, 117, 102, 0.1)',
+														color: '#907566',
+														borderRadius: 10,
+														textDecoration: 'none'
+													}
+												}
+												:
+												{
+													pt: 2,
+													pb: 2,
+													pl: 2,
+													pr: 10,
+													color: '#907566',
+													_hover: {
+														textDecoration: 'none'
+													}
+												}}
+										>
+											{route.name}
+										</Link>
+										{route.subRoutes.length > 0 && route.subRoutes.map((subRoute) => (
+											<Link
+												as={NavLink}
+												key={subRoute.path}
+												to={subRoute.path}
+												onClick={onClose}
+												width={'100%'}
+												sx={{
+													pt: 2,
+													pb: 2,
+													pl: 8,
+													pr: 10,
+													color: '#907566',
+													_hover: {
+														bg: 'rgba(144, 117, 102, 0.1)',
+														color: '#907566',
+														borderRadius: 10,
+														textDecoration: 'none'
+													}
+												}}
+											>
+												◦ {subRoute.name}
+											</Link>
+										))}
+									</>
 								))}
 							</VStack>
 							<Button
@@ -184,7 +239,6 @@ export const Header: React.FC = () => {
 					color={'backgrounds.100'}
 					width={'100%'}
 					justifyContent={'center'}
-					// gap={4}
 					fontSize={'lg'}
 					fontWeight={'bold'}
 					display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens

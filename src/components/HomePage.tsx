@@ -15,7 +15,7 @@ import {
 	ModalCloseButton,
 	useDisclosure
 } from '@chakra-ui/react';
-import homepageImage from '../images/homepage.jpg';
+import homepageImage from '../images/homepage.jpeg';
 
 function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 
@@ -62,8 +62,8 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 							<Box textAlign={'left'} mb={10}>Thanks in advance for your RSVP. Please do so by&nbsp;
 								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>
 							</Box>
-							<Box textAlign={'left'} mb={10}>We will be adding updates soon to our program, FAQS, registry, and photos.</Box>
-							<Box textAlign={'left'} mb={10}>Please add your email details to get updates.</Box>
+							<Box textAlign={'left'} mb={10}>We plan to have a Zoom Q&A session in September. Details will follow soon.</Box>
+							{/* <Box textAlign={'left'} mb={10}>Please add your email details to get updates.</Box> */}
 							<Box textAlign={'left'} mb={1}>Cheers,</Box>
 							<Box textAlign={'left'}>Yvonne & Sebastian</Box>
 						</Flex>
@@ -119,6 +119,8 @@ const HomePage = () => {
 				objectFit={'cover'}
 				boxSize={700}
 				loading='lazy'
+				borderRadius={'lg'}
+				boxShadow={'lg'}
 				onLoad={() => setImageLoaded(true)}
 			/>
 			{imageLoaded && <Flex direction={'column'} gap={4} alignItems={'center'}>

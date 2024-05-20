@@ -14,7 +14,8 @@ export const faq = [
 	{
 		id: 3,
 		question: "Where are the ceremony and the reception taking place?",
-		answer1: "In Diani, it will be at Diamonds Leisure Beach & Golf Resort."
+		answer1: "The ceremony will take place in Diani at Diamonds Leisure Beach & Golf Resort.",
+		answer2: "The reception will take place on the beach."
 	},
 	{
 		id: 4,
@@ -59,7 +60,13 @@ export const faq = [
 	},
 	{
 		id: 12,
+		question: "What happens if I can't make it or want to cancel?",
+		answer1: "Please communicate to the wedding planner latest by September 4th 2024."
+	},
+	{
+		id: 13,
 		question: "What's the best way to contact you if I have additional questions?",
-		answer1: "Please check the websites for updates and to contact us please use the email: yswedding01@gmail.com"
+		/* answer1: "Please check the websites for updates and to contact us please use the email: yswedding01@gmail.com" */
+		answer1: "Please contact the wedding planner if you have any questions. (link to contact page)"
 	}
 ];
