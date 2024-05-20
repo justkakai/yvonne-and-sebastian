@@ -1,29 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import './styles/globals.css';
-import { ChakraProvider, Box, Flex} from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex } from '@chakra-ui/react';
 
 import theme from './styles/theme';
 import { Router } from './components/router/Router';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import officialBgImage from './images/official-background-image.jpg';
+import officialBgImage from './images/official-background-image-compressed.jpg';
 
 export const App: React.FC = () => {
 	const [bgImageLoaded, setBgImageLoaded] = useState(false);
 
 	useEffect(() => {
-		const img = new Image();
-		img.src = officialBgImage;
-		img.onload = () => setBgImageLoaded(true);
-	}, []);
+		const handleResize = () => {
+			const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
+			if (isLargeScreen && !bgImageLoaded) {
+				const img = new Image();
+				img.src = officialBgImage;
+				img.onload = () => setBgImageLoaded(true);
+			}
+		};
+
+		handleResize(); // Check the screen size on initial load
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [bgImageLoaded]);
 
 	return (
 		<ChakraProvider theme={theme}>
-			{bgImageLoaded && <Flex
+			<Flex
 				justifyContent={'center'}
 				bg={'white'}
 				style={{
-					backgroundImage: `url(${officialBgImage})`,
+					backgroundImage: bgImageLoaded ? `url(${officialBgImage})` : 'none',
 					backgroundAttachment: 'fixed',
 					backgroundSize: 'cover'
 				}}
@@ -35,12 +47,12 @@ export const App: React.FC = () => {
 					justifyContent={'center'}
 				>
 					<Box width={'100%'} px={10}>
-						<Header/>
-						<Router/>
+						<Header />
+						<Router />
 						<Footer />
 					</Box>
 				</Flex>
-			</Flex>}
+			</Flex>
 		</ChakraProvider>
 	);
 };
