@@ -2,7 +2,7 @@
 import React from 'react';
 import { Flex, Image, Text, Box, Heading, Link, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { BiHeartCircle } from 'react-icons/bi';
-import image from '../images/accomodation.jpg';
+import image from '../images/accomodation-compressed.jpg';
 import Page from './layout/Page';
 import diamondsLeisure from '../images/diamonds-leisure.jpeg';
 import bahariDhow from '../images/bahari-dhow.jpeg';
@@ -46,6 +46,7 @@ function Accommodation() {
 				alt='Yvonne and Sebastian'
 				objectFit={'cover'}
 				boxSize={400}
+				boxShadow={'lg'}
 				loading='lazy'
 				alignSelf={'center'}
 				onLoad={() => setImageLoaded(true)}

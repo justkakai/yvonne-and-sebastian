@@ -55,6 +55,7 @@ const Transport = () => {
 				alt='Transport Options'
 				objectFit={'cover'}
 				boxSize={400}
+				boxShadow={'lg'}
 				loading='lazy'
 				alignSelf={'center'}
 				onLoad={() => setImageLoaded(true)}

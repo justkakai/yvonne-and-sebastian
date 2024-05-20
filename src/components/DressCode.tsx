@@ -48,8 +48,6 @@ function DressCode() {
 			<Page gap={3}>
 				{dressCodes.map((dressCode, index) => (
 					<Grid
-						fontFamily={'body'}
-						fontWeight={'400'}
 						key={index}
 						templateColumns={{ base: '1fr', md: '1fr 1fr' }}
 						gap={6}
@@ -76,7 +74,7 @@ function DressCode() {
 									</Flex>
 								</GridItem>
 								<GridItem display="flex" alignItems="center">
-									<Text fontSize="xl" fontWeight="bold">
+									<Text fontSize="xl">
 										{dressCode.text}
 									</Text>
 								</GridItem>
@@ -84,7 +82,7 @@ function DressCode() {
 						) : (
 							<>
 								<GridItem display="flex" alignItems="center">
-									<Text fontSize="xl" fontWeight="bold">
+									<Text fontSize="xl">
 										{dressCode.text}
 									</Text>
 								</GridItem>

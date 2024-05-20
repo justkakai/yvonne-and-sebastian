@@ -15,7 +15,7 @@ import {
 	ModalCloseButton,
 	useDisclosure
 } from '@chakra-ui/react';
-import homepageImage from '../images/homepage.jpeg';
+import homepageImage from '../images/homepage-compressed.jpeg';
 
 function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 
@@ -117,7 +117,10 @@ const HomePage = () => {
 				src={homepageImage}
 				alt='Yvonne and Sebastian'
 				objectFit={'cover'}
-				boxSize={700}
+				objectPosition={'100% 60%'}
+				// boxSize={700}
+				height={400}
+				width={700}
 				loading='lazy'
 				borderRadius={'lg'}
 				boxShadow={'lg'}

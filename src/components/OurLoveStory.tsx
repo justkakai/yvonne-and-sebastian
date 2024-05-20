@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Text, Image } from '@chakra-ui/react';
 import image1 from '../images/our-love-story-1.jpg';
-import image2 from '../images/our-love-story-2.png';
+import image2 from '../images/our-love-story-2.jpg';
 import image3 from '../images/our-love-story-3.jpg';
 import image4 from '../images/our-love-story-4.jpg';
 import image5 from '../images/our-love-story-5.jpg';
@@ -48,6 +48,7 @@ function OurLoveStory() {
 							alt={part.imgAlt}
 							objectFit={'cover'}
 							boxSize={400}
+							boxShadow={'lg'}
 							loading='lazy'
 							alignSelf='center'
 						/>
