@@ -119,10 +119,10 @@ export const Header: React.FC = () => {
 			>
 				<Text
 					fontFamily={'heading'}
-					fontSize={'5xl'}
+					fontSize={['3xl', null, null, '4xl']}
 					textAlign={'center'}
 					cursor={'pointer'}
-					mb={[8, null, null, null, 0]}
+					mb={[6, null, null, null, 0]}
 					onClick={() => window.location.href = '/'}
 				>Yvonne & Sebastian</Text>
 			</Flex>

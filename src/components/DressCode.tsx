@@ -74,7 +74,7 @@ function DressCode() {
 									</Flex>
 								</GridItem>
 								<GridItem display="flex" alignItems="center">
-									<Text fontSize="xl">
+									<Text>
 										{dressCode.text}
 									</Text>
 								</GridItem>
@@ -82,7 +82,7 @@ function DressCode() {
 						) : (
 							<>
 								<GridItem display="flex" alignItems="center">
-									<Text fontSize="xl">
+									<Text>
 										{dressCode.text}
 									</Text>
 								</GridItem>

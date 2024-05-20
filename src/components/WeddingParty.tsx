@@ -144,7 +144,7 @@ function WeddingParty() {
 								transition="transform 0.3s, box-shadow 0.2s"
 							/>
 							<Text fontSize='xl' as={'b'}>{entry.name}</Text>
-							<Text mb={6}>
+							<Text mb={6} fontSize={'lg'}>
 								{entry.role}
 							</Text>
 						</Flex>
@@ -176,11 +176,11 @@ function WeddingParty() {
 								mb={4}
 								// mx="auto" // Center the image
 							/>
-							<Text fontWeight="bold" mb={4}>
+							<Text fontWeight="bold" fontSize={'lg'} mb={4}>
 								{selectedEntry.role}
 							</Text>
 							{selectedEntry.text ? (
-								<Text>{selectedEntry.text}</Text>
+								<Text fontSize={'lg'} lineHeight={9} p={4}>{selectedEntry.text}</Text>
 							) : ''}
 						</ModalBody>
 					</ModalContent>

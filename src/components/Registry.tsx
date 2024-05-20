@@ -79,7 +79,7 @@ function Registry() {
 						<Box key={index} mb={12}>
 							<Flex mt={8} mb={3} gap={3} alignItems={'center'}>
 								<method.icon color={method.color} />
-								<Text as={'b'} fontSize={'xl'}>{method.title}</Text>
+								<Text as={'b'}>{method.title}</Text>
 							</Flex>
 							{method.details?.map((detail, i) => (
 								<Text key={i}>{detail}</Text>

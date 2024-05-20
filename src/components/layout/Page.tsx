@@ -11,8 +11,8 @@ const Page: React.FC<PageProps> = ({ children, gap }) => (
 		direction='column'
 		gap={gap ?? 10}
 		px={[0, 4, 16, 24, 60]}
-		lineHeight={8}
-		fontSize='lg'
+		lineHeight={9}
+		fontSize={['xl', null, 'lg']}
 	>
 		{children}
 	</Flex>
