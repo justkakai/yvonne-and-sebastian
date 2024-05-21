@@ -154,7 +154,6 @@ const HomePage = () => {
 					width={48}
 					ref={rsvpRef}
 					fontWeight={'bold'}
-					bg={'rgba(255, 255, 255, 0.6)'}
 					_hover={{ textDecoration: 'none' }}
 				>RSVP</Button>
 			</Flex>}

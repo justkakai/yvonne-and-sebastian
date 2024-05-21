@@ -147,7 +147,7 @@ export const Header: React.FC = () => {
 					autoFocus={false}
 				>
 					<DrawerOverlay />
-					<DrawerContent>
+					<DrawerContent bg={'#F6F0EA'}>
 						<DrawerCloseButton color='#907566'/>
 						<DrawerBody mt={10} display={'flex'} flexDirection={'column'}>
 							<Text
@@ -233,10 +233,11 @@ export const Header: React.FC = () => {
 								mr={12}
 								alignSelf={'center'}
 								mt={'auto'}
+								fontWeight={'bold'}
 								color={'#907566'}
-								bg={'transparent'}
-								borderColor={'#907566'}
-								_hover={{ textDecoration: 'none', backgroundColor: 'rgba(209, 188, 183, 0.5)' }}
+								// bg={'transparent'}
+								// borderColor={'#907566'}
+								// _hover={{ textDecoration: 'none', backgroundColor: 'rgba(209, 188, 183, 0.5)' }}
 							>
                                 RSVP
 							</Button>
