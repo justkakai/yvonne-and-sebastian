@@ -71,7 +71,8 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 					<ModalFooter>
 						<Button
 							variant={'fun'}
-							fontWeight={'bold'}
+							color={'black'}
+							// fontWeight={'bold'}
 							onClick={onClose}
 						>Continue</Button>
 					</ModalFooter>
@@ -153,7 +154,9 @@ const HomePage = () => {
 					variant={'fun'}
 					width={48}
 					ref={rsvpRef}
-					fontWeight={'bold'}
+					// fontWeight={'bold'}
+					bg={'transparent'}
+					color={'black'}
 					_hover={{ textDecoration: 'none' }}
 				>RSVP</Button>
 			</Flex>}

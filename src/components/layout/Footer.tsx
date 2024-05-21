@@ -33,18 +33,20 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 					pt={8}
 					pl={8}
 					width={{base: '90%', md: '100%'}}
+					bg={'backgrounds.100'}
 				>
 					<ModalHeader pr={{base: 8, md: 16}}>
 						<Text>Hey! I&apos;m Kakai & I do frontend stuff 🎨</Text>
 					</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pr={{base: 8, md: 16}}>
-						<Text>Feel free to connect with me on <Link href="https://www.linkedin.com/in/wapenyik/" isExternal color='green'>LinkedIn</Link> or reach out to me on <Text as={'b'}>wapenyik@outlook.com</Text> for business-related enquiries.</Text>
+						<Text>Feel free to connect with me on <Link href="https://www.linkedin.com/in/wapenyik/" isExternal color='teal.600'>LinkedIn</Link> or reach out to me on <Text as={'b'}>wapenyik@outlook.com</Text> for business-related enquiries.</Text>
 					</ModalBody>
 					<ModalFooter>
 						<Button
 							variant={'fun'}
-							fontWeight={'bold'}
+							// fontWeight={'bold'}
+							color={'black'}
 							onClick={onClose}
 						>Close</Button>
 					</ModalFooter>

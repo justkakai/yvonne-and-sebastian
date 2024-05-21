@@ -9,7 +9,7 @@ const config: ThemeConfig = {
 const styles: ChakraTheme['styles'] = {
 	global: {
 		body: {
-			bg: '#F6F0EA',
+			bg: '#F9FAFF',
 			color: '#4a4a4a',
 			height: '100vh'
 		},
@@ -95,7 +95,7 @@ const semanticTokens: ChakraTheme['semanticTokens'] = {
 			_dark: 'foregrounds.200'
 		},
 		modalbg: {
-			default: 'brand.700',
+			default: 'backgrounds.100',
 			_dark: 'backgrounds.300'
 		},
 		modalborder: {
@@ -130,10 +130,10 @@ const components: ChakraTheme['components'] = {
 			},
 			fun: {
 				alignItems: 'center',
-				backgroundColor: 'rgba(210, 178, 157, 0.2)',
-				border: '1px solid',
-				borderColor: 'rgba(74, 74, 74, 0.2)',
-				borderRadius: '16px',
+				backgroundColor: 'backgrounds.100',
+				border: '2px solid',
+				borderColor: 'black',
+				borderRadius: 'lg',
 				boxSizing: 'border-box',
 				color: 'rgba(74, 74, 74, 0.9)',
 				cursor: 'pointer',
@@ -147,8 +147,9 @@ const components: ChakraTheme['components'] = {
 				textDecoration: 'none',
 				transition: 'all .2s',
 				userSelect: 'none',
-				touchAction: 'manipulation',
-				width: '50%'
+				touchAction: 'manipulation'
+				// width: '50%'
+				// boxShadow: 'rgb(6 22 33 / 30%) 0px 1px 2px'
 			},
 			alert: {
 				background: 'red.900',
