@@ -12,15 +12,15 @@ function WhatToKnow() {
 			items: [
 				'Do get all necessary vaccinations at least four weeks before your departure, including the yellow fever vaccination.',
 				'Do purchase travel insurance relevant to your trip.',
-				'Do note down international hospitals in Kenya, such as Nairobi Hospital, Diani Beach Hospital, Aga Khan Hospital Nairobi, and Aga Khan Hospital Mombasa, which offer 24-hour doctors on call and in-patient services. (insert google maps)',
+				'Do note down international hospitals in Kenya, such as Nairobi Hospital, Diani Beach Hospital, Aga Khan Hospital Nairobi, and Aga Khan Hospital Mombasa, which offer 24-hour doctors on call and in-patient services.',
 				'Do ask for permission before capturing photos of people or restricted areas.',
 				'Do bring adapters for devices with non-Type G plugs due to Nairobi\'s 240V electricity and British-style outlets.',
-				'Do check out here for places to stay and here for things to do in Nairobi.',
+				/* 'Do check out here for places to stay and here for things to do in Nairobi.', */
 				'Do download Uber (Taxi app) to use all over Kenya',
 				'Do always have small Kenyan money on you for taking a Tuk-tuk in Diani',
-				'MPESA',
+				'Do plan on registering for an MPESA account on your mobile phone.',
 				{
-					text: 'Do learn a few key phrases or words in the local language(s) to establish rapport with locals. Below are some that we recommend',
+					text: 'Do learn a few key phrases or words in the local language(s) to establish rapport with the locals. Below are some that we recommend',
 					phrases: [
 						'Niaje! = Hello',
 						'Pole = Sorry',
@@ -39,9 +39,14 @@ function WhatToKnow() {
 			title: 'Kenya DONTs',
 			items: [
 				'Don\'t drink tap water. Always drink bottled water.',
+				'Don\'t smoke outside designated areas.',
+				'Don\'t bring over 250 grams total of any tobacco products, 1 litre of spirits or 2 litres of wine or 500 ml total of perfume and eau de toilette, unless purchased at duty free.',
+				'Don\'t work or volunteer in any charity programs without a valid work permit. A valid work permit can be attained through the Directorate of Immigration Services.',
+				'Don\'t show public displays of affection like kissing, especially for same-sex relationships.',
 				'Don\'t sleep without a mosquito net.',
 				'Don\'t plan to drive in Kenya due to potential road hazards, including potholes and unexpected animal crossings, as well as limited visibility at night.',
-				'Don\'t bring any single-use plastic bags, single-use bottle or straws, they are legally banned.',
+				'Don\'t bring any single-use plastic bags, single-use bottle or straws. They are legally banned.',
+				'Don\'t plan to fish in national marine parks.',
 				'Don\'t disrespect local customs and traditions due to cultural differences.'
 			]
 		}

@@ -23,10 +23,11 @@ const Page: React.FC<PageProps> = ({ children, gap, fontsize, heading }) => (
 				pt={6}
 				pb={2}
 				fontFamily={'body'}
+				// fontWeight={'normal'}
 				textAlign="center"
 				display={['inline-block', null, 'none']}
 			>
-				<Flex alignItems={'center'}>
+				<Flex alignItems={'center'} gap={2}>
 					<IoIosArrowForward />{heading}
 				</Flex>
 			</Heading>

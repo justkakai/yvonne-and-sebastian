@@ -2,7 +2,9 @@
 import React from 'react';
 import { Image, Box, Flex, Text, Link, List, ListItem, ListIcon, Heading } from '@chakra-ui/react';
 import { IoIosPricetag } from 'react-icons/io';
-import { MdCheckCircle, MdWarning } from 'react-icons/md';
+/* import { MdCheckCircle, MdWarning } from 'react-icons/md'; */
+import { IoAirplaneOutline, IoCarSportOutline } from 'react-icons/io5';
+import { PiTrainLight } from 'react-icons/pi';
 
 import image from '../images/transport.jpg';
 import Page from './layout/Page';
@@ -12,14 +14,16 @@ const Transport = () => {
 
 	const transportOptions = [
 		{
-			icon: MdCheckCircle,
+			icon: IoAirplaneOutline,
 			title: 'Flight',
 			links: [
 				{ name: 'Jambo Jet', url: 'https://www.jambojet.com/en-US' },
 				{ name: 'Safarilink', url: 'https://www.flysafarilink.com/en' },
 				{ name: 'Fly ALS', url: 'https://www.flyals.com/' }
 			],
-			description: 'Book a flight from Nairobi to Ukunda/Diani Airport. It is possible to fly into Mombasa (which is 1 hour 20 minutes away from Diani by car), however we recommend flying directly to Ukunda/Diani. Each flight takes about one hour. We suggest that you avoid booking flights that would require you to travel to the airport during peak rush hour times, that is 7-10am and 3:30-6pm. ',
+			description1: 'Book a flight from Nairobi to Ukunda/Diani Airport.',
+			description2: 'It is possible to fly into Mombasa and then arrange for transportation to Diani by road, which would then be 1 hour 20 minutes away. However, we recommend flying directly to Ukunda/Diani. Each flight takes about one hour.',
+			description3: 'We suggest that you avoid booking flights that would require you to travel to the airport during peak rush hour times, that is 7-10am and 3:30-6pm.',
 			color: 'green',
 			cost: {
 				min: '$40 / KSH 6,000',
@@ -27,10 +31,12 @@ const Transport = () => {
 			}
 		},
 		{
-			icon: MdCheckCircle,
+			icon: PiTrainLight,
 			title: 'Train',
 			links: [{ name: 'Madaraka Express', url: 'https://metickets.krc.co.ke/' }],
-			description: 'Take the high-speed Madaraka Express train from Nairobi to Mombasa, then an Uber or Taxi to Diani. The train leaves daily at 3pm or 10pm and takes about six hours. The tickets can only be purchased in person with cash or with MPESA.',
+			description1: 'Take the high-speed Madaraka Express train from Nairobi to Mombasa, then an Uber or taxi to Diani.',
+			description2: 'The train leaves daily at 3pm or 10pm and takes about six hours to get to Mombasa.',
+			description3: 'The tickets can only be purchased in person with cash or with MPESA.',
 			color: 'green',
 			cost: {
 				min: '$38 / KSH 5800',
@@ -38,17 +44,17 @@ const Transport = () => {
 			}
 		},
 		{
-			icon: MdWarning,
+			icon: IoCarSportOutline,
 			title: 'Car Hire',
-			description: 'Hiring a car is possible but not recommended unless you are familiar with Kenyan roads.',
+			description1: 'Hiring a car is possible but NOT recommended unless you are familiar with Kenyan roads.',
+			description2: '',
+			description3: '',
 			color: 'red'
 		}
 	];
 
-
 	return (
 		<Page heading='Transport'>
-			{/* <Heading size={'lg'} as='h3' fontWeight={'normal'}>Transport</Heading> */}
 			<Image
 				src={image}
 				borderRadius='full'
@@ -63,7 +69,7 @@ const Transport = () => {
 			{imageLoaded && (
 				<>
 					<Box textAlign={'left'}>
-                            There are two recommended ways to travel to Diani.
+                        There are two recommended ways to travel to Diani.
 					</Box>
 					{transportOptions.map((option, index) => (
 						<Box key={index} mb={4} textAlign={'left'}>
@@ -71,10 +77,12 @@ const Transport = () => {
 								<option.icon color={option.color} />
 								<Heading size='md'>{option.title}</Heading>
 							</Flex>
-							<Text mb={2}>{option.description}</Text>
+							<Text mb={2}>{option.description1}</Text>
+							{option.description2 && <Text mb={2}>{option.description2}</Text>}
+							{option.description3 && <Text mb={2}>{option.description3}</Text>}
 							<List spacing={2}>
 								{option.links && option.links.map((link, linkIndex, array) => (
-									<ListItem key={linkIndex} mb={linkIndex === array.length-1 ? 6 : 0}>
+									<ListItem key={linkIndex} mb={linkIndex === array.length - 1 ? 6 : 0}>
 										<ListIcon as={IoIosPricetag} color='black' />
 										<Text display='inline-block'>Book with</Text>&nbsp;
 										<Link href={link.url} isExternal variant={'deco'} display={'inline-block'}>
@@ -83,7 +91,7 @@ const Transport = () => {
 									</ListItem>
 								))}
 								{option.cost && (
-									<ListItem >
+									<ListItem>
 										<Text>Prices range from <Text as={'b'}>{option.cost.min}</Text> to <Text as={'b'}>{option.cost.max}</Text></Text>
 									</ListItem>
 								)}

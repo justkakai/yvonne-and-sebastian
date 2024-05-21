@@ -140,4 +140,15 @@ a {
   .icon-car {
 	font-size: 42px; /* Adjusted size for visual consistency */
   }
+
+  .custom-link {
+	color: teal;
+	text-decoration: none;
+  }
+  
+  .custom-link:hover {
+	color: darkcyan;
+	text-decoration: underline;
+  }
+  
   

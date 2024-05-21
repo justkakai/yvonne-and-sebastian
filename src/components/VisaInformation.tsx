@@ -10,7 +10,10 @@ import {
 	ListIcon,
 	Heading
 } from '@chakra-ui/react';
-import { MdCheckCircle } from 'react-icons/md';
+// import { MdCheckCircle } from 'react-icons/md';
+import { IoCheckmark } from 'react-icons/io5';
+// import { FaCircle } from 'react-icons/fa';
+import { IoIosArrowForward } from 'react-icons/io';
 import Page from './layout/Page';
 
 function VisaInformation() {
@@ -41,12 +44,17 @@ function VisaInformation() {
 			'The eTA is only valid for one trip and affected travelers must obtain a new eTA for each visit to Kenya',
 			'Each adult visitor to the Republic of Kenya is required to submit e-VISA applications in their personal eCitizen account. Parents can apply for their children in the parent\'s account.',
 			'If you are traveling alone with children, border officials may require custody documents or notarized written consent from the other parent',
-			'You must have a valid passport for at least six (6) months after your planned date of arrival into Kenya, with at least two blank pages',
-			'Passport-type photo',
-			'Contact information, email address and phone number',
-			'Details of your arrival and departure itinerary',
-			'Accommodation booking confirmation(s)',
-			'Credit card, debit card, or other means of payment',
+			{
+				text: 'Visa requirements you need to fulfill include the following. You must have:',
+				visaRequirements: [
+					'a valid passport for at least six (6) months after your planned date of arrival into Kenya, with at least two blank pages',
+					'a passport-type photo',
+					'contact information i.e. email address and phone number',
+					'details of your arrival and departure itinerary',
+					'accommodation booking confirmation(s)',
+					'credit card, debit card, or other means of payment'
+				]
+			},
 			'The e-Visa printout must be presented at the port of entry.',
 			'It should take at least 3 working days to get your e-Visa.',
 			'There are no visas or eTAs offered on arrival'
@@ -109,10 +117,28 @@ function VisaInformation() {
 								<Heading size='md' mb={4}>{formatTitle(key)}</Heading>
 								{values.map((item, index) => (
 									<ListItem key={index} display={'flex'} alignItems="start" mb={2} gap={1}>
-										<ListIcon as={MdCheckCircle} color="green.500" mt={2} />
-										<Text textAlign={'left'} wordBreak="break-word">
-											{key === 'applicationSteps' ? renderTextWithHtml(item) : item}
-										</Text>
+										<ListIcon as={IoIosArrowForward} color="brand.500" mt={2} />
+										{typeof item === 'string' ? (
+											<Text textAlign={'left'} wordBreak="break-word">
+												{key === 'applicationSteps' ? renderTextWithHtml(item) : item}
+											</Text>
+										) : (
+											<Box>
+												<Text textAlign={'left'} wordBreak="break-word" mb={2}>
+													{item.text}
+												</Text>
+												<List pl={4}>
+													{item.visaRequirements.map((requirement, reqIndex) => (
+														<ListItem key={reqIndex} display={'flex'} alignItems="start" mb={2} gap={2}>
+															<ListIcon as={IoCheckmark} color="brand.500" mt={3} fontSize={'xs'} />
+															<Text textAlign={'left'} wordBreak="break-word">
+																{requirement}
+															</Text>
+														</ListItem>
+													))}
+												</List>
+											</Box>
+										)}
 									</ListItem>
 								))}
 							</Box>

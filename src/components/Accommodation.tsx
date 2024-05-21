@@ -13,7 +13,9 @@ function Accommodation() {
 	const accommodationData = [
 		{
 			title: 'Hotels',
-			description: 'Hotels in Diani have easy access to diverse food options and essential amenities like WiFi and air conditioning, ensuring a comfortable and worry-free stay.',
+			description1: 'Hotels in Diani have easy access to diverse food options and essential amenities like WiFi and air conditioning, ensuring a comfortable and worry-free stay.',
+			description2: 'Some of the hotels we would recommend include:',
+			description3: '',
 			items: [
 				'Diamonds Leisure Beach & Golf Resort (Wedding venue)',
 				'Baobab Beach Resort & Spa',
@@ -27,7 +29,9 @@ function Accommodation() {
 		},
 		{
 			title: 'Villas/Apartments',
-			description: 'Choosing villas or apartments in Diani allows international visitors to enjoy the perks of privacy with their own pool, cost-effectiveness, and the comfort of home-like amenities including a mini kitchen, WiFi, and air conditioning (limited) (kujipikia).',
+			description1: 'Choosing villas or apartments in Diani allows international visitors to enjoy the perks of privacy with their own pool, cost-effectiveness, and the comfort of home-like amenities including a mini kitchen, WiFi, and air conditioning (limited).',
+			description2: 'Some of the villas/apartments we would recommend include:',
+			description3: '',
 			items: [
 				'Bahari Dhow Beach Villas',
 				'Diani Wonder Apartments No.5',
@@ -63,7 +67,9 @@ function Accommodation() {
 									<Heading size='md' mb={4}>{section.title}</Heading>
 									<Flex gap={4} direction={{ base: 'column', md: 'row' }}>
 										<Box flex={1}>
-											<Text mb={2}>{section.description}</Text>
+											<Text mb={2}>{section.description1}</Text>
+											{section.description2 && <Text mb={2}>{section.description2}</Text>}
+											{section.description3 && <Text mb={2}>{section.description3}</Text>}
 											<List>
 												{section.items.map((item, itemIndex) => (
 													<ListItem key={itemIndex}>

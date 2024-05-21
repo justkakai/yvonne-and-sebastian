@@ -4,7 +4,7 @@ export const faq = [
 	{
 		id: 1,
 		question: "What should I wear? Is there a dress code?",
-		answer1: "The dress code for our ceremony in Diani is beach casual. Please check out some examples here link to tab dress-code."
+		answer1: "The dress code for our ceremony in Diani is beach casual. Please check out some examples <a href='/wedding-info/dress-code' class='custom-link'>here</a>."
 	},
 	{
 		id: 2,
@@ -35,18 +35,18 @@ export const faq = [
 	{
 		id: 7,
 		question: "Have you booked hotel room blocks for guests?",
-		answer1: "No, we did not. Guests can stay wherever they are comfortable in Diani. Please check out some examples here link to tab accommodation"
+		answer1: "No, we did not. Guests can stay wherever they are comfortable in Diani. Please check out some examples <a href='/travel/accommodation' class='custom-link'>here</a>."
 	},
 	{
 		id: 8,
 		question: "When is the RSVP deadline? Do I need to mail back my RSVP or can I do it online?",
 		answer1: "The RSVP deadline for the Diani ceremony is August 12th, 2024.",
-		answer2: "Please complete the online form provided."
+		answer2: "Please complete the <a href='https://docs.google.com/forms/d/e/1FAIpQLSeL1IHRq-kGY34Nt8SXMITSsQEjijph-P7m32TB_76_bh96Rw/viewform?usp=sharing' target='_blank' class='custom-link'>online form</a> provided."
 	},
 	{
 		id: 9,
 		question: "Should I bring a gift to your destination wedding?",
-		answer1: "Your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift. Please find more information here link to tab registry"
+		answer1: "Your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift. Please find more information <a href='/wedding-info/registry' class='custom-link'>here</a>."
 	},
 	{
 		id: 10,
@@ -61,12 +61,11 @@ export const faq = [
 	{
 		id: 12,
 		question: "What happens if I can't make it or want to cancel?",
-		answer1: "Please communicate to the wedding planner latest by September 4th 2024."
+		answer1: "Please <a href='/contact' class='custom-link'>communicate this to the wedding planner</a> by September 4th 2024 at the latest."
 	},
 	{
 		id: 13,
 		question: "What's the best way to contact you if I have additional questions?",
-		/* answer1: "Please check the websites for updates and to contact us please use the email: yswedding01@gmail.com" */
-		answer1: "Please contact the wedding planner if you have any questions. (link to contact page)"
+		answer1: "Please <a href='/contact' class='custom-link'>contact the wedding planner</a> if you have any questions."
 	}
 ];

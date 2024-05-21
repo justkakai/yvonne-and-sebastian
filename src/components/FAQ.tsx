@@ -50,6 +50,9 @@ function FAQ() {
 		);
 	};
 
+	// eslint-disable-next-line @typescript-eslint/naming-convention
+	const createMarkup = (html) => ({ __html: html });
+
 	return (
 		<Box mt={[0, null, 12]}>
 			<Page heading='FAQ'>
@@ -58,15 +61,9 @@ function FAQ() {
 						<Text as={'b'} display='inline-block' mb={2}>
 							{copyEmailFunctionality(entry.question)}
 						</Text>
-						<Text mb={i === faq.length-1 ? 40 : 3}>
-							{copyEmailFunctionality(entry.answer1)}
-						</Text>
-						{entry.answer2 && <Text>
-							{copyEmailFunctionality(entry.answer2)}
-						</Text>}
-						{entry.answer3 && <Text>
-							{copyEmailFunctionality(entry.answer3)}
-						</Text>}
+						<Text mb={i === faq.length - 1 ? 40 : 3} dangerouslySetInnerHTML={createMarkup(entry.answer1)} />
+						{entry.answer2 && <Text dangerouslySetInnerHTML={createMarkup(entry.answer2)} />}
+						{entry.answer3 && <Text dangerouslySetInnerHTML={createMarkup(entry.answer3)} />}
 					</Box>
 				))}
 			</Page>
