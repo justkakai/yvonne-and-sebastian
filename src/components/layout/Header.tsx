@@ -126,7 +126,6 @@ export const Header: React.FC = () => {
 					fontFamily={'heading'}
 					fontSize={['3xl', null, null, '4xl']}
 					textAlign={'center'}
-					// letterSpacing={1}
 					cursor={'pointer'}
 					mb={[6, null, null, null, 0]}
 					onClick={() => window.location.href = '/'}

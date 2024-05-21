@@ -6,12 +6,14 @@ import image from '../images/accomodation-compressed.jpg';
 import Page from './layout/Page';
 import diamondsLeisure from '../images/diamonds-leisure.jpeg';
 import bahariDhow from '../images/bahari-dhow.jpeg';
+import { MdOutlineHotel, MdOutlineHolidayVillage } from 'react-icons/md';
 
 function Accommodation() {
 	const [imageLoaded, setImageLoaded] = React.useState(false);
 
 	const accommodationData = [
 		{
+			icon: MdOutlineHotel,
 			title: 'Hotels',
 			description1: 'Hotels in Diani have easy access to diverse food options and essential amenities like WiFi and air conditioning, ensuring a comfortable and worry-free stay.',
 			description2: 'Some of the hotels we would recommend include:',
@@ -28,6 +30,7 @@ function Accommodation() {
 			caption: 'Diamonds Leisure Beach & Golf Resort'
 		},
 		{
+			icon: MdOutlineHolidayVillage,
 			title: 'Villas/Apartments',
 			description1: 'Choosing villas or apartments in Diani allows international visitors to enjoy the perks of privacy with their own pool, cost-effectiveness, and the comfort of home-like amenities including a mini kitchen, WiFi, and air conditioning (limited).',
 			description2: 'Some of the villas/apartments we would recommend include:',
@@ -64,7 +67,11 @@ function Accommodation() {
 						<Box key={index} mb={index === array.length-1 ? 4 : 8 }>
 							<Flex gap={4} justifyContent={'space-between'} alignItems={'flex-start'} direction={{ base: 'column', md: 'row' }}>
 								<Box flex={1} textAlign={'left'}>
-									<Heading size='md' mb={4}>{section.title}</Heading>
+									{/* <Heading size='md' mb={4} fontFamily={'body'}>{section.title}</Heading> */}
+									<Flex gap={2} mb={4} alignItems={'center'}>
+										<section.icon color={'brand.500'} size={32} />
+										<Heading size='md' fontFamily={'body'}>{section.title}</Heading>
+									</Flex>
 									<Flex gap={4} direction={{ base: 'column', md: 'row' }}>
 										<Box flex={1}>
 											<Text mb={2}>{section.description1}</Text>

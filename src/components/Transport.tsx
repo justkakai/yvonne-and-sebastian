@@ -75,7 +75,7 @@ const Transport = () => {
 						<Box key={index} mb={4} textAlign={'left'}>
 							<Flex gap={2} mb={4} alignItems={'center'}>
 								<option.icon color={'brand.500'} size={32} />
-								<Heading size='md'>{option.title}</Heading>
+								<Heading size='md' fontFamily={'body'}>{option.title}</Heading>
 							</Flex>
 							<Text mb={2}>{option.description1}</Text>
 							{option.description2 && <Text mb={2}>{option.description2}</Text>}

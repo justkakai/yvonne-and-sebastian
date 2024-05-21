@@ -26,6 +26,15 @@
 }
 
 @font-face {
+	font-family: "RadioGrotesk";
+	src: url("../../public/fonts/PPRadioGrotesk-Black.otf") format("woff"),
+		url("../../public/fonts/PPRadioGrotesk-Black.otf") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: "Woodland";
 	src: url("../../public/fonts/PPWoodland-Bold.otf") format("woff"),
 		url("../../public/fonts/PPWoodland-Bold.otf") format("woff2");

@@ -57,7 +57,7 @@ function WhatToKnow() {
 			<Page heading='What to know'>
 				{dosAndDonts.map(section => (
 					<Box key={section.id}>
-						<Heading size='md' mb={4}>{section.title}</Heading>
+						<Heading size='md' mb={4} fontFamily={'body'}>{section.title}</Heading>
 						<List spacing={3}>
 							{section.items.map((item, index) => {
 								if (typeof item === 'string') {

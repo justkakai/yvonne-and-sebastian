@@ -47,14 +47,14 @@ function Program() {
 				>
 					{events.map((event, index) => (
 						<Box key={index} mt={index === 0 ? 0 : 12}>
-							<Heading size='md' mb={4}>{event.title}</Heading>
-							<Flex alignItems={'center'} mb={2} gap={4}>
-								<CiCalendarDate />
-								<Text fontWeight={'bold'}>{event.date}</Text>
+							<Heading size='md' mb={4} fontFamily={'body'}>{event.title}</Heading>
+							<Flex alignItems={'start'} mb={2} gap={4}>
+								<Box mt={2}><CiCalendarDate /></Box>
+								<Text>{event.date}</Text>
 							</Flex>
-							<Flex alignItems={'center'} mb={6} gap={4}>
-								<FaLocationDot />
-								<Text fontWeight={'bold'}>{event.location}</Text>
+							<Flex alignItems={'start'} mb={6} gap={4}>
+								<Box mt={2}><FaLocationDot /></Box>
+								<Text>{event.location}</Text>
 							</Flex>
 							{event.schedule.map((item, idx) => (
 								<Text key={idx}>{item.time} - {item.activity}</Text>

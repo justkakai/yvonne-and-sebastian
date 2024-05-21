@@ -114,7 +114,7 @@ function VisaInformation() {
 					<List spacing={3} width="100%">
 						{Object.entries(visaDetails).map(([key, values]) => (
 							<Box key={key} py={4} textAlign={'left'}>
-								<Heading size='md' mb={4}>{formatTitle(key)}</Heading>
+								<Heading size='md' mb={4} fontFamily={'body'}>{formatTitle(key)}</Heading>
 								{values.map((item, index) => (
 									<ListItem key={index} display={'flex'} alignItems="start" mb={2} gap={1}>
 										<ListIcon as={IoIosArrowForward} color="brand.500" mt={2} />
