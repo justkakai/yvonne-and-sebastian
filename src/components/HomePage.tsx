@@ -135,9 +135,9 @@ const HomePage = () => {
 				>Friday, October 4th 2024</Text>
 				<Text
 					textAlign={'center'}
-					fontFamily={'heading'}
+					fontFamily={'body'}
 					fontSize={'xl'}
-					mb={16}
+					mb={8}
 				>Diani Beach, Kenya</Text>
 				<Text
 					textAlign={'center'}

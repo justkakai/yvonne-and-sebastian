@@ -6,7 +6,8 @@ import theme from './styles/theme';
 import { Router } from './components/router/Router';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import officialBgImage from './images/official-background-image-compressed.jpg';
+// import officialBgImage from './images/official-background-image-compressed.jpg';
+import officialBgImage from './images/official-background-image-4.png';
 
 export const App: React.FC = () => {
 	const [bgImageLoaded, setBgImageLoaded] = useState(false);
@@ -43,7 +44,7 @@ export const App: React.FC = () => {
 				<Flex
 					width={{ base: '100%', md: '80%' }}
 					pt={[4, null, null, 20]}
-					bg={['rgb(255, 255, 255)', null, null, 'rgba(255, 255, 255, 1)']}
+					bg={['rgb(255, 255, 255)', null, null, 'rgba(255, 255, 255, 0.95)']}
 					justifyContent={'center'}
 				>
 					<Box width={'100%'} px={10}>

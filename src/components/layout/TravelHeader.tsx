@@ -8,21 +8,23 @@ export const TravelHeader: React.FC = () => {
 		link: {
 			color: 'brand.500',
 			textDecoration: 'none',
+			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
 			paddingRight: 20,
-			borderRadius: 40
+			borderRadius: 4
 		},
 		activeLink: {
 			color: 'brand.500',
 			backgroundColor: 'rgba(209, 188, 183, 0.3)',
 			textDecoration: 'none',
+			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
 			paddingRight: 20,
-			borderRadius: 40
+			borderRadius: 4
 		}
 	};
 

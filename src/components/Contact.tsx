@@ -10,11 +10,11 @@ function Contact() {
 		<Box mt={[0, null, 12]}>
 			<Page heading='Contact'>
 				<Box>
-					<Text fontSize="2xl" fontWeight="bold" mb={8}>
+					<Text fontSize="xl" fontWeight="bold" mb={4}>
                         Suzzie
 					</Text>
 					<Text mb={8}>
-                        Suzzie is the wedding planner. Feel free to message her <Link href="https://wa.me/254724826188" isExternal color="teal.500">here</Link> for more information.
+                        Suzzie is the wedding planner. Feel free to message her <Link href="https://wa.me/254724826188" isExternal color="teal.500">here</Link> for any questions or to make a cancellation.
 					</Text>
 					<Image
 						src={suzzie}

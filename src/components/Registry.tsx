@@ -40,7 +40,7 @@ function Registry() {
 			details: [
 				'Email: bakulube@yahoo.co.uk',
 				'Username: YMutua',
-				'Please send as Friends and Family option when sending to reduce extra charges.'
+				'Please go for the Friends and Family option when sending to reduce extra charges.'
 			]
 		},
 		{
@@ -74,9 +74,9 @@ function Registry() {
 					<Text mb={8}>Dear Friends and Family,</Text>
 					<Text mb={8}>As our wedding day nears, your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift.</Text>
 					<Text mb={2}>With love,</Text>
-					<Text mb={16}>Yvonne & Sebastian</Text>
+					<Text mb={10}>Yvonne & Sebastian</Text>
 					{paymentMethods.map((method, index) => (
-						<Box key={index} mb={12}>
+						<Box key={index} mb={10}>
 							<Flex mt={8} mb={3} gap={3} alignItems={'center'}>
 								<method.icon color={method.color} />
 								<Text as={'b'}>{method.title}</Text>

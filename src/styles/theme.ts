@@ -3,7 +3,7 @@ import type { ChakraTheme, ThemeConfig } from '@chakra-ui/react';
 
 const config: ThemeConfig = {
 	initialColorMode: 'light',
-	useSystemColorMode: true
+	useSystemColorMode: false
 };
 
 const styles: ChakraTheme['styles'] = {
@@ -114,7 +114,7 @@ const semanticTokens: ChakraTheme['semanticTokens'] = {
 
 const fonts: ChakraTheme['fonts'] = {
 	heading: '"Fragment", sans-serif',
-	body: '"Neue-Montreal", sans-serif'
+	body: '"RadioGrotesk", sans-serif'
 };
 
 const components: ChakraTheme['components'] = {

@@ -74,7 +74,7 @@ const Transport = () => {
 					{transportOptions.map((option, index) => (
 						<Box key={index} mb={4} textAlign={'left'}>
 							<Flex gap={2} mb={4} alignItems={'center'}>
-								<option.icon color={option.color} />
+								<option.icon color={'brand.500'} size={32} />
 								<Heading size='md'>{option.title}</Heading>
 							</Flex>
 							<Text mb={2}>{option.description1}</Text>

@@ -7,17 +7,35 @@
 	font-display: swap;
 }
 
-/* @font-face {
+@font-face {
 	font-family: "Fragment";
 	src: url("../../public/fonts/PPFragment-GlareLight.otf") format("woff"),
 		url("../../public/fonts/PPFragment-GlareLight.otf") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
-} */
+}
 
 @font-face {
-	font-family: "Hatton-Medium";
+	font-family: "RadioGrotesk";
+	src: url("../../public/fonts/PPRadioGrotesk-Regular.otf") format("woff"),
+		url("../../public/fonts/PPRadioGrotesk-Regular.otf") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Woodland";
+	src: url("../../public/fonts/PPWoodland-Bold.otf") format("woff"),
+		url("../../public/fonts/PPWoodland-Bold.otf") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hatton";
 	src: url("../../public/fonts/PPHatton-Medium.otf") format("woff"),
 		url("../../public/fonts/PPHatton-Medium.otf") format("woff2");
 	font-weight: 400;
@@ -26,7 +44,7 @@
 }
 
 @font-face {
-	font-family: "Hatton-Bold";
+	font-family: "Hatton";
 	src: url("../../public/fonts/PPHatton-Bold.otf") format("woff"),
 		url("../../public/fonts/PPHatton-Bold.otf") format("woff2");
 	font-weight: 700;
@@ -35,7 +53,7 @@
 }
 
 @font-face {
-	font-family: "Hatton-Ultralight";
+	font-family: "Hatton";
 	src: url("../../public/fonts/PPHatton-Ultralight.otf") format("woff"),
 		url("../../public/fonts/PPHatton-Ultralight.otf") format("woff2");
 	font-weight: 200;
@@ -62,7 +80,7 @@
 }
 
 @font-face {
-	font-family: "LaBelleAurore-Regular";
+	font-family: "LaBelleAurore";
 	src: url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype"),
 		url("../../public/fonts/LaBelleAurore-Regular.ttf") format("truetype");
 	font-weight: 400;
@@ -71,7 +89,25 @@
 }
 
 @font-face {
-	font-family: "Pangaia-Medium";
+	font-family: "PPRightSerif";
+	src: url("../../public/fonts/PPRightSerif-Medium.otf") format("woff"),
+		url("../../public/fonts/PPRightSerif-Medium.otf") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Telegraf";
+	src: url("../../public/fonts/PPTelegraf-Regular.otf") format("woff"),
+		url("../../public/fonts/PPTelegraf-Regular.otf") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Pangaia";
 	src: url("../../public/fonts/PPPangaia-Medium.otf") format("woff"),
 		url("../../public/fonts/PPPangaia-Medium.otf") format("woff2");
 	font-weight: 400;

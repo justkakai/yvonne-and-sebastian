@@ -13,17 +13,17 @@ const dressCodes = [
 	{
 		image: dresscode1,
 		text: 'Flowy dresses and light suits in shades of blue and green for a refreshing oceanic feel.',
-		colors: ['#518B68', '#ABC388', '#EDE1D1', '#B56F46', '#212029']
+		colors: ['#518B68', '#ABC388', '#EDE1D1', '#B56F46', '#384F39']
 	},
 	{
 		image: dresscode2,
 		text: 'Smart casual outfits perfect for a breezy evening by the beach.',
-		colors: ['#283F06', '#718795', '#D2B29D', '#A58B74', '#593128']
+		colors: ['#283F06', '#718795', '#D2B29D', '#A58B74', '#5C694F']
 	},
 	{
 		image: dresscode3,
 		text: 'Light fabrics and pastel colors to keep you cool and stylish during the sunny outdoor ceremony.',
-		colors: ['#C3D1BE', '#AD916D', '#DBD8D2', '#88543E', '#343922']
+		colors: ['#C3D1BE', '#AD916D', '#DBD8D2', '#818B75', '#343922']
 	},
 	{
 		image: dresscode4,

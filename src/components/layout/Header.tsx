@@ -37,21 +37,23 @@ export const Header: React.FC = () => {
 		link: {
 			color: '#4a4a4a',
 			textDecoration: 'none',
+			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
 			paddingRight: 20,
-			borderRadius: 40
+			borderRadius: 4
 		},
 		activeLink: {
 			color: '#4a4a4a',
 			backgroundColor: 'rgba(209, 188, 183, 0.6)',
 			textDecoration: 'none',
+			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
 			paddingRight: 20,
-			borderRadius: 40
+			borderRadius: 4
 		}
 	};
 
@@ -124,6 +126,7 @@ export const Header: React.FC = () => {
 					fontFamily={'heading'}
 					fontSize={['3xl', null, null, '4xl']}
 					textAlign={'center'}
+					// letterSpacing={1}
 					cursor={'pointer'}
 					mb={[6, null, null, null, 0]}
 					onClick={() => window.location.href = '/'}
