@@ -88,8 +88,8 @@ function VisaInformation() {
 	const renderTextWithHtml = (text) => <span dangerouslySetInnerHTML={{ __html: text }} />;
 
 	return (
-		<Box mt={20}>
-			<Page>
+		<Box>
+			<Page heading='Visa Information'>
 				<VStack spacing={4}>
 					<Select placeholder="Select your nationality" onChange={handleChange}>
 						{Object.keys(visaInfo).map(country => (

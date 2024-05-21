@@ -68,8 +68,8 @@ function Registry() {
 	];
 
 	return (
-		<Box mt={12}>
-			<Page>
+		<Box mt={[0, null, 12]}>
+			<Page heading='Registry'>
 				<Box textAlign={'left'}>
 					<Text mb={8}>Dear Friends and Family,</Text>
 					<Text mb={8}>As our wedding day nears, your presence is present enough, but should you wish to bring a gift to our wedding, we are accepting only a cash gift.</Text>

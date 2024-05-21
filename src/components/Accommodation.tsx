@@ -39,7 +39,7 @@ function Accommodation() {
 	];
 
 	return (
-		<Page>
+		<Page heading='Accommodation'>
 			<Image
 				src={image}
 				borderRadius='full'

@@ -41,6 +41,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 					px={{base: 2, md: 10}}
 					py={10}
 					bg={'modalbg'}
+					fontSize={'lg'}
 					width={{base: '90%', md: '100%'}}
 				>
 					<ModalHeader
@@ -56,7 +57,6 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 							direction={'column'}
 							px={8}
 							lineHeight={8}
-							fontSize={'lg'}
 						>
 							<Box textAlign={'left'} mb={10}>We are so excited to have you!</Box>
 							<Box textAlign={'left'} mb={10}>Thanks in advance for your RSVP. Please do so by&nbsp;

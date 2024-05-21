@@ -16,14 +16,16 @@ import {
 	DrawerCloseButton,
 	VStack
 } from '@chakra-ui/react';
-import { CiMenuFries } from 'react-icons/ci';
+import { IoIosMenu } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+
 
 export const Header: React.FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	// Updated styles for glass-like effect
 	const glassEffectStyle = {
-		bg: 'rgba(209, 188, 183, 0.1)', // Transparent background
+		bg: 'rgba(209, 188, 183, 0.3)', // Transparent background
 		backdropFilter: 'blur(10px)', // Blur effect
 		_hover: {
 			bg: 'rgba(209, 188, 183, 0.2)',
@@ -88,28 +90,29 @@ export const Header: React.FC = () => {
 				cursor={'pointer'}
 				display={['flex', null, null, null, 'none']} // Only display in mobile view
 				alignItems={'center'}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				width={'fit-content'}
 				py={2}
-				pr={8}
+				pr={4}
 				pl={4}
 				borderRadius={40}
 				position="sticky"
 				top={4}
 				zIndex={2}
+				height={12}
 				{...glassEffectStyle}
 			>
 				<IconButton
-					icon={<CiMenuFries size={20}/>}
+					icon={<IoIosMenu size={20} color='grey'/>}
 					bg={'transparent'}
 					_hover={{ bg: 'transparent' }}
 					aria-label="Open Menu"
 					boxSize={0}
 					marginRight={1}
 				/>
-				<Text
-					fontSize={'md'}
-				>MENU</Text>
+				{/* <Text
+					fontSize={'lg'} fontWeight={'bold'}
+				>MENU</Text> */}
 			</Flex>
 			<Flex
 				alignItems={'center'}
@@ -196,6 +199,7 @@ export const Header: React.FC = () => {
 												to={subRoute.path}
 												onClick={onClose}
 												width={'100%'}
+												fontSize={'lg'}
 												sx={{
 													pt: 2,
 													pb: 2,
@@ -210,7 +214,9 @@ export const Header: React.FC = () => {
 													}
 												}}
 											>
-												◦ {subRoute.name}
+												<Flex gap={2}>
+													<IoIosArrowForward /> {subRoute.name}
+												</Flex>
 											</Link>
 										))}
 									</>

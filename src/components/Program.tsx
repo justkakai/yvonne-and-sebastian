@@ -34,7 +34,7 @@ function Program() {
 
 	return (
 		<Box>
-			<Page>
+			<Page heading='Program'>
 				<Box textAlign={'left'} mb={4}>
                     Please find below tentative programs for planning purposes.
                     The final programs will be sent closer to each event. We kindly ask for your patience on this.

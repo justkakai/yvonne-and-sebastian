@@ -7,8 +7,8 @@ import suzzie from '../images/suzzie.jpg';
 
 function Contact() {
 	return (
-		<Box mt={12}>
-			<Page>
+		<Box mt={[0, null, 12]}>
+			<Page heading='Contact'>
 				<Box>
 					<Text fontSize="2xl" fontWeight="bold" mb={8}>
                         Suzzie

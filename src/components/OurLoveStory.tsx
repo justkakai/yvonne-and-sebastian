@@ -38,8 +38,8 @@ function OurLoveStory() {
 	];
 
 	return (
-		<Box mt={12}>
-			<Page>
+		<Box mt={[0, null, 12]}>
+			<Page heading='Our love story'>
 				{storyParts.map((part, index) => (
 					<React.Fragment key={index}>
 						<Image

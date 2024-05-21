@@ -8,6 +8,7 @@ interface HeaderPageProps {
 const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 	<Flex
 		direction="column"
+		display={['none', 'none', 'flex']}
 		px={[0, 4, 16, 24, 60]}
 		lineHeight={8}
 		fontSize="lg"
@@ -18,7 +19,6 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 			color="backgrounds.100"
 			fontSize="lg"
 			fontWeight="bold"
-			// spacing={4}
 			justify={['space-between', 'center']}
 			width="100%"
 		>

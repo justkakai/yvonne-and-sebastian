@@ -47,7 +47,7 @@ const Transport = () => {
 
 
 	return (
-		<Page>
+		<Page heading='Transport'>
 			{/* <Heading size={'lg'} as='h3' fontWeight={'normal'}>Transport</Heading> */}
 			<Image
 				src={image}

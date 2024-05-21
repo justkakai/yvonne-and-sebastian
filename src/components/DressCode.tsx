@@ -45,7 +45,7 @@ const dressCodes = [
 function DressCode() {
 	return (
 		<Box>
-			<Page gap={3}>
+			<Page heading='Dress Code' gap={3} /* fontsize='xl' */>
 				{dressCodes.map((dressCode, index) => (
 					<Grid
 						key={index}
@@ -57,7 +57,7 @@ function DressCode() {
 						{index % 2 === 0 ? (
 							<>
 								<GridItem>
-									<Flex direction="column">
+									<Flex direction="column" mt={index === 0 ? [10, null, 0] : 0}>
 										<Image
 											src={dressCode.image}
 											alt={`Dress code recommendation ${index + 1}`}

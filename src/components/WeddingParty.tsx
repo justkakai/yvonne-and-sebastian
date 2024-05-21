@@ -108,9 +108,9 @@ function WeddingParty() {
 	};
 
 	return (
-		<Box>
-			<Page gap={0}>
-				<Text textAlign={'left'} mb={10}>Meet our Wakandan BrideVengers!</Text>
+		<Box mt={[0, null, 12]}>
+			<Page heading='Wedding Party' gap={0}>
+				<Text textAlign={'left'} mb={10} mt={[10, null, 0]}>Meet our Wakandan BrideVengers!</Text>
 				<Text textAlign={'left'} mb={4}>As we begin our lifelong journey, we are blessed to have an extraordinary group of women as our bridesmaids, who are our chosen sisters, confidantes, and cheerleaders, accompanying us through every moment.</Text>
 				<Text textAlign={'left'} mb={16}>They each add joy, wisdom, and love to our lives, and we're excited to introduce these incredible women who will be walking down the aisle before us.</Text>
 				<Flex

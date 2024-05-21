@@ -48,8 +48,8 @@ function WhatToKnow() {
 	];
 
 	return (
-		<Box mt={12}>
-			<Page>
+		<Box mt={[0, null, 12]}>
+			<Page heading='What to know'>
 				{dosAndDonts.map(section => (
 					<Box key={section.id}>
 						<Heading size='md' mb={4}>{section.title}</Heading>

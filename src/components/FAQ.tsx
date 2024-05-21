@@ -51,8 +51,8 @@ function FAQ() {
 	};
 
 	return (
-		<Box mt={12}>
-			<Page>
+		<Box mt={[0, null, 12]}>
+			<Page heading='FAQ'>
 				{faq.map((entry, i) => (
 					<Box key={i}>
 						<Text as={'b'} display='inline-block' mb={2}>
