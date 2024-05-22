@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Box, Grid, GridItem, Image, Text, Flex } from '@chakra-ui/react';
 import Page from './layout/Page';
@@ -45,7 +46,13 @@ const dressCodes = [
 function DressCode() {
 	return (
 		<Box>
-			<Page heading='Dress Code' gap={3} /* fontsize='xl' */>
+			<Page heading='Dress Code' /* fontsize='xl' */>
+				<Box textAlign={'left'}>
+					We encourage you to dress in the beautiful colors of the ocean or soft pastel hues to complement our seaside setting. While we want everyone to feel comfortable and stylish, we kindly ask that you avoid wearing white.
+				</Box>
+				<Box textAlign={'left'} mb={[0, null, null, 8]}>
+					Feel free to have a look at the photos below for some ideas.
+				</Box>
 				{dressCodes.map((dressCode, index) => (
 					<Grid
 						key={index}

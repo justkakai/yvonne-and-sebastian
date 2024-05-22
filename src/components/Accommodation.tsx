@@ -19,7 +19,7 @@ function Accommodation() {
 			description2: 'Some of the hotels we would recommend include:',
 			description3: '',
 			items: [
-				'Diamonds Leisure Beach & Golf Resort (Wedding venue)',
+				'Diamonds Leisure Beach & Golf Resort (wedding venue)',
 				'Baobab Beach Resort & Spa',
 				'Leopard Beach Resort & Spa',
 				'Ocean Village Club (adults only)',

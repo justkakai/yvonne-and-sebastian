@@ -138,11 +138,11 @@ const HomePage = () => {
 					textAlign={'center'}
 					fontFamily={'body'}
 					fontSize={'xl'}
-					mb={8}
+					mb={4}
 				>Diani Beach, Kenya</Text>
 				<Text
 					textAlign={'center'}
-					mb={1}
+					mb={8}
 					fontSize={'lg'}
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}
@@ -154,9 +154,9 @@ const HomePage = () => {
 					variant={'fun'}
 					width={48}
 					ref={rsvpRef}
-					// fontWeight={'bold'}
-					bg={'transparent'}
-					color={'black'}
+					fontWeight={'bold'}
+					border={'2px solid'}
+					p={'24px 22px'}
 					_hover={{ textDecoration: 'none' }}
 				>RSVP</Button>
 			</Flex>}

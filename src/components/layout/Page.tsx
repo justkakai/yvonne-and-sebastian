@@ -25,7 +25,7 @@ const Page: React.FC<PageProps> = ({ children, gap, fontsize, heading }) => (
 				pt={6}
 				pb={2}
 				fontFamily={'body'}
-				fontWeight={'normal'}
+				fontWeight={'bold'}
 				textAlign="center"
 				display={['inline-block', null, 'none']}
 			>

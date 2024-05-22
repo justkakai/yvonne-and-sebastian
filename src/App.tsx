@@ -44,7 +44,7 @@ export const App: React.FC = () => {
 				<Flex
 					width={{ base: '100%', md: '80%' }}
 					pt={[4, null, null, 20]}
-					bg={['rgba(255, 255, 255, 0.2)', null, null, 'rgba(255, 255, 255, 0.2)']}
+					bg={['backgrounds.100', null, null, 'rgba(255, 255, 255, 0.2)']}
 					boxShadow={['none', null, null, 'lg']}
 					justifyContent={'center'}
 				>
