@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { WrapItem } from '@chakra-ui/react';
 import HeaderPage from './HeaderPage';
 
 export const TravelHeader: React.FC = () => {
@@ -37,16 +36,11 @@ export const TravelHeader: React.FC = () => {
 	return (
 		<HeaderPage>
 			{travelRoutes.map((route, i) => (
-				<WrapItem
-					key={`travel_route_${i}`}
-					width={['calc(50% - 1rem)', 'auto']}
-				>
-					<NavLink to={route.path} style={({ isActive }) => (
-						isActive ? styles.activeLink : styles.link
-					)}>
-						{route.name}
-					</NavLink>
-				</WrapItem>
+				<NavLink key={`travel_route_${i}`} to={route.path} style={({ isActive }) => (
+					isActive ? styles.activeLink : styles.link
+				)}>
+					{route.name}
+				</NavLink>
 			))}
 		</HeaderPage>
 	);

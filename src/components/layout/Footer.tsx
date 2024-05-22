@@ -30,10 +30,10 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 			>
 				<ModalOverlay />
 				<ModalContent
-					pt={8}
+					py={8}
 					pl={8}
 					width={{base: '90%', md: '100%'}}
-					bg={'backgrounds.100'}
+					bg={['backgrounds.100', null, null, null, 'backgrounds.200']}
 				>
 					<ModalHeader pr={{base: 8, md: 16}}>
 						<Text>Hey! I&apos;m Kakai & I do frontend stuff 🎨</Text>
@@ -46,6 +46,8 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 						<Button
 							variant={'fun'}
 							onClick={onClose}
+							fontWeight={'normal'}
+							border={'1px solid'}
 						>Close</Button>
 					</ModalFooter>
 				</ModalContent>

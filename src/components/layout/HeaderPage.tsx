@@ -8,7 +8,7 @@ interface HeaderPageProps {
 const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 	<Flex
 		direction="column"
-		display={['none', 'none', 'flex']}
+		display={['none', null, null, null, 'flex']}
 		px={[0, 4, 16, 24, 60]}
 		lineHeight={8}
 		fontSize="lg"

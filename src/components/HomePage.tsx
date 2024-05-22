@@ -40,7 +40,7 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 				<ModalContent
 					px={{base: 2, md: 10}}
 					py={10}
-					bg={'modalbg'}
+					bg={['backgrounds.100', null, null, null, 'backgrounds.200']}
 					fontSize={'lg'}
 					width={{base: '90%', md: '100%'}}
 				>
@@ -71,8 +71,9 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 					<ModalFooter>
 						<Button
 							variant={'fun'}
-							color={'black'}
-							// fontWeight={'bold'}
+							// color={'black'}
+							fontWeight={'normal'}
+							border={'1px solid'}
 							onClick={onClose}
 						>Continue</Button>
 					</ModalFooter>

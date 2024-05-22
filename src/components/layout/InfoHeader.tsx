@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { WrapItem } from '@chakra-ui/react';
 import HeaderPage from './HeaderPage';
 
 export const InfoHeader: React.FC = () => {
@@ -38,17 +37,11 @@ export const InfoHeader: React.FC = () => {
 	return (
 		<HeaderPage>
 			{infoRoutes.map((route, i) => (
-				<WrapItem
-					key={`info_route_${i}`}
-					width={['auto', 'calc(50% - 2rem)', 'auto']}
-					// width={['calc(50% - 2rem)', 'auto']}
-				>
-					<NavLink to={route.path} style={({ isActive }) => (
-						isActive ? styles.activeLink : styles.link
-					)}>
-						{route.name}
-					</NavLink>
-				</WrapItem>
+				<NavLink key={`info_route_${i}`} to={route.path} style={({ isActive }) => (
+					isActive ? styles.activeLink : styles.link
+				)}>
+					{route.name}
+				</NavLink>
 			))}
 		</HeaderPage>
 	);

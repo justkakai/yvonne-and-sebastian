@@ -40,7 +40,7 @@ const colors: ChakraTheme['colors'] = {
 	},
 	backgrounds: {
 		100: '#ffffff',   // emphbglight
-		200: '#f8faff',   // bglight
+		200: '#fffdf8',   // bglight
 		300: '#e4e4e4',   // modalbglight
 		700: '#171923',   // modalbgdark
 		800: '#080600',   // bgdark
@@ -131,7 +131,7 @@ const components: ChakraTheme['components'] = {
 			fun: {
 				alignItems: 'center',
 				backgroundColor: 'transparent',
-				border: '1px solid',
+				border: '2px solid',
 				borderColor: 'brand.500',
 				borderRadius: 'lg',
 				boxSizing: 'border-box',
@@ -139,7 +139,7 @@ const components: ChakraTheme['components'] = {
 				cursor: 'pointer',
 				display: 'flex',
 				fontSize: '18px',
-				fontWeight: 'normal',
+				fontWeight: 'bold',
 				justifyContent: 'center',
 				lineHeight: '28px',
 				maxWidth: '100%',

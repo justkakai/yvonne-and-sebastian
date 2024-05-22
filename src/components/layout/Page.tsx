@@ -1,7 +1,8 @@
 import React from 'react';
 import { Flex, Heading } from '@chakra-ui/react';
 // import { IoIosArrowForward } from 'react-icons/io';
-import { GoPin } from 'react-icons/go';
+// import { GoPin } from 'react-icons/go';
+import { MdPushPin } from 'react-icons/md';
 // import { TiPin } from 'react-icons/ti';
 
 interface PageProps {
@@ -27,10 +28,10 @@ const Page: React.FC<PageProps> = ({ children, gap, fontsize, heading }) => (
 				fontFamily={'body'}
 				fontWeight={'bold'}
 				textAlign="center"
-				display={['inline-block', null, 'none']}
+				display={['inline-block', null, null, null, 'none']}
 			>
 				<Flex alignItems={'center'} gap={2}>
-					<GoPin />{heading}
+					<MdPushPin />{heading}
 				</Flex>
 			</Heading>
 		)}

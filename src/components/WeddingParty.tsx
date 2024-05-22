@@ -159,7 +159,7 @@ function WeddingParty() {
 					onClose={closeModal}
 				>
 					<ModalOverlay />
-					<ModalContent mx={4} bg={'backgrounds.100'}>
+					<ModalContent mx={4} bg={['backgrounds.100', null, null, null, 'backgrounds.200']}>
 						<ModalHeader mt={4}>{selectedEntry.name} <Text display={'inline-block'} verticalAlign={'middle'}><FaHeart color={selectedEntry.fillColor}/></Text></ModalHeader>
 						<ModalCloseButton />
 						<ModalBody mb={4}>

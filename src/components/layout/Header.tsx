@@ -124,6 +124,7 @@ export const Header: React.FC = () => {
 			>
 				<Text
 					fontFamily={'heading'}
+					// fontWeight={'bold'}
 					fontSize={['3xl', null, null, '4xl']}
 					textAlign={'center'}
 					cursor={'pointer'}
