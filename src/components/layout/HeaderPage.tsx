@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Wrap } from '@chakra-ui/react';
+import { Flex, HStack } from '@chakra-ui/react';
 
 interface HeaderPageProps {
 	children: React.ReactNode;
@@ -9,21 +9,21 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 	<Flex
 		direction="column"
 		display={['none', null, null, null, 'flex']}
-		px={[0, 4, 16, 24, 60]}
 		lineHeight={8}
 		fontSize="lg"
-		justifyContent="center"
+		// justifyContent="center"
 		mb={20}
+		width={'100%'}
 	>
-		<Wrap
+		<HStack
 			color="backgrounds.100"
 			fontSize="lg"
 			fontWeight="bold"
-			justify={['space-between', 'center']}
+			justifyContent={'center'}
 			width="100%"
 		>
 			{children}
-		</Wrap>
+		</HStack>
 	</Flex>
 );
 
