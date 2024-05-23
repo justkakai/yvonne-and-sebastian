@@ -7,10 +7,8 @@ import {
 	ModalOverlay,
 	ModalContent,
 	ModalHeader,
-	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
-	Button,
 	useDisclosure,
 	Link
 } from '@chakra-ui/react';
@@ -30,7 +28,8 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 			>
 				<ModalOverlay />
 				<ModalContent
-					py={8}
+					pt={8}
+					pb={10}
 					pl={8}
 					width={{base: '90%', md: '100%'}}
 					bg={['backgrounds.100', null, null, null, 'backgrounds.200']}
@@ -42,14 +41,14 @@ export const Footer: React.FC<FlexProps> = (props: FlexProps) => {
 					<ModalBody pr={{base: 8, md: 16}}>
 						<Text>Feel free to connect with me on <Link href="https://www.linkedin.com/in/wapenyik/" isExternal color='teal.600'>LinkedIn</Link> or reach out to me on <Text as={'b'}>wapenyik@outlook.com</Text> for business-related enquiries.</Text>
 					</ModalBody>
-					<ModalFooter>
+					{/* <ModalFooter>
 						<Button
 							variant={'fun'}
 							onClick={onClose}
 							fontWeight={'normal'}
 							border={'1px solid'}
 						>Close</Button>
-					</ModalFooter>
+					</ModalFooter> */}
 				</ModalContent>
 			</Modal>
 		</Flex>

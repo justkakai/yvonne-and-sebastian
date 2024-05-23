@@ -11,7 +11,6 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 		display={['none', null, null, null, 'flex']}
 		lineHeight={8}
 		fontSize="lg"
-		// justifyContent="center"
 		mb={20}
 		width={'100%'}
 	>
