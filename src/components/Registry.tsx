@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { Box, Text, Flex, Image } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Text, Flex, Image, Button, Tooltip } from '@chakra-ui/react';
 
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 import { FaPaypal } from 'react-icons/fa';
-import { /* SiZelle,  */SiCashapp } from 'react-icons/si';
+import { /* SiZelle, */ SiCashapp } from 'react-icons/si';
 import { MdMobileScreenShare } from 'react-icons/md';
 import { IoLogoVenmo } from 'react-icons/io5';
 
@@ -13,26 +13,71 @@ import venmo from '../images/Venmo.jpg';
 import Page from './layout/Page';
 
 function Registry() {
+	const [tooltipText, setTooltipText] = useState('');
+
+	const handleCopy = (text) => {
+		navigator.clipboard.writeText(text).then(() => {
+			setTooltipText(text);
+			setTimeout(() => setTooltipText(''), 2000);
+		}, (err) => {
+			console.error('Could not copy text: ', err);
+		});
+	};
+
+	const parseCopyText = (text) => {
+		const regex = /\(copy\)(.*?)\(copy\)/g;
+		const parts = text.split(regex);
+		return parts.map((part, index) => (
+			index % 2 === 1 ? (
+				<Tooltip
+					key={index}
+					bg={'black'}
+					color={'white'}
+					label="Copied to clipboard!"
+					isOpen={tooltipText === part}
+					placement="top"
+				>
+					<Button
+						onClick={() => handleCopy(part)}
+						bg={'transparent'}
+						fontWeight={'normal'}
+						border={'1px solid #ebeae8'}
+						my={1}
+						mr={1}
+						_hover={{
+							bg: '#f1ebea',
+							border: '1px solid #f1ebea'
+						}}
+					>
+						{part}
+					</Button>
+				</Tooltip>
+			) : (
+				<React.Fragment key={index}>{part}</React.Fragment>
+			)
+		));
+	};
+
 	const paymentMethods = [
 		{
 			icon: FaMoneyBillTransfer,
 			color: '#FDBB23',
 			title: 'Bank Transfer',
 			details1: [
-				'Account holder : Yvonne Ndinda Mutua',
-				'Bank : N26',
+				'Account holder : (copy)Yvonne Ndinda Mutua(copy)',
+				'Bank : (copy)N26(copy)',
 				'Account number / IBAN : (copy)DE07 1001 1001 2622 6816 14(copy)',
 				'BIC : (copy)NTSBDEB1XXX(copy)'
 			]
 		},
 		/* {
-			icon: SiZelle,
-			color: '#6C1CD3',
-			title: 'Zelle',
-			details: [
-				'Email: yvonnendindam@gmail.com'
-			]
-		}, */
+            icon: SiZelle,
+            color: '#6C1CD3',
+            title: 'Zelle',
+            details: [
+                'Email: yvonnendindam@gmail.com'
+            ]
+        }, */
 		{
 			icon: FaPaypal,
 			color: '#0175BA',
@@ -84,10 +129,10 @@ function Registry() {
 								<Text as={'b'}>{method.title}</Text>
 							</Flex>
 							{method.details1?.map((detail, i) => (
-								<Text key={i}>{detail}</Text>
+								<Text key={i}>{parseCopyText(detail)}</Text>
 							))}
 							{method.details2?.map((detail, i) => (
-								<Text key={i} mt={4}>{detail}</Text>
+								<Text key={i} mt={4}>{parseCopyText(detail)}</Text>
 							))}
 							{method.image && (
 								<Image
