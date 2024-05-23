@@ -11,9 +11,9 @@ function Program() {
 			date: 'October 3rd, 2024',
 			location: 'Diamonds Leisure Beach & Golf Resort',
 			schedule: [
-				{ time: '8:00 PM', activity: 'Guests Arrival' },
+				{ time: '8:00 PM', activity: 'Guests arrival' },
 				{ time: '9:00 PM', activity: 'Speeches' },
-				{ time: '10:15 PM', activity: 'Karaoke Party' },
+				{ time: '10:15 PM', activity: 'Karaoke party' },
 				{ time: '11:00 PM', activity: 'Closing' }
 			]
 		},
@@ -22,12 +22,12 @@ function Program() {
 			date: 'October 4th, 2024',
 			location: 'Diamonds Leisure Beach & Golf Resort',
 			schedule: [
-				{ time: '3:30 PM', activity: 'Guests Arrival' },
-				{ time: '4:00 PM', activity: 'Wedding Ceremony' },
-				{ time: '6:30 PM', activity: 'Reception Begins' },
-				{ time: '9:00 PM', activity: 'Party Time' },
-				{ time: '10:00 PM', activity: 'Reception Ends' },
-				{ time: '11:00 PM', activity: 'After-Party' }
+				{ time: '3:30 PM', activity: 'Guests arrival' },
+				{ time: '4:00 PM', activity: 'Wedding ceremony' },
+				{ time: '6:30 PM', activity: 'Reception begins' },
+				{ time: '9:00 PM', activity: 'Party time' },
+				{ time: '10:00 PM', activity: 'Reception ends' },
+				{ time: '11:00 PM', activity: 'Afterparty' }
 			]
 		}
 	];

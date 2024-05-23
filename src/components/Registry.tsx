@@ -42,6 +42,7 @@ function Registry() {
 						bg={'transparent'}
 						fontWeight={'normal'}
 						border={'1px solid #ebeae8'}
+						color={'brand.500'}
 						my={1}
 						mr={1}
 						_hover={{
@@ -64,10 +65,22 @@ function Registry() {
 			color: '#FDBB23',
 			title: 'Bank Transfer',
 			details1: [
-				'Account holder : (copy)Yvonne Ndinda Mutua(copy)',
-				'Bank : (copy)N26(copy)',
-				'Account number / IBAN : (copy)DE07 1001 1001 2622 6816 14(copy)',
-				'BIC : (copy)NTSBDEB1XXX(copy)'
+				{
+					label: 'Account holder',
+					value: '(copy)Yvonne Ndinda Mutua(copy)'
+				},
+				{
+					label: 'Bank',
+					value: '(copy)N26(copy)'
+				},
+				{
+					label: 'Account number / IBAN',
+					value: '(copy)DE07 1001 1001 2622 6816 14(copy)'
+				},
+				{
+					label: 'BIC',
+					value: '(copy)NTSBDEB1XXX(copy)'
+				}
 			]
 		},
 		/* {
@@ -83,8 +96,14 @@ function Registry() {
 			color: '#0175BA',
 			title: 'PayPal',
 			details1: [
-				'Email : (copy)bakulube@yahoo.co.uk(copy)',
-				'Username : (copy)YMutua(copy)'
+				{
+					label: 'Email',
+					value: '(copy)bakulube@yahoo.co.uk(copy)'
+				},
+				{
+					label: 'Username',
+					value: '(copy)YMutua(copy)'
+				}
 			],
 			details2: [
 				'Please go for the Friends and Family option when sending to reduce extra charges.'
@@ -95,7 +114,10 @@ function Registry() {
 			color: '#38AF48',
 			title: 'MPESA',
 			details1: [
-				'Yvonne Ndinda Mutua : (copy)0702042034(copy)'
+				{
+					label: 'Yvonne Ndinda Mutua',
+					value: '(copy)0702042034(copy)'
+				}
 			]
 		},
 		{
@@ -129,10 +151,17 @@ function Registry() {
 								<Text as={'b'}>{method.title}</Text>
 							</Flex>
 							{method.details1?.map((detail, i) => (
-								<Text key={i}>{parseCopyText(detail)}</Text>
+								<Flex key={i} direction={['column', 'row']} alignItems={['start', 'center']} mb={2}>
+									<Text mr={2}>
+										{detail.label} :
+									</Text>
+									<Text>{parseCopyText(detail.value)}</Text>
+								</Flex>
 							))}
 							{method.details2?.map((detail, i) => (
-								<Text key={i} mt={4}>{parseCopyText(detail)}</Text>
+								<Text key={i} mt={4}>
+									{parseCopyText(detail)}
+								</Text>
 							))}
 							{method.image && (
 								<Image
@@ -140,7 +169,7 @@ function Registry() {
 									alt={method.alt}
 									objectFit={'contain'}
 									boxSize={300}
-									loading='lazy'
+									loading="lazy"
 								/>
 							)}
 						</Box>
