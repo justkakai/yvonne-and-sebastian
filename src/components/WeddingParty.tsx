@@ -143,8 +143,8 @@ function WeddingParty() {
 								}}
 								transition="transform 0.3s, box-shadow 0.2s"
 							/>
-							<Text fontSize='xl' as={'b'}>{entry.name}</Text>
-							<Text mb={6} fontSize={'lg'}>
+							<Text fontSize='xl' as={'b'} textAlign={'left'}>{entry.name}</Text>
+							<Text mb={6} fontSize={'lg'} textAlign={'left'}>
 								{entry.role}
 							</Text>
 						</Flex>

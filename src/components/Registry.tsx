@@ -18,11 +18,11 @@ function Registry() {
 			icon: FaMoneyBillTransfer,
 			color: '#FDBB23',
 			title: 'Bank Transfer',
-			details: [
-				'Yvonne Ndinda Mutua',
-				'Bank: N26',
-				'Account number / IBAN: DE07 1001 1001 2622 6816 14',
-				'BIC: NTSBDEB1XXX'
+			details1: [
+				'Account holder : Yvonne Ndinda Mutua',
+				'Bank : N26',
+				'Account number / IBAN : (copy)DE07 1001 1001 2622 6816 14(copy)',
+				'BIC : (copy)NTSBDEB1XXX(copy)'
 			]
 		},
 		/* {
@@ -37,9 +37,11 @@ function Registry() {
 			icon: FaPaypal,
 			color: '#0175BA',
 			title: 'PayPal',
-			details: [
-				'Email: bakulube@yahoo.co.uk',
-				'Username: YMutua',
+			details1: [
+				'Email : (copy)bakulube@yahoo.co.uk(copy)',
+				'Username : (copy)YMutua(copy)'
+			],
+			details2: [
 				'Please go for the Friends and Family option when sending to reduce extra charges.'
 			]
 		},
@@ -47,8 +49,8 @@ function Registry() {
 			icon: MdMobileScreenShare,
 			color: '#38AF48',
 			title: 'MPESA',
-			details: [
-				'Yvonne Ndinda Mutua: 0702042034'
+			details1: [
+				'Yvonne Ndinda Mutua : (copy)0702042034(copy)'
 			]
 		},
 		{
@@ -81,8 +83,11 @@ function Registry() {
 								<method.icon color={method.color} />
 								<Text as={'b'}>{method.title}</Text>
 							</Flex>
-							{method.details?.map((detail, i) => (
+							{method.details1?.map((detail, i) => (
 								<Text key={i}>{detail}</Text>
+							))}
+							{method.details2?.map((detail, i) => (
+								<Text key={i} mt={4}>{detail}</Text>
 							))}
 							{method.image && (
 								<Image
