@@ -119,10 +119,9 @@ const HomePage = () => {
 				src={homepageImage}
 				alt='Yvonne and Sebastian'
 				objectFit={'cover'}
-				objectPosition={'100% 60%'}
-				// boxSize={700}
-				height={400}
-				width={700}
+				objectPosition={['100% 60%', null, null, null, '100% 70%']}
+				height={['100%', null, null, null, 600]}
+				width={800}
 				loading='lazy'
 				borderRadius={'lg'}
 				boxShadow={'lg'}
@@ -139,11 +138,11 @@ const HomePage = () => {
 					textAlign={'center'}
 					fontFamily={'body'}
 					fontSize={'xl'}
-					mb={4}
+					mb={8}
 				>Diani Beach, Kenya</Text>
 				<Text
 					textAlign={'center'}
-					mb={8}
+					mb={2}
 					fontSize={'lg'}
 				>
 					{days} {days === 1 ? 'day' : 'days'}, {hours} {hours === 1 ? 'hour' : 'hours'} and {minutes} {minutes === 1 ? 'minute' : 'minutes'}

@@ -69,7 +69,7 @@ function Accommodation() {
 								<Box flex={1} textAlign={'left'}>
 									{/* <Heading size='md' mb={4} fontFamily={'body'}>{section.title}</Heading> */}
 									<Flex gap={2} mb={4} alignItems={'center'}>
-										<section.icon color={'brand.500'} size={32} />
+										<section.icon color={'brand.500'} size={26} />
 										<Heading size='md' fontFamily={'body'}>{section.title}</Heading>
 									</Flex>
 									<Flex gap={4} direction={{ base: 'column', md: 'row' }}>
