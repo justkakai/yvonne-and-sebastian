@@ -109,8 +109,8 @@ function VisaInformation() {
 							As a {selectedCountry} national, you need to apply for an <b>{visaInfo[selectedCountry]}</b>.
 						</Text>
 					)}
-					<Text textAlign={'left'} width={'100%'} mt={8}>The best option to use is to travel on a tourist visa.</Text>
-					<Text textAlign={'left'} width={'100%'} mb={6}>Visit Visa is also an option which requires an invitation letter from a family member/ travel agent in Kenya.</Text>
+					{/* <Text textAlign={'left'} width={'100%'} mt={8}>The best option to use is to travel on a tourist visa.</Text>
+					<Text textAlign={'left'} width={'100%'} mb={6}>Visit Visa is also an option which requires an invitation letter from a family member/ travel agent in Kenya.</Text> */}
 					<List spacing={3} width="100%">
 						{Object.entries(visaDetails).map(([key, values]) => (
 							<Box key={key} py={4} textAlign={'left'}>
