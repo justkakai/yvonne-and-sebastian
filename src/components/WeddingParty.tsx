@@ -22,6 +22,7 @@ interface WeddingPartyEntry {
 	name: string;
 	role: string;
 	image: string;
+	objectPosition: string|undefined;
 	text: string;
 	fillColor: string;
 }
@@ -32,6 +33,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Yvette Munee Mutua',
 		role: 'Sister of the Bride / Maid of Honor',
 		image: yvette,
+		objectPosition: undefined,
 		text: 'Catch me moonwalking on the dance floor. Diagnosed with joy so watch out because I’ll be spreading infectious laughs. Can’t wait to celebrate Yvonne and Seb’s love with all of you!',
 		fillColor: '#75a8e8'
 	},
@@ -40,6 +42,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Joanne Magare',
 		role: 'Bridesmaid',
 		image: joanne,
+		objectPosition: undefined,
 		text: 'Childhood bestie of the bride. (I don’t know what else to say 🤣🤣🤣) I slay for a living? 🫣😅 Yvonne you have officially opened the doors for the rest of us. Wishing you and Sebastian lots of love and joy and amazing segggsssss 💃🏾❤️',
 		fillColor: '#596956'
 	},
@@ -48,6 +51,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Bianca Kibwage',
 		role: 'Bridesmaid',
 		image: bianca,
+		objectPosition: '100% 0%',
 		text: 'Hello there! I´m Bianca, cousin of the stunning bride and honored to be part of Yvonne and Sebastian´s love journey! 🥹 Growing up with Yvonne has been a treat - we´ve shared countless laughs, adventures, and memories that I´ll treasure forever. When I´m not designing buildings, you can find me exploring new cities, visiting loved ones, dancing the night away, or chasing sunsets on the nearest beach! Cheers to the beautiful couple 🥂',
 		fillColor: '#fda051'
 	},
@@ -56,6 +60,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Cynthia Mogoi',
 		role: 'Bridesmaid',
 		image: cynthia,
+		objectPosition: undefined,
 		text: '',
 		fillColor: '#c9b0bc'
 	},
@@ -64,6 +69,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Adeva Kimmy Prince',
 		role: 'Bridesmaid',
 		image: adeva,
+		objectPosition: '0% 100%',
 		text: '',
 		fillColor: '#c2d5eb'
 	},
@@ -72,6 +78,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Charlene Guya',
 		role: 'Bridesmaid',
 		image: charlene,
+		objectPosition: undefined,
 		text: 'Childhood friend of the bride.',
 		fillColor: '#dda78e'
 	},
@@ -80,6 +87,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Christine Rolle',
 		role: 'Bridesmaid',
 		image: christine,
+		objectPosition: undefined,
 		text: 'Hi everyone, I´m Christine, a proud bridesmaid and friend of the beautiful bride. I’m a homebody for most of the year. When I deign to leave the house, I enjoy long walks, travelling and finding joy in the company of friends. Like the bride, I studied in China which is where I currently work as a teacher. I´m excited to be a part of this memorable occasion and look forward to the beautiful journey ahead!',
 		fillColor: '#c7c5c6'
 	},
@@ -88,6 +96,7 @@ const weddingParty: WeddingPartyEntry[] = [
 		name: 'Kakai Wapenyi',
 		role: 'Bridesmaid',
 		image: kakai,
+		objectPosition: undefined,
 		text: '',
 		fillColor: '#64488e'
 	}
@@ -130,6 +139,7 @@ function WeddingParty() {
 								src={entry.image ? entry.image : heart}
 								alt={entry.name}
 								objectFit={'cover'}
+								objectPosition={entry.objectPosition ? entry.objectPosition : 'center'}
 								boxSize={300}
 								boxShadow='lg'
 								borderRadius='lg'

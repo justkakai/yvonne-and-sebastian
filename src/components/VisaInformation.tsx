@@ -42,7 +42,7 @@ function VisaInformation() {
 			'All travelers must obtain an e-Visa/eTA before travel',
 			'East African Community nationals are exempt from the eTA requirement (Kenya, Burundi, Rwanda, South Sudan, Tanzania, and Uganda)',
 			'The eTA is only valid for one trip and affected travelers must obtain a new eTA for each visit to Kenya',
-			'Each adult visitor to the Republic of Kenya is required to submit e-VISA applications in their personal eCitizen account. Parents can apply for their children in the parent\'s account.',
+			'Each adult visitor to the Republic of Kenya is required to submit e-Visa applications in their personal eCitizen account. Parents can apply for their children in the parent\'s account.',
 			'If you are traveling alone with children, border officials may require custody documents or notarized written consent from the other parent',
 			{
 				text: 'Visa requirements you need to fulfill include the following. You must have:',
@@ -99,16 +99,23 @@ function VisaInformation() {
 		<Box>
 			<Page heading='Visa Information'>
 				<VStack spacing={4}>
-					<Select placeholder="Select your nationality" onChange={handleChange}>
-						{Object.keys(visaInfo).map(country => (
-							<option key={country} value={country}>{country}</option>
-						))}
-					</Select>
-					{selectedCountry && (
-						<Text fontSize="xl">
+					<Box width={'100%'} mb={6}>
+						<Select
+							width={'100%'}
+							mb={4}
+							placeholder="Select your nationality"
+							onChange={handleChange}
+						>
+							{Object.keys(visaInfo).map(country => (
+								<option key={country} value={country}>{country}</option>
+							))}
+						</Select>
+						{selectedCountry && (
+							<Text fontSize="xl">
 							As a {selectedCountry} national, you need to apply for an <b>{visaInfo[selectedCountry]}</b>.
-						</Text>
-					)}
+							</Text>
+						)}
+					</Box>
 					{/* <Text textAlign={'left'} width={'100%'} mt={8}>The best option to use is to travel on a tourist visa.</Text>
 					<Text textAlign={'left'} width={'100%'} mb={6}>Visit Visa is also an option which requires an invitation letter from a family member/ travel agent in Kenya.</Text> */}
 					<List spacing={3} width="100%">

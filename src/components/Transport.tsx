@@ -64,6 +64,7 @@ const Transport = () => {
 				boxShadow={'lg'}
 				loading='lazy'
 				alignSelf={'center'}
+				objectPosition={'90% 100%'}
 				onLoad={() => setImageLoaded(true)}
 			/>
 			{imageLoaded && (
