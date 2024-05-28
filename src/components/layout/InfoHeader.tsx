@@ -7,7 +7,6 @@ export const InfoHeader: React.FC = () => {
 		link: {
 			color: 'brand.500',
 			textDecoration: 'none',
-			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
@@ -18,7 +17,6 @@ export const InfoHeader: React.FC = () => {
 			color: 'brand.500',
 			backgroundColor: 'rgba(209, 188, 183, 0.3)',
 			textDecoration: 'none',
-			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,

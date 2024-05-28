@@ -17,6 +17,7 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 		<HStack
 			color="backgrounds.100"
 			fontSize="lg"
+			fontFamily={'heading'}
 			fontWeight="bold"
 			justifyContent={'center'}
 			width="100%"

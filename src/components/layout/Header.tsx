@@ -37,7 +37,6 @@ export const Header: React.FC = () => {
 		link: {
 			color: '#4a4a4a',
 			textDecoration: 'none',
-			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
@@ -48,7 +47,6 @@ export const Header: React.FC = () => {
 			color: '#4a4a4a',
 			backgroundColor: 'rgba(209, 188, 183, 0.6)',
 			textDecoration: 'none',
-			fontWeight: 'normal',
 			paddingTop: 4,
 			paddingBottom: 4,
 			paddingLeft: 20,
@@ -247,6 +245,7 @@ export const Header: React.FC = () => {
 					width={'100%'}
 					justifyContent={'center'}
 					fontSize={'lg'}
+					fontFamily={'heading'}
 					fontWeight={'bold'}
 					display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
