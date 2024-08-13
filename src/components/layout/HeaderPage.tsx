@@ -18,7 +18,7 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ children }) => (
 			color="backgrounds.100"
 			fontSize="lg"
 			fontFamily={'heading'}
-			fontWeight="bold"
+			fontWeight="normal"
 			justifyContent={'center'}
 			width="100%"
 		>

@@ -2,10 +2,10 @@
 import React, { useEffect, useRef } from 'react';
 import {
 	Image,
-	Box,
+	/* Box, */
 	Flex,
 	Text,
-	Button,
+	Button/* ,
 	Modal,
 	ModalOverlay,
 	ModalContent,
@@ -13,11 +13,11 @@ import {
 	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
-	useDisclosure
+	useDisclosure */
 } from '@chakra-ui/react';
 import homepageImage from '../images/homepage-compressed.jpeg';
 
-function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
+/* function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 
 	const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true });
 
@@ -63,7 +63,6 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 								<Text display={'inline-block'} fontWeight={'bold'} fontSize={'xl'} ml={0}>12th August 2024</Text>
 							</Box>
 							<Box textAlign={'left'} mb={10}>We plan to have a Zoom Q&A session in September. Details will follow soon.</Box>
-							{/* <Box textAlign={'left'} mb={10}>Please add your email details to get updates.</Box> */}
 							<Box textAlign={'left'} mb={1}>Cheers,</Box>
 							<Box textAlign={'left'}>Yvonne & Sebastian</Box>
 						</Flex>
@@ -71,7 +70,6 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 					<ModalFooter>
 						<Button
 							variant={'fun'}
-							// color={'black'}
 							fontWeight={'normal'}
 							border={'1px solid'}
 							onClick={onClose}
@@ -81,18 +79,18 @@ function DeadlinePopup({ onModalClose }: { onModalClose: () => void }) {
 			</Modal>
 		</Box>
 	);
-}
+} */
 
 const HomePage = () => {
 
 	const [imageLoaded, setImageLoaded] = React.useState(false);
 	const rsvpRef = useRef<HTMLButtonElement>(null);
 
-	const handleModalClose = () => {
+	/* const handleModalClose = () => {
 		if (rsvpRef.current) {
 			rsvpRef.current.scrollIntoView({ behavior: 'smooth' });
 		}
-	};
+	}; */
 
 	useEffect(() => {
 		window.scrollTo(0, 0); // Scroll to top on page load
@@ -114,7 +112,7 @@ const HomePage = () => {
 			alignItems={'center'}
 			gap={10}
 		>
-			{imageLoaded && <DeadlinePopup onModalClose={handleModalClose}/>}
+			{/* {imageLoaded && <DeadlinePopup onModalClose={handleModalClose}/>} */}
 			<Image
 				src={homepageImage}
 				alt='Yvonne and Sebastian'

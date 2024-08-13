@@ -126,6 +126,7 @@ export const Header: React.FC = () => {
 					fontSize={['3xl', null, null, '4xl']}
 					textAlign={'center'}
 					cursor={'pointer'}
+					fontWeight={'500'}
 					mb={[6, null, null, null, 0]}
 					onClick={() => window.location.href = '/'}
 				>Yvonne & Sebastian</Text>
@@ -246,7 +247,7 @@ export const Header: React.FC = () => {
 					justifyContent={'center'}
 					fontSize={'lg'}
 					fontFamily={'heading'}
-					fontWeight={'bold'}
+					fontWeight={'normal'}
 					display={['none', null, null, null, 'flex']} // Hide on mobile, show on medium and larger screens
 				>
 					{mainRoutes.map((route, i) => (
